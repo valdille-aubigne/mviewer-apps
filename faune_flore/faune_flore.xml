@@ -30,14 +30,16 @@
 						namespace="ccvia" 
 						queryable="true" 
 						filter="" 
-						infoformat="text/html" 
+						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="faune" 
 						url="http://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
 						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune_flore" 
 						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune_flore"
-				/>
+				>
+						<template url="./apps/faune_flore/templates/ff_faune.mst"></template> 
+				</layer>
 				<layer 	id="faune" 
 						name="Amphibiens" 
 						visible="false" 
@@ -239,14 +241,16 @@
 						namespace="ccvia" 
 						queryable="true" 
 						filter="" 
-						infoformat="text/html" 
+						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="flore" 
 						url="http://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
 						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune_flore" 
 						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune_flore"
-				/>			
+				>
+						<template url="./apps/faune_flore/templates/ff_flore.mst"></template> 
+				</layer>			
 				<layer 	id="flore" 
 						name="Arbres" 
 						visible="false" 

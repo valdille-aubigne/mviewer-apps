@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <application title="Val d'Ille - Aubigné" logo="./apps/logo-via.png" help="mviewer_help.html" panelfooterimage="img/panel-footer.png" panelfooterheight="80px" legend="false" exportpng="false" measuretools="true" legendasimage="false" popup="false" print="false" style="css/themes/wet_asphalt.css"/>
+	<mapoptions zoom="12" center="-179742,6154000" projection="EPSG:3857" maxzoom="19"/>  
+		
+	<baselayers style="gallery"><!-- style="default"||gallery" -->   
+        <baselayer  type="WMS" id="photo1" label="Photo aérienne" title="Ortho Géobretagne" thumbgallery="img/basemap/ortho.jpg" url="http://tile.geobretagne.fr/gwc02/service/wms" layers="satellite" format="image/jpeg" visible="false" attribution="partenaires GéoBretagne - IGN RGE BD ORTHO - PlanetObserver"/>
+		<baselayer  type="OSM" id="osm2" label="Plan" title="Thunderforest Neighbourhood" thumbgallery="img/basemap/mapquest.png" 
+			url="https://tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=1de58fc34e9443279668517b06a35dc1" 
+			attribution="© Thunderforest. Données : les contributeurs d'&lt;a href='http://www.openstreetmap.org/' target='_blank'>OpenStreetMap &lt;/a>,  &lt;a href='http://www.openstreetmap.org/copyright' target='_blank'>ODbL &lt;/a>" visible="false"/>
+		<baselayer  type="OSM" id="positron" label="Plan clair" title="CartoDb" thumbgallery="img/basemap/positron.png" 
+			url="http://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" maxzoom="20" 
+			visible="true" attribution="Map tiles by  &lt;a href='http://cartodb.com/attributions'>CartoDb &lt;/a>, under  &lt;a href='http://creativecommons.org/licenses/by/3.0/'>CC BY 3.0 &lt;/a>" />      
+    </baselayers> 
+    <proxy url=""/>
+    <olscompletion url="http://api-adresse.data.gouv.fr/search/" type="ban"/>
+    <elasticsearch url="http://ows.region-bretagne.fr/kartenn/_search" geometryfield="geometry" linkid="search_id" querymode="fussy_like_this"/>
+    <searchparameters bbox="true" localities="true" features="true"/>
+	
+    <themes mini="">
+		
+
+		<theme name="Environnement" collapsed="false" id="ENVIRONNEMENT" icon="leaf">
+				
+				<layer 	id="communes_via" 
+						name="Communes" 
+						visible="true" 
+						tiled="true" 
+						namespace="ccvia" 
+						queryable="false" 
+						infoformat="application/vnd.ogc.gml" 
+						opacity="0.1" 
+						featurecount="5" 
+						style="" 
+						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						attribution="Val d'Ille-Aubigné" 
+						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-communes_via" 
+						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-communes_via"
+				>
+						<template url="./apps/global/templates/global.communes.mst"></template> 
+				</layer>
+				
+				<layer 	id="bocage_valdille_aubigne" 
+						name="Haies bocagères" 
+						visible="false" 
+						tiled="true" 
+						namespace="ccvia" 
+						queryable="true" 
+						infoformat="text/html" 
+						featurecount="5" 
+						style="" 
+						opacity="1" 
+						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						attribution="Val d'Ille-Aubigné" 
+						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-bocage_valdille_aubigne" 
+						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-bocage_valdille_aubigne" 
+				/>
+				<layer 	id="vergers" 
+						name="Vergers" 
+						visible="false" 
+						namespace="ccvia" 
+						queryable="true" 
+						infoformat="text/html" 
+						featurecount="5" 
+						style="" 
+						opacity="1" 
+						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						attribution="Val d'Ille-Aubigné" 
+						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-vergers" 
+						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-vergers" 
+				/>
+				<layer 	id="trame_verte" 
+						name="Trame verte" 
+						visible="false" 
+						namespace="ccvia" 
+						queryable="false" 
+						infoformat="text/html" 
+						featurecount="5" 
+						style="" 
+						opacity="1" 
+						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						attribution="Val d'Ille-Aubigné" 
+						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=f5dc03a1-2759-46e6-ba8e-39e62e86140a" 
+						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=f5dc03a1-2759-46e6-ba8e-39e62e86140a" 
+				/>
+				<layer 	id="trame_bleue" 
+						name="Trame bleue" 
+						visible="false" 
+						namespace="ccvia" 
+						queryable="false" 
+						infoformat="text/html" 
+						featurecount="5" 
+						style="" 
+						opacity="1" 
+						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						attribution="Val d'Ille-Aubigné" 
+						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=1b64d5c3-b7c7-4413-8ede-d42cb597719d" 
+						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=1b64d5c3-b7c7-4413-8ede-d42cb597719d" 
+				/>
+		
+		</theme>
+		
+    </themes>
+</config>

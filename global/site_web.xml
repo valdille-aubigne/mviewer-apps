@@ -376,5 +376,23 @@
 						<template url="./apps/global/templates/global.rando.mst"></template> 
 				</layer>
 		</theme>
+		<theme name="Economie" collapsed="true" id="ECONOMIE" icon="globe">
+				<layer 	id="zone_activite" 
+						name="Zones d'activité" 
+						visible="false" 
+						tiled="true" 
+						namespace="ccvia" 
+						queryable="true" 
+						infoformat="text/html" 
+						featurecount="5" 
+						style="" 
+						opacity="1" 
+						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						attribution="Val d'Ille-Aubigné" 
+						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-zone-activite" 
+						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-zone_activite" 
+				/> 
+				
+		</theme>
     </themes>
 </config>

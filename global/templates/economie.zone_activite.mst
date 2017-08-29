@@ -9,7 +9,6 @@
 			<span style="font-family:'roboto_bold'"> Code INSEE :</span> {{INSEE}}<br/>
 			<span style="font-family:'roboto_bold'"> Commune :</span> {{COMMUNE}}<br/>
 			<span style="font-family:'roboto_bold'"> Vocation :</span> {{VOCATION}}<br/>
-			<span style="font-family:'roboto_bold'"> Places :</span> {{PLACES}}<br/>
 			<span style="font-family:'roboto_bold'"> Foncier disponible :</span> {{F_DISPO}}<br/>
 		</p>
 	</li>

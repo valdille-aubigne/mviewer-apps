@@ -19,7 +19,7 @@
 	
     <themes mini="">
 		
-       	<theme name="Urbanisme" collapsed="true" id="URBANISME" icon="globe">  
+       	<theme name="Urbanisme" collapsed="true" id="URBANISME" icon="building">  
 				<layer 	id="PRESCRIPTION_PCT" 
 						name="Prescriptions ponctuelles" 
 						visible="false" 

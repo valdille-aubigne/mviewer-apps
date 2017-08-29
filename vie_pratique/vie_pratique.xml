@@ -21,7 +21,7 @@
 		
 				
 		
-		<theme name="Vie pratique" collapsed="false" id="VIE_PRATIQUE" icon="globe">
+		<theme name="Vie pratique" collapsed="false" id="VIE_PRATIQUE" icon="child">
 				
 				<layer 	id="communes_via" 
 						name="Communes" 

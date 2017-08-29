@@ -20,7 +20,7 @@
     <themes mini="">
 		
        	
-		<theme name="Tourisme" collapsed="true" id="TOURISME" icon="globe">
+		<theme name="Tourisme" collapsed="true" id="TOURISME" icon="image">
 				
 				<layer 	id="communes_via" 
 						name="Communes" 

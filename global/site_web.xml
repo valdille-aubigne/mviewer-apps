@@ -49,10 +49,10 @@
 						infoformat="text/html" 
 						featurecount="5" 
 						style="" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille-Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-plu-PRESCRIPTION_PCT" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-plu-PRESCRIPTION_PCT"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-plu-PRESCRIPTION_PCT" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-plu-PRESCRIPTION_PCT"
 				/>
 				<layer 	id="PRESCRIPTION_LIN" 
 						name="Prescriptions linéaire" 
@@ -65,10 +65,10 @@
 						infoformat="text/html" 
 						featurecount="5" 
 						style="" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille-Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-plu-PRESCRIPTION_LIN" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-plu-PRESCRIPTION_LIN"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-plu-PRESCRIPTION_LIN" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-plu-PRESCRIPTION_LIN"
 				/>
 				<layer 	id="PRESCRIPTION_SURF" 
 						name="Prescriptions surfaciques" 
@@ -81,10 +81,10 @@
 						infoformat="text/html" 
 						featurecount="5" 
 						style="" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille-Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-plu-PRESCRIPTION_SURF" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-plu-PRESCRIPTION_SURF"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-plu-PRESCRIPTION_SURF" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-plu-PRESCRIPTION_SURF"
 				/>
 				<layer 	id="ZONE_URBA" 
 						name="Zonages PLU" 
@@ -96,10 +96,10 @@
 						featurecount="5" 
 						style="" 
 						opacity="0.7" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille-Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-plu-ZONE_URBA" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-plu-ZONE_URBA" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-plu-ZONE_URBA" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-plu-ZONE_URBA" 
 				/>						
 		</theme>
 		<theme name="Transports" collapsed="true" id="TRANSPORT" icon="bus">
@@ -112,10 +112,10 @@
 						featurecount="5" 
 						style="" 
 						opacity="1" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille-Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-aire_covoiturage" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-aire_covoiturage" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-aire_covoiturage" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-aire_covoiturage" 
 				>
 						<template url="./apps/global/templates/transport.aire_covoiturage.mst"></template> 
 				</layer>
@@ -128,10 +128,10 @@
 						featurecount="5" 
 						style="" 
 						opacity="1" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille-Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-abri_velo" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-abri_velo" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-abri_velo" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-abri_velo" 
 				>
 						<template url="./apps/global/templates/transport.abri_velo.mst"></template> 
 				</layer>
@@ -144,10 +144,10 @@
 						featurecount="5" 
 						style="" 
 						opacity="1" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille-Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-liaisons_cyclables" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-liaisons_cyclables" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-liaisons_cyclables" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-liaisons_cyclables" 
 				>
 						<template url="./apps/global/templates/transport.liaisons_cyclables.mst"></template> 
 				</layer>
@@ -160,10 +160,10 @@
 						featurecount="5" 
 						style="" 
 						opacity="1" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille-Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-arret_mobifute" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-arret_mobifute" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-arret_mobifute" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-arret_mobifute" 
 				>
 						<template url="./apps/global/templates/transport.arrets_mobifute.mst"></template> 
 				</layer>
@@ -176,10 +176,10 @@
 						featurecount="5" 
 						style="" 
 						opacity="1" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille-Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-mobifute" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-mobifute" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-mobifute" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-mobifute" 
 				>
 						<template url="./apps/global/templates/transport.mobifute.mst"></template> 
 				</layer>
@@ -193,10 +193,10 @@
 						featurecount="5" 
 						style="point_arret_logique_reseau_departemental"
 						opacity="1" 
-						url="http://geobretagne.fr/geoserver/cd35/ows" 
+						url="https://geobretagne.fr/geoserver/cd35/ows" 
 						attribution="Département 35" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=618ec52b-bb31-41cb-8e3b-dfa91d8e30ca" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=618ec52b-bb31-41cb-8e3b-dfa91d8e30ca" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=618ec52b-bb31-41cb-8e3b-dfa91d8e30ca" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=618ec52b-bb31-41cb-8e3b-dfa91d8e30ca" 
 				>
 						<template url="./apps/global/templates/transport.arrets_illenoo.mst"></template> 
 				</layer>
@@ -209,10 +209,10 @@
 						featurecount="5" 
 						style="" 
 						opacity="1" 
-						url="http://geobretagne.fr/geoserver/cd35/ows" 
+						url="https://geobretagne.fr/geoserver/cd35/ows" 
 						attribution="Département 35" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=33e34455-5405-4f7d-be98-caa21ab5f0c0" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=33e34455-5405-4f7d-be98-caa21ab5f0c0" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=33e34455-5405-4f7d-be98-caa21ab5f0c0" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=33e34455-5405-4f7d-be98-caa21ab5f0c0" 
 						>
 						<template url="./apps/global/templates/transport.ligne_illenoo.mst"></template> 
 				</layer>
@@ -225,10 +225,10 @@
 						featurecount="5" 
 						style="" 
 						opacity="1" 
-						url="http://ows.region-bretagne.fr/geoserver/rb/ows" 
+						url="https://ows.region-bretagne.fr/geoserver/rb/ows" 
 						attribution="Région Bretagne" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=0da27e88-4da6-423e-ba4c-dbcad9128cd2" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=0da27e88-4da6-423e-ba4c-dbcad9128cd2"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=0da27e88-4da6-423e-ba4c-dbcad9128cd2" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=0da27e88-4da6-423e-ba4c-dbcad9128cd2"
 						> 
 						<template url="./apps/global/templates/global.arret_ferroviaire.mst"></template> 
 				</layer>
@@ -241,10 +241,10 @@
 						featurecount="5" 
 						style="" 
 						opacity="1" 
-						url="http://ows.region-bretagne.fr/geoserver/rb/ows" 
+						url="https://ows.region-bretagne.fr/geoserver/rb/ows" 
 						attribution="Région Bretagne" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=0da27e88-4da6-423e-ba4c-dbcad9128cd2" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=0da27e88-4da6-423e-ba4c-dbcad9128cd2"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=0da27e88-4da6-423e-ba4c-dbcad9128cd2" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=0da27e88-4da6-423e-ba4c-dbcad9128cd2"
 						> 
 						<template url="./apps/global/templates/transport.ligne_ferroviaire.mst"></template> 
 				</layer>
@@ -259,8 +259,8 @@
 						opacity="1" 
 						url="https://public.sig.rennesmetropole.fr/geoserver/ows" 
 						attribution="Rennes Métropole" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=74052be5-4ce0-4861-baf1-35c0761538af" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=74052be5-4ce0-4861-baf1-35c0761538af" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=74052be5-4ce0-4861-baf1-35c0761538af" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=74052be5-4ce0-4861-baf1-35c0761538af" 
 						> 
 						<template url="./apps/global/templates/transport.ligne_star.mst"></template> 
 				</layer>
@@ -276,10 +276,10 @@
 						featurecount="5" 
 						style="" 
 						opacity="1" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille-Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-bocage_valdille_aubigne" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-bocage_valdille_aubigne" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-bocage_valdille_aubigne" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-bocage_valdille_aubigne" 
 				/>
 				<layer 	id="vergers" 
 						name="Vergers" 
@@ -290,10 +290,10 @@
 						featurecount="5" 
 						style="" 
 						opacity="1" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille-Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-vergers" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-vergers" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-vergers" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-vergers" 
 				/>
 				<layer 	id="trame_verte" 
 						name="Trame verte" 
@@ -304,10 +304,10 @@
 						featurecount="5" 
 						style="" 
 						opacity="1" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille-Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=f5dc03a1-2759-46e6-ba8e-39e62e86140a" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=f5dc03a1-2759-46e6-ba8e-39e62e86140a" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=f5dc03a1-2759-46e6-ba8e-39e62e86140a" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=f5dc03a1-2759-46e6-ba8e-39e62e86140a" 
 				/>
 				<layer 	id="trame_bleue" 
 						name="Trame bleue" 
@@ -318,10 +318,10 @@
 						featurecount="5" 
 						style="" 
 						opacity="1" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille-Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=1b64d5c3-b7c7-4413-8ede-d42cb597719d" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=1b64d5c3-b7c7-4413-8ede-d42cb597719d" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=1b64d5c3-b7c7-4413-8ede-d42cb597719d" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=1b64d5c3-b7c7-4413-8ede-d42cb597719d" 
 				/>
 		
 		</theme>
@@ -336,10 +336,10 @@
 						featurecount="5" 
 						style="equip_pe" 
 						opacity="1" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille-Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-equipements" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-bocage_valdille_equipements" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-equipements" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-bocage_valdille_equipements" 
 				/>
 				<layer 	id="equipements" 
 						name="Espaces jeunes" 
@@ -351,10 +351,10 @@
 						featurecount="5" 
 						style="equip_espjeunes" 
 						opacity="1" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille-Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-equipements" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-bocage_valdille_equipements" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-equipements" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-bocage_valdille_equipements" 
 				/>
 		</theme>
 		<theme name="Tourisme" collapsed="true" id="TOURISME" icon="image">
@@ -368,10 +368,10 @@
 						featurecount="5" 
 						style="" 
 						opacity="1" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille-Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-iti_rando_valdille_aubigne" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-iti_rando_valdille_aubigne" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-iti_rando_valdille_aubigne" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-iti_rando_valdille_aubigne" 
 				> 
 						<template url="./apps/global/templates/global.rando.mst"></template> 
 				</layer>
@@ -387,10 +387,10 @@
 						featurecount="5" 
 						style="" 
 						opacity="1" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille-Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-zone-activite" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-zone_activite" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-zone-activite" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-zone_activite" 
 				> 
 						<template url="./apps/global/templates/economie.zone_activite.mst"></template> 
 				</layer>

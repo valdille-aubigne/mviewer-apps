@@ -33,10 +33,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="faune" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune_flore" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune_flore"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune_flore" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune_flore"
 				>
 						<template url="./apps/faune_flore/templates/ff_faune.mst"></template> 
 				</layer>
@@ -52,10 +52,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="amphibien" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
@@ -71,10 +71,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="chauvesouris" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
@@ -90,10 +90,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="libellules" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
@@ -109,10 +109,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="mammiferes" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
@@ -128,10 +128,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="oiseaux" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune" 
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune" 
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
@@ -147,10 +147,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="papillons" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
@@ -166,10 +166,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="reptiles" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
@@ -185,10 +185,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="abeille" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
@@ -204,10 +204,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="araignées" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
@@ -223,10 +223,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="autres insectes" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune"
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
@@ -244,10 +244,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="flore" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune_flore" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune_flore"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-faune_flore" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-faune_flore"
 				>
 						<template url="./apps/faune_flore/templates/ff_flore.mst"></template> 
 				</layer>			
@@ -263,10 +263,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="arbre" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-flore" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-flore"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-flore" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-flore"
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
@@ -282,10 +282,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="arbuste" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-flore" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-flore"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-flore" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-flore"
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
@@ -301,10 +301,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="plante_herbacee" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-flore" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-flore"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-flore" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-flore"
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
@@ -320,10 +320,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="plante_invasive" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-flore" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-flore"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-flore" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-flore"
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
@@ -339,10 +339,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="lichen" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-flore" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-flore"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-flore" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-flore"
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
@@ -358,10 +358,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="Mousses" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-flore" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-flore"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-flore" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-flore"
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
@@ -377,10 +377,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="Graminées" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-flore" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-flore"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-flore" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-flore"
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
@@ -396,10 +396,10 @@
 						infoformat="application/vnd.ogc.gml" 
 						featurecount="5" 
 						style="Fougères" 
-						url="http://geobretagne.fr/geoserver/ccvia/ows" 
+						url="https://geobretagne.fr/geoserver/ccvia/ows" 
 						attribution="Val d'Ille - Aubigné" 
-						metadata="http://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-flore" 
-						metadata-csw="http://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-flore"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-flore" 
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-flore"
 				>
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	

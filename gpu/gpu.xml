@@ -22,8 +22,8 @@
 
     <themes>        
         <theme name="Documents d'urbanisme" collapsed="false"  id="gpu" icon="building">  
-		
-			<layer id="document" name="Documents" visible="true" tiled="true" 
+			
+			<layer id="document" name="Documents" visible="true" tiled="true"
 			filter="grid_name LIKE'35%' OR grid_name LIKE'56%' OR grid_name LIKE'22%' OR grid_name LIKE'29%'"
 			queryable="true" infoformat="application/vnd.ogc.gml" featurecount="5" 
 			opacity="0.7" 

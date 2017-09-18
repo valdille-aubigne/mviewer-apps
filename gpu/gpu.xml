@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!--<mapoptions projection="EPSG:2154" extent="145518,6726671,372058,6868691"  />-->
+    <application title="GPU" logo="img/logo/g.png" help=""  exportpng="false" measuretools="true" style="css/themes/blue.css"/>
+    <mapoptions maxzoom="18" projection="EPSG:3857" center="-161129,6140339" zoom="9" projextent="-20037508.342789244, -20037508.342789244, 20037508.342789244, 20037508.342789244" />
+    
+	<baselayers style="default">
+        <baselayer  type="WMTS" id="ortho1" label="Photo aérienne actuelle" title="GéoBretagne" thumbgallery="img/basemap/ortho.jpg" 
+            url="https://tile.geobretagne.fr/gwc02/service/wmts" layers="satellite" format="image/png" visible="false"
+            attribution="&lt;a href='http://applications.region-bretagne.fr/geonetwork/?uuid=3a0ac2e3-7af1-4dec-9f36-dae6b5a8c731' target='_blank' >partenaires GéoBretagne - IGN RGE BD ORTHO - PlanetObserver&lt;/a>" style="_null" matrixset="EPSG:3857" fromcapacity="false"/>
+        <baselayer  type="OSM" id="osm1" label="OpenStreetMap" title="OpenSTreetMap" thumbgallery="img/basemap/osm.png" 
+			url="http://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
+			attribution="Données : les contributeurs d'&lt;a href='http://www.openstreetmap.org/' target='_blank'>OpenStreetMap &lt;/a>,  &lt;a href='http://www.openstreetmap.org/copyright' target='_blank'>ODbL &lt;/a>" visible="true"/>
+        <baselayer  type="OSM" id="stamen1" label="Toner-lite" title="Stamen Design" thumbgallery="img/basemap/toner-lite.png" 
+			url="http://{a-d}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png" maxzoom="20" 
+			visible="false" attribution="Map tiles by  &lt;a href='http://stamen.com/'>Stamen Design &lt;/a>, under  &lt;a href='http://creativecommons.org/licenses/by/3.0/'>CC BY 3.0 &lt;/a>" />
+    </baselayers> 
+    <authentification url="who" loginurl="?login" logouturl="../j_spring_security_logout" enabled="true"/>
+    <!--<proxy url="../proxy/?url="/>-->
+    <olscompletion url="https://api-adresse.data.gouv.fr/search/" type="ban" attribution="La recherche d'adresse est un service proposé par l'API adresse.data.gouv.fr"/>
+    <searchparameters bbox="true" localities="true" features="true"/>	
+
+    <themes>        
+        <theme name="GPU"   id="gpu" icon="building">  
+		
+			<layer id="document" name="Documents" visible="true" tiled="true"
+			queryable="true" infoformat="application/vnd.ogc.gml" featurecount="5" 
+			opacity="0.7" 
+			url="https://wxs-gpu.mongeoportail.ign.fr/externe/i9ytmrb6tgtq5yfek781ntqi/wms/v?" 
+			attribution="Institut national de l'information géographique et forestière (IGN-F)" 
+			metadata="" 
+			metadata-csw="">
+		    <template url="../pub/mviewer-formation/gpu/document.mst"></template>
+		    </layer>
+			
+			<layer id="zone_secteur" name="Zonages PLU" visible="true" tiled="true" 
+			queryable="true" infoformat="application/vnd.ogc.gml" featurecount="5" 
+			opacity="0.7"
+			url="https://wxs-gpu.mongeoportail.ign.fr/externe/i9ytmrb6tgtq5yfek781ntqi/wms/v?" 
+			attribution="Institut national de l'information géographique et forestière (IGN-F)" 
+			metadata="" 
+			metadata-csw="">
+			<template url="../pub/mviewer-formation/gpu/zone_secteur.mst"></template>
+		    </layer>
+				
+				<!--ne fonctionne pas sld="https://geobretagne.fr/pub/mviewer-formation/gpu/zone_secteur.sld"-->
+				
+			<!--<layer id="ZONE_URBA" name="URBA CCVIA" visible="true" tiled="true" 
+			queryable="true" infoformat="text/html" featurecount="5" 
+			opacity="0.7" sld="https://geobretagne.fr/pub/mviewer-formation/gpu/ZONE_URBA.sld"
+			url="https://geobretagne.fr/geoserver/ccvia/wms/?" 
+			attribution="CCVIA" 
+			metadata="" 
+			metadata-csw="" />-->
+
+			<layer id="prescription" name="prescriptions" visible="false" tiled="true" 
+			queryable="true" infoformat="text/html" featurecount="5" 
+			opacity="0.7" 
+			url="https://wxs-gpu.mongeoportail.ign.fr/externe/i9ytmrb6tgtq5yfek781ntqi/wms/v?" 
+			attribution="Institut national de l'information géographique et forestière (IGN-F)" 
+			metadata="" 
+			metadata-csw="" />
+		</theme>        
+        <theme name="Limites administratives"  collapsed="true" id="territoire">  
+			<layer id="commune_bdcarto" name="Commune" visible="false" tiled="false"
+				queryable="true"
+                infoformat="text/html" featurecount="5"                
+				style="commune_region" 
+				url="https://geobretagne.fr/geoserver/dreal_b/wms" 
+				attribution="IGN - BDCARTO" 
+				metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=b08e6cb1-236c-49b7-88f9-42b500d274d5"
+				metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=b08e6cb1-236c-49b7-88f9-42b500d274d5" />			
+			<layer id="EPCI_053" name="Intercommunalité" visible="false" tiled="false"
+				queryable="true"
+                filter="" 
+                searchable="true" searchid="SIREN_EPCI" 
+                infoformat="text/html" featurecount="5"
+				style="epci_region" 
+                opacity="0.5" 
+				url="https://geobretagne.fr/geoserver/dreal_b/wms" 
+				attribution="GéoBretagne" 
+				metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=2298d744-49cb-4fcb-9487-26f916fecdff" 
+				metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=2298d744-49cb-4fcb-9487-26f916fecdff" />			
+            <layer id="n_pays" name="Pays" visible="false" tiled="true"
+				queryable="true"
+                infoformat="text/html" featurecount="5"             
+				style="pays_region" 
+				url="https://geobretagne.fr/geoserver/dreal_b/wms" 
+				attribution="GéoBretagne" 
+				metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=9722d181-75f9-40ab-a136-a9f9ed6f29a5" 
+				metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=9722d181-75f9-40ab-a136-a9f9ed6f29a5" />
+            <layer id="FDepartement" name="Département" visible="false" tiled="false"
+				queryable="true"
+                infoformat="text/html" featurecount="5"
+				style="" 
+				url="https://geobretagne.fr/geoserver/dreal_b/wms" 
+				attribution="IGN - BDCARTO" 
+				metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=e16d50d4-746d-44e3-a5e7-5fc000f97665" 
+				metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=e16d50d4-746d-44e3-a5e7-5fc000f97665" />
+        </theme>
+    </themes>
+</config>

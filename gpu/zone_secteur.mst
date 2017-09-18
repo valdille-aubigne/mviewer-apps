@@ -1,0 +1,29 @@
+{{#features}}
+	<li class="item" style="width:238px;">
+		<h3 class="title-feature">Zone : {{libelle}}</h3>
+		<p class="text-feature">		
+			<span style="font-family:'roboto_bold'">Libellé de zone : </span></br>{{libelong}}<br/>
+			<span style="font-family:'roboto_bold'">Date d'approbation (AAAA/MM/JJ) : </span>{{datappro}}<br/>
+			<span style="font-family:'roboto_bold'"> INSEE :</span> {{insee}}<br/>
+			<br/>
+			{{#urlfic}}<span style="font-family:'roboto_bold'"> <a href="{{urlfic}}" target="_blank"> Ouvrir le règlement </a></span><br/>{{/urlfic}}
+		</p>
+
+	</li>
+{{/features}}
+
+<style>
+	.title-feature {
+		color: #032E46;
+		font-family:"roboto_bold";
+		font-size:23px;
+		margin-bottom:1%;
+		line-height:1;
+	}
+	.text-feature{
+		font-family:"roboto_regular";
+		color:#555;
+		font-size:13px;
+		margin-top:10%;
+	}
+</style>

@@ -1,0 +1,28 @@
+{{#features}}
+	<li class="item" style="width:238px;">
+		<h3 class="title-feature">{{grid_title}}</h3>
+		<p class="text-feature">		
+			<span style="font-family:'roboto_bold'"> Type :</span> {{du_type}}<br/>
+			<span style="font-family:'roboto_bold'"> INSEE :</span> {{grid_name}}<br/>
+			</br>
+			<span style="font-family:'roboto_bold'"> <a href="https://www.geoportail-urbanisme.gouv.fr/document/download-by-partition/{{partition}}" target="_blank"> Télécharger le document </a></span><br/>
+		</p>
+
+	</li>
+{{/features}}
+
+<style>
+	.title-feature {
+		color: #032E46;
+		font-family:"roboto_bold";
+		font-size:23px;
+		margin-bottom:1%;
+		line-height:1;
+	}
+	.text-feature{
+		font-family:"roboto_regular";
+		color:#555;
+		font-size:13px;
+		margin-top:10%;
+	}
+</style>

@@ -21,7 +21,7 @@
     <searchparameters bbox="true" localities="true" features="true"/>	
 
     <themes>        
-        <theme name="GPU"   id="gpu" icon="building">  
+        <theme name="Documents d'urbanisme" collapsed="false"  id="gpu" icon="building">  
 		
 			<layer id="document" name="Documents" visible="true" tiled="true"
 			queryable="true" infoformat="application/vnd.ogc.gml" featurecount="5" 
@@ -30,7 +30,7 @@
 			attribution="Institut national de l'information géographique et forestière (IGN-F)" 
 			metadata="" 
 			metadata-csw="">
-		    <template url="../pub/mviewer-formation/gpu/document.mst"></template>
+		    <template url="./apps/gpu/document.mst"></template>
 		    </layer>
 			
 			<layer id="zone_secteur" name="Zonages PLU" visible="true" tiled="true" 
@@ -40,7 +40,7 @@
 			attribution="Institut national de l'information géographique et forestière (IGN-F)" 
 			metadata="" 
 			metadata-csw="">
-			<template url="../pub/mviewer-formation/gpu/zone_secteur.mst"></template>
+			<template url="./apps/gpu/zone_secteur.mst"></template>
 		    </layer>
 				
 				<!--ne fonctionne pas sld="https://geobretagne.fr/pub/mviewer-formation/gpu/zone_secteur.sld"-->
@@ -53,13 +53,26 @@
 			metadata="" 
 			metadata-csw="" />-->
 
-			<layer id="prescription" name="prescriptions" visible="false" tiled="true" 
-			queryable="true" infoformat="text/html" featurecount="5" 
+			<layer id="prescription" name="Prescriptions" visible="false" tiled="true" 
+			queryable="true" infoformat="application/vnd.ogc.gml" featurecount="5" 
 			opacity="0.7" 
 			url="https://wxs-gpu.mongeoportail.ign.fr/externe/i9ytmrb6tgtq5yfek781ntqi/wms/v?" 
 			attribution="Institut national de l'information géographique et forestière (IGN-F)" 
 			metadata="" 
-			metadata-csw="" />
+			metadata-csw="">
+			<template url="./apps/gpu/prescription.mst"></template>
+		    </layer>
+			
+			<layer id="info" name="Informations" visible="false" tiled="true" 
+			queryable="true" infoformat="application/vnd.ogc.gml" featurecount="5" 
+			opacity="0.7" 
+			url="https://wxs-gpu.mongeoportail.ign.fr/externe/i9ytmrb6tgtq5yfek781ntqi/wms/v?" 
+			attribution="Institut national de l'information géographique et forestière (IGN-F)" 
+			metadata="" 
+			metadata-csw="">
+			<template url="./apps/gpu/information.mst"></template>
+		    </layer>
+			
 		</theme>        
         <theme name="Limites administratives"  collapsed="true" id="territoire">  
 			<layer id="commune_bdcarto" name="Commune" visible="false" tiled="false"

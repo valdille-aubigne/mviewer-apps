@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-    <application title="Inventaire participatif faunistique et floristique (depuis 2014)" showhelp="true" logo="./apps/logo-via.png" help="./apps/faune_flore/mviewer_help_ff.html" exportpng="false" measuretools="true" style="css/themes/green.css"/>
+  <application title="Inventaire participatif faunistique et floristique" showhelp="true" logo="./apps/logo-via.png" help="./apps/faune_flore/mviewer_help_ff.html" exportpng="false" measuretools="true" style="css/themes/green.css"/>
 	<mapoptions projextent="-20037508.342789244, -20037508.342789244, 20037508.342789244, 20037508.342789244" zoom="12" center="-179742,6154000" projection="EPSG:3857" maxzoom="19"/>  
 	<baselayers style="gallery"><!-- style="default"||gallery" -->   
         <baselayer  
@@ -51,16 +51,29 @@
 		 matrixset="EPSG:3857"
 		 />
 	</baselayers>
-    <authentification url="who" loginurl="?login" logouturl="../j_spring_security_logout" enabled="true"/>
-    <proxy url=""/>
-    <olscompletion url="http://api-adresse.data.gouv.fr/search/" type="ban"/>
-    <elasticsearch url="http://ows.region-bretagne.fr/kartenn/_search" geometryfield="geometry" linkid="search_id" querymode="fussy_like_this"/>
-    <searchparameters bbox="true" localities="true" features="true"/>
-    <themes>      			
+
+<!-- <authentification url="who" loginurl="?login" logouturl="../j_spring_security_logout" enabled="true"/> -->
+    <!-- <proxy url=""/> -->
+    <!-- <olscompletion url="http://api-adresse.data.gouv.fr/search/" type="ban"/> -->
+    <!-- <elasticsearch url="http://ows.region-bretagne.fr/kartenn/_search" geometryfield="geometry" linkid="search_id" querymode="fussy_like_this"/> -->
+    <!-- <searchparameters bbox="true" localities="true" features="true"/> -->
+	
+<themes mini="false">
+<theme name="observations"  collapsed="false" id="observations" icon="fas fa-binoculars">
+        <layer id="obs_faune_flore" name="Observations" visible="true" queryable="false"
+            type="customlayer" opacity="0.8" legendurl="img/blank.gif"
+            url="customlayers/obs_faune_flore.js"
+            customcontrol="true"
+            expanded="true"           
+            attribution="Source: Val d'Ille-Aubigné"
+            metadata=""
+            metadata-csw="">
+        </layer>
+    </theme>
        	<theme name="Faune" collapsed="true" id="faune" icon="bug">  
 				<layer 	id="faune_flore" 
 						name="Faune (nombre d'individus)" 
-						visible="true" 
+						visible="false" 
 						scalemin="0" 
 						scalemax="1000000" 
 						tiled="true" 
@@ -441,5 +454,6 @@
 						<template url="./apps/faune_flore/templates/ff_inventaire.mst"></template> 
 				</layer>	
 		</theme>
-    </themes>
+    
+</themes>
 </config>

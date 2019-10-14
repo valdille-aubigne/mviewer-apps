@@ -1,11 +1,10 @@
 
 {{#features}}
 	<li class="item" style="width:238px;">
-		<h3 class="title-feature">LIGNE N°{{NUM_LIGNE}}</h3>
 		<p class="text-feature">
-			<span style="font-family:'roboto_bold'"> Axe :</span> {{NOM_LIGNE}}<br/>
-			<span style="font-family:'roboto_bold'">Horaires :</span><a target="_blank" href="http://www.illenoo-services.fr/fr?location={{NUM_LIGNE}}%20{{NOM_LIGNE}}%20%28illenoo%29&business_id=Line%E2%80%A11%E2%80%A1illenoo%E2%80%A1{{NUM_LIGNE}}"> Accéder aux horaires</a><br/><br/>
-		
+			<h3 class="title-feature">LIGNE N°{{num_ligne}}</h3>
+			<span style="font-family:'roboto_bold'"> Axe :</span> {{nom}}<br/>
+			<span style="font-family:'roboto_bold'">Horaires :</span><a target="_blank" href="http://www.illenoo-services.fr/fr?location={{num_ligne}}%20{{nom}}%20%28illenoo%29&business_id=Line%E2%80%A11%E2%80%A1illenoo%E2%80%A1{{num_ligne}}"> Accéder aux horaires</a><br/>	
 		</p>
 	</li>
 {{/features}}

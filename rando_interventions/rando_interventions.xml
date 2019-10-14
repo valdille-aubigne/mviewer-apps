@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-  <application title="Demande d'intervention sur les sentiers de randonnée" showhelp="true" logo="./apps/logo-via.png" help="./apps/rando_interventions/help_itv_rando.html" exportpng="false" measuretools="true" style="css/themes/wet_asphalt.css"/>
+  <application title="Demande d'intervention sur les sentiers de randonnée" showhelp="true" logo="./apps/logo-via.png" help="./apps/rando_interventions/help_itv_rando.html" titlehelp="Randonnée" exportpng="false" measuretools="true" style="css/themes/wet_asphalt.css"/>
 	<mapoptions projextent="-20037508.342789244, -20037508.342789244, 20037508.342789244, 20037508.342789244" zoom="12" center="-179742,6154000" projection="EPSG:3857" maxzoom="19"/>  
 	<baselayers style="gallery"><!-- style="default"||gallery" -->   
         <baselayer  
@@ -62,7 +62,8 @@
 <theme name="interventions"  collapsed="false" id="interventions" icon="fas fa-exclamation-triangle">
         <layer id="itv_rando" name="Demande intervention" visible="true" queryable="false"
             type="customlayer" opacity="0.8" legendurl="img/blank.gif"
-            url="customlayers/itv_rando.js"
+            url="apps/rando_interventions/customlayers/itv_rando.js"
+			customcontrolpath="apps/rando_interventions/customcontrols"
             customcontrol="true"
             expanded="true"           
             attribution="Source: Val d'Ille-Aubigné"

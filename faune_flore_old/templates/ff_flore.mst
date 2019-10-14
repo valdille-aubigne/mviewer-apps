@@ -1,0 +1,58 @@
+
+{{#features}}
+	<li class="item" style="width:238px;">
+		<h3 class="title-feature">Flore</h3>
+
+		<p class="text-feature">		
+			{{#flore}}<span style="font-family:'roboto_bold'"> Observations floristiques :</span> {{flore}}<br/>{{/flore}}
+			{{#arbres}}<span style="font-family:'roboto_bold'"> Arbres :</span> {{arbres}}<br/>{{/arbres}}
+			{{#arbustes}}<span style="font-family:'roboto_bold'"> Arbustes :</span> {{arbustes}}<br/>{{/arbustes}}
+			{{#plherbacee}}<span style="font-family:'roboto_bold'"> Plantes herbacées :</span> {{plherbacee}}<br/>{{/plherbacee}}
+			{{#plinvasive}}<span style="font-family:'roboto_bold'"> Plantes invasives :</span> {{plinvasive}}<br/>{{/plinvasive}}
+			{{#lichen}}<span style="font-family:'roboto_bold'"> Lichens :</span> {{lichen}}<br/>{{/lichen}}
+			{{#mousses}}<span style="font-family:'roboto_bold'"> Mousses :</span> {{mousses}}<br/>{{/mousses}}
+			{{#graminee}}<span style="font-family:'roboto_bold'"> Graminées :</span> {{graminee}}<br/>{{/graminee}}
+			{{#fougeres}}<span style="font-family:'roboto_bold'"> Fougères :</span> {{fougeres}}<br/>{{/fougeres}}
+			{{#autreflore}}<span style="font-family:'roboto_bold'"> Autre Flore :</span> {{autreflore}}<br/>{{/autreflore}}
+			</br>
+		</p>
+	</li>
+{{/features}}
+
+<style>
+	.title-feature {
+		color: #032e46;
+		font-family:"roboto_bold";
+		font-size:23px;
+		margin-bottom:1%;
+		line-height:1;
+	}
+	.subtitle-feature {
+		color: #032e46;
+		font-family:"roboto_bold";
+		font-size:18px;
+		margin-top:7%;
+		line-height:1;
+	}
+	.text-feature{
+		font-family:"roboto_regular";
+		color:#555;
+		font-size:13px;
+		margin-top:10%;
+	}
+	.info.N {
+   		background-image: url(http://kartenn.region-bretagne.fr/doc/transports/icons/non_1.png);
+   		background-size: 16px;
+    	background-repeat: no-repeat;
+   	    background-position-x: 0px;
+   	    margin-bottom:3px;
+	}
+	.info.O {
+   		background-image: url(http://kartenn.region-bretagne.fr/doc/transports/icons/oui.png);
+   		background-size: 16px;
+    	background-repeat: no-repeat;
+   	    background-position-x: 0px;
+   	    margin-bottom:3px;
+	}
+</style>
+

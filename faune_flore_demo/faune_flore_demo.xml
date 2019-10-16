@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-  <application title="Inventaire participatif faunistique et floristique" showhelp="true" logo="./apps/logo-via.png" help="./apps/faune_flore/mviewer_help_ff.html" exportpng="false" measuretools="true" togglealllayersfromtheme="true" style="css/themes/green.css"/>
+  <application title="Inventaire participatif faunistique et floristique (demo)" showhelp="false" logo="./apps/logo-via.png" help="./apps/faune_flore_demo/mviewer_help_ff.html" exportpng="false" measuretools="true" togglealllayersfromtheme="true" style="css/themes/green.css"/>
 	<mapoptions projextent="-20037508.342789244, -20037508.342789244, 20037508.342789244, 20037508.342789244" zoom="12" center="-179742,6154000" projection="EPSG:3857" maxzoom="19"/>  
 	<baselayers style="gallery"><!-- style="default"||gallery" -->   
         <baselayer  

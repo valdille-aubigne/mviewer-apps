@@ -1,8 +1,8 @@
-mviewer.customControls.itv_rando = (function() {
+mviewer.customControls.obs_faune_flore_demo = (function() {
     /*
      * Private
      */
-    var _idlayer = 'itv_rando';
+    var _idlayer = 'obs_faune_flore';
 
     var _draw; // global so we can remove it later
 
@@ -29,7 +29,7 @@ mviewer.customControls.itv_rando = (function() {
              zIndex: parseInt(10000 / data.time)
         });
         feature.setStyle(style);
-        mviewer.customLayers.itv_rando.layer.getSource().addFeature(feature);
+        mviewer.customLayers.obs_faune_flore.layer.getSource().addFeature(feature);
     };
 
     return {
@@ -72,21 +72,27 @@ mviewer.customControls.itv_rando = (function() {
 		applyEvent: function ()
 		 {
 		var newFile='';	
+		var categorie = document.getElementById('categorie');
+		var espece = document.getElementById('espece');
 		var date_observation = document.getElementById('date_observation');
 		var text = document.getElementById('comment');
 		var nom = document.getElementById('nom');
 		var mail = document.getElementById('mail');
 		var image = document.getElementById("image").files[0];
 		var erreur = "Merci de bien vouloir : <br/>" ;
-		var date_saisie = new Date();
 		
-		date_saisie = date_saisie.getTime();
 		
+		if (categorie.value=='none')
+		erreur = erreur + "- Choisir une catégorie<br/>";
+		
+		if (espece.value=='')
+		erreur = erreur + "- Remplir le champ espèce<br/>";
+	
 		if (date_observation.value=='')
 		erreur = erreur + "- Renseigner une date<br/>";
-	
-		if (text.value=='')
-		erreur = erreur + "- Renseigner une description<br/>";
+		
+		// if (text.value=='')
+		// erreur = erreur + "- Remplir le champ commentaire<br/>";
 	
 		if (image != undefined)
 			{
@@ -95,6 +101,8 @@ mviewer.customControls.itv_rando = (function() {
 
 				var blob = image.slice(0,image.size, 'image/'+extension);
 
+				var date_saisie = new Date();
+				date_saisie = date_saisie.getTime();
 				//definir le nom avec la date en place de name
 				newFile= new File([blob], 'photo_'+date_saisie+'.'+extension, {type: 'image/'+extension});
 			}
@@ -103,34 +111,35 @@ mviewer.customControls.itv_rando = (function() {
 		erreur = erreur + "- Définir un lieu<br/>";
 		
 		if (erreur=="Merci de bien vouloir : <br/>")
-		{mviewer.customControls.itv_rando.send_comment(text.value,_xy[0],_xy[1],date_observation.value,mail.value,newFile, nom.value, date_saisie);}
+		{mviewer.customControls.obs_faune_flore.send_comment(text.value,_xy[0],_xy[1],date_observation.value,categorie.value,mail.value,newFile, nom.value, espece.value);}
 		else
 		{mviewer.alert(erreur,"alert-info");}
 		 },
 
-		send_comment: function (comment,coord_x,coord_y,date_observation,mail,image,nom, id)
+		send_comment: function (comment,coord_x,coord_y,date_observation,categorie,mail,image,nom,espece)
 		{
-		var xhr = mviewer.customControls.itv_rando.getXMLHttpRequest();
+		var xhr = mviewer.customControls.obs_faune_flore.getXMLHttpRequest();
 		
 		var scomment = encodeURIComponent(comment);
 		var coord_x = encodeURIComponent(coord_x);
 		var coord_y = encodeURIComponent(coord_y);
 		var date_observation = encodeURIComponent(date_observation);
+		var categorie = encodeURIComponent(categorie);
 		var mail = encodeURIComponent(mail);
 		var imagename = encodeURIComponent(image.name);
 		var nom = encodeURIComponent(nom);
-		var id = encodeURIComponent(id);
+		var espece = encodeURIComponent(espece);
 
 		
 		var formData = new FormData();
 		formData.append("image", image);
 		
-		xhr.open("POST", "/mviewer/apps/rando_interventions/savecomment.php", true);
+		xhr.open("POST", "/mviewer/apps/faune_flore/savecomment.php", true);
 		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		xhr.send("comment="+scomment+"&coord_x="+coord_x+"&coord_y="+coord_y+"&date_observation="+date_observation+"&mail="+mail+"&imagename="+imagename+"&nom="+nom+"&id="+id);
+		xhr.send("comment="+scomment+"&coord_x="+coord_x+"&coord_y="+coord_y+"&date_observation="+date_observation+"&categorie="+categorie+"&mail="+mail+"&imagename="+imagename+"&nom="+nom+"&espece="+espece);
 		
-		var xhr = mviewer.customControls.itv_rando.getXMLHttpRequest();
-		xhr.open("POST", "/mviewer/apps/rando_interventions/saveimage.php", true);
+		var xhr = mviewer.customControls.obs_faune_flore.getXMLHttpRequest();
+		xhr.open("POST", "/mviewer/apps/faune_flore/saveimage.php", true);
 		xhr.send(formData);
 		
 		mviewer.alert("Merci d'avoir participé "+nom,"alert-info");
@@ -139,7 +148,7 @@ mviewer.customControls.itv_rando = (function() {
 		document.getElementById('casedepart').style.display='inline';
 		document.getElementById('preview').src='#';
 				
-		mviewer.customControls.itv_rando.destroy();
+		mviewer.customControls.obs_faune_flore.destroy();
 		
 		},
 		
@@ -193,7 +202,7 @@ mviewer.customControls.itv_rando = (function() {
             // mandatory - code executed when panel is closed
             _xy = null;
             mviewer.hideLocation();
-            mviewer.customLayers.itv_rando.layer.getSource().clear();
+            mviewer.customLayers.obs_faune_flore.layer.getSource().clear();
         },
 		
 		

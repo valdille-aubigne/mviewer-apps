@@ -162,98 +162,112 @@ Etape 4
 -----------
  Renommer / paramétrer le javascript (customcontrols/xxxx.js) pour mise en cohérence avec le fichier html
  
- Modifier la fonction applyEvent pour mise en cohérence avec les champs présents dans le formulaire :
+ #### Modifier la fonction applyEvent pour mise en cohérence avec les champs présents dans le formulaire :
  
- applyEvent: function ()
-		 {
-		var newFile='';	
-		var categorie = document.getElementById('categorie');
-		var espece = document.getElementById('espece');
-		var date_observation = document.getElementById('date_observation');
-		var text = document.getElementById('comment');
-		var nom = document.getElementById('nom');
-		var mail = document.getElementById('mail');
-		var image = document.getElementById("image").files[0];
-		var erreur = "Merci de bien vouloir : <br/>" ;
-		
-		
-		if (categorie.value=='none')
-		erreur = erreur + "- Choisir une catégorie<br/>";
-		
-		if (espece.value=='')
-		erreur = erreur + "- Remplir le champ espèce<br/>";
-	
-		if (date_observation.value=='')
-		erreur = erreur + "- Renseigner une date<br/>";
-		
-		// if (text.value=='')
-		// erreur = erreur + "- Remplir le champ commentaire<br/>";
-	
-		if (image != undefined)
-			{
-				var extension = image.name.split('.').pop();
-				extension = extension.toLowerCase();
-
-				var blob = image.slice(0,image.size, 'image/'+extension);
-
-				var date_saisie = new Date();
-				date_saisie = date_saisie.getTime();
-				//definir le nom avec la date en place de name
-				newFile= new File([blob], 'photo_'+date_saisie+'.'+extension, {type: 'image/'+extension});
-			}
+	 applyEvent: function ()
+			 {
+			var newFile='';	
+			var categorie = document.getElementById('categorie');
+			var espece = document.getElementById('espece');
+			var date_observation = document.getElementById('date_observation');
+			var text = document.getElementById('comment');
+			var nom = document.getElementById('nom');
+			var mail = document.getElementById('mail');
+			var image = document.getElementById("image").files[0];
+			var erreur = "Merci de bien vouloir : <br/>" ;
 			
-		if (_xy==undefined)
-		erreur = erreur + "- Définir un lieu<br/>";
+			
+			if (categorie.value=='none')
+			erreur = erreur + "- Choisir une catégorie<br/>";
+			
+			if (espece.value=='')
+			erreur = erreur + "- Remplir le champ espèce<br/>";
 		
-		if (erreur=="Merci de bien vouloir : <br/>")
-		{mviewer.customControls.obs_faune_flore.send_comment(text.value,_xy[0],_xy[1],date_observation.value,categorie.value,mail.value,newFile, nom.value, espece.value);}
-		else
-		{mviewer.alert(erreur,"alert-info");}
-		 },
- 
- Modifier la fonction sendcomment pour mise en cohérence avec le formulaire html :
- 
- send_comment: function (comment,coord_x,coord_y,date_observation,categorie,mail,image,nom,espece)
-		{
-		var xhr = mviewer.customControls.obs_faune_flore.getXMLHttpRequest();
+			if (date_observation.value=='')
+			erreur = erreur + "- Renseigner une date<br/>";
+			
+			// if (text.value=='')
+			// erreur = erreur + "- Remplir le champ commentaire<br/>";
 		
-		var scomment = encodeURIComponent(comment);
-		var coord_x = encodeURIComponent(coord_x);
-		var coord_y = encodeURIComponent(coord_y);
-		var date_observation = encodeURIComponent(date_observation);
-		var categorie = encodeURIComponent(categorie);
-		var mail = encodeURIComponent(mail);
-		var imagename = encodeURIComponent(image.name);
-		var nom = encodeURIComponent(nom);
-		var espece = encodeURIComponent(espece);
+			if (image != undefined)
+				{
+					var extension = image.name.split('.').pop();
+					extension = extension.toLowerCase();
 
-		
-		var formData = new FormData();
-		formData.append("image", image);
-		
-		xhr.open("POST", "/mviewer/apps/faune_flore/savecomment.php", true);
-		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		xhr.send("comment="+scomment+"&coord_x="+coord_x+"&coord_y="+coord_y+"&date_observation="+date_observation+"&categorie="+categorie+"&mail="+mail+"&imagename="+imagename+"&nom="+nom+"&espece="+espece);
-		
-		var xhr = mviewer.customControls.obs_faune_flore.getXMLHttpRequest();
-		xhr.open("POST", "/mviewer/apps/faune_flore/saveimage.php", true);
-		xhr.send(formData);
-		
-		mviewer.alert("Merci d'avoir participé "+nom,"alert-info");
-		document.getElementById("formu").reset();
-		document.getElementById('casearrive').style.display='none';
-		document.getElementById('casedepart').style.display='inline';
-		document.getElementById('preview').src='#';
+					var blob = image.slice(0,image.size, 'image/'+extension);
+
+					var date_saisie = new Date();
+					date_saisie = date_saisie.getTime();
+					//definir le nom avec la date en place de name
+					newFile= new File([blob], 'photo_'+date_saisie+'.'+extension, {type: 'image/'+extension});
+				}
 				
-		mviewer.customControls.obs_faune_flore.destroy();
-		
-		},
+			if (_xy==undefined)
+			erreur = erreur + "- Définir un lieu<br/>";
+			
+			if (erreur=="Merci de bien vouloir : <br/>")
+			{mviewer.customControls.obs_faune_flore.send_comment(text.value,_xy[0],_xy[1],date_observation.value,categorie.value,mail.value,newFile, nom.value, espece.value);}
+			else
+			{mviewer.alert(erreur,"alert-info");}
+			 },
+ 
+ #### Modifier la fonction sendcomment pour mise en cohérence avec le formulaire html :
+ 
+	 send_comment: function (comment,coord_x,coord_y,date_observation,categorie,mail,image,nom,espece)
+			{
+			var xhr = mviewer.customControls.obs_faune_flore.getXMLHttpRequest();
+			
+			var scomment = encodeURIComponent(comment);
+			var coord_x = encodeURIComponent(coord_x);
+			var coord_y = encodeURIComponent(coord_y);
+			var date_observation = encodeURIComponent(date_observation);
+			var categorie = encodeURIComponent(categorie);
+			var mail = encodeURIComponent(mail);
+			var imagename = encodeURIComponent(image.name);
+			var nom = encodeURIComponent(nom);
+			var espece = encodeURIComponent(espece);
+
+			
+			var formData = new FormData();
+			formData.append("image", image);
+			
+			xhr.open("POST", "/mviewer/apps/faune_flore/savecomment.php", true);
+			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			xhr.send("comment="+scomment+"&coord_x="+coord_x+"&coord_y="+coord_y+"&date_observation="+date_observation+"&categorie="+categorie+"&mail="+mail+"&imagename="+imagename+"&nom="+nom+"&espece="+espece);
+			
+			var xhr = mviewer.customControls.obs_faune_flore.getXMLHttpRequest();
+			xhr.open("POST", "/mviewer/apps/faune_flore/saveimage.php", true);
+			xhr.send(formData);
+			
+			mviewer.alert("Merci d'avoir participé "+nom,"alert-info");
+			document.getElementById("formu").reset();
+			document.getElementById('casearrive').style.display='none';
+			document.getElementById('casedepart').style.display='inline';
+			document.getElementById('preview').src='#';
+					
+			mviewer.customControls.obs_faune_flore.destroy();
+			
+			},
  
  #### Ne pas oublier de modifier le nom du custom control sur la première ligne
+ 
  #### Ne pas oublier de modifier le var_idlayer sur la cinquième ligne
  
  
+ Etape 5
+-----------
+ Renommer / paramétrer le javascript (customlayers/xxxx.js) pour mise en cohérence avec les fichiers modifiés précédemment.
  
+ 
+	 {
+	mviewer.customLayers.obs_faune_flore_demo = {};
+
+	mviewer.customLayers.obs_faune_flore_demo.layer = new ol.layer.Vector({
+		source: new ol.source.Vector()    
+	});
+	mviewer.customLayers.obs_faune_flore_demo.handle = false;
+	}
+
  
  
  

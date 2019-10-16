@@ -2,7 +2,7 @@ mviewer.customControls.obs_faune_flore_demo = (function() {
     /*
      * Private
      */
-    var _idlayer = 'obs_faune_flore';
+    var _idlayer = 'obs_faune_flore_demo';
 
     var _draw; // global so we can remove it later
 

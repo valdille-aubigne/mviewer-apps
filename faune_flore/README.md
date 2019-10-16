@@ -249,7 +249,7 @@ Etape 4
 		
 		},
  
- #### <span style='color:red'>Ne pas oublier de modifier le nom du custom control sur la première ligne</span>
+ #### :! Ne pas oublier de modifier le nom du custom control sur la première ligne
  
 		mviewer.customControls.obs_faune_flore_demo = (function() {
 

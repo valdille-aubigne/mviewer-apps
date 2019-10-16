@@ -25,7 +25,9 @@ Etape 2
 Renommer / paramétrer le fichier config.xml (ici faune_flore_demo.xml)
 
 ### Personnaliser l'entête d'applciation
- <application title="Inventaire participatif faunistique et floristique (demo)" showhelp="false" logo="./apps/logo-via.png" help="./apps/faune_flore_demo/mviewer_help_ff.html" exportpng="false" measuretools="true" togglealllayersfromtheme="true" style="css/themes/green.css"/>
+
+
+	<application title="Inventaire participatif faunistique et floristique (demo)" showhelp="false" logo="./apps/logo-via.png" help="./apps/faune_flore_demo/mviewer_help_ff.html" exportpng="false" measuretools="true" togglealllayersfromtheme="true" style="css/themes/green.css"/>
  
  ### Personnaliser la couche "participative"
   <layer id="obs_faune_flore_demo" name="Observations" visible="true" queryable="false"

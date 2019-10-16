@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-  <application title="Inventaire participatif faunistique et floristique (demo)" showhelp="false" logo="./apps/logo-via.png" help="./apps/faune_flore_demo/mviewer_help_ff.html" exportpng="false" measuretools="true" togglealllayersfromtheme="true" style="css/themes/green.css"/>
+  <application title="Inventaire participatif faunistique et floristique (demo)" showhelp="true" logo="./apps/logo-via.png" help="./apps/faune_flore_demo/mviewer_help_ff.html" exportpng="false" measuretools="true" togglealllayersfromtheme="true" style="css/themes/green.css"/>
 	<mapoptions projextent="-20037508.342789244, -20037508.342789244, 20037508.342789244, 20037508.342789244" zoom="12" center="-179742,6154000" projection="EPSG:3857" maxzoom="19"/>  
 	<baselayers style="gallery"><!-- style="default"||gallery" -->   
         <baselayer  
@@ -60,11 +60,11 @@
 	
 <themes mini="false">
 <theme name="observations"  collapsed="false" id="observations" icon="fas fa-binoculars">
-        <layer id="obs_faune_flore" name="Observations" visible="true" queryable="false"
+        <layer id="obs_faune_flore_demo" name="Observations" visible="true" queryable="false"
             type="customlayer" opacity="0.8" legendurl="img/blank.gif"
-            url="apps/faune_flore/customlayers/obs_faune_flore.js"
+            url="apps/faune_flore_demo/customlayers/obs_faune_flore_demo.js"
             customcontrol="true"
-			customcontrolpath="apps/faune_flore/customcontrols"
+			customcontrolpath="apps/faune_flore_demo/customcontrols"
             expanded="true"           
             attribution="Source: Val d'Ille-Aubigné"
             metadata=""

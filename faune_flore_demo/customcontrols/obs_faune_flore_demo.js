@@ -29,7 +29,7 @@ mviewer.customControls.obs_faune_flore_demo = (function() {
              zIndex: parseInt(10000 / data.time)
         });
         feature.setStyle(style);
-        mviewer.customLayers.obs_faune_flore.layer.getSource().addFeature(feature);
+        mviewer.customLayers.obs_faune_flore_demo.layer.getSource().addFeature(feature);
     };
 
     return {
@@ -111,14 +111,14 @@ mviewer.customControls.obs_faune_flore_demo = (function() {
 		erreur = erreur + "- Définir un lieu<br/>";
 		
 		if (erreur=="Merci de bien vouloir : <br/>")
-		{mviewer.customControls.obs_faune_flore.send_comment(text.value,_xy[0],_xy[1],date_observation.value,categorie.value,mail.value,newFile, nom.value, espece.value);}
+		{mviewer.customControls.obs_faune_flore_demo.send_comment(text.value,_xy[0],_xy[1],date_observation.value,categorie.value,mail.value,newFile, nom.value, espece.value);}
 		else
 		{mviewer.alert(erreur,"alert-info");}
 		 },
 
 		send_comment: function (comment,coord_x,coord_y,date_observation,categorie,mail,image,nom,espece)
 		{
-		var xhr = mviewer.customControls.obs_faune_flore.getXMLHttpRequest();
+		var xhr = mviewer.customControls.obs_faune_flore_demo.getXMLHttpRequest();
 		
 		var scomment = encodeURIComponent(comment);
 		var coord_x = encodeURIComponent(coord_x);
@@ -134,12 +134,12 @@ mviewer.customControls.obs_faune_flore_demo = (function() {
 		var formData = new FormData();
 		formData.append("image", image);
 		
-		xhr.open("POST", "/mviewer/apps/faune_flore/savecomment.php", true);
+		xhr.open("POST", "/mviewer/apps/faune_flore_demo/savecomment.php", true);
 		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 		xhr.send("comment="+scomment+"&coord_x="+coord_x+"&coord_y="+coord_y+"&date_observation="+date_observation+"&categorie="+categorie+"&mail="+mail+"&imagename="+imagename+"&nom="+nom+"&espece="+espece);
 		
-		var xhr = mviewer.customControls.obs_faune_flore.getXMLHttpRequest();
-		xhr.open("POST", "/mviewer/apps/faune_flore/saveimage.php", true);
+		var xhr = mviewer.customControls.obs_faune_flore_demo.getXMLHttpRequest();
+		xhr.open("POST", "/mviewer/apps/faune_flore_demo/saveimage.php", true);
 		xhr.send(formData);
 		
 		mviewer.alert("Merci d'avoir participé "+nom,"alert-info");
@@ -148,7 +148,7 @@ mviewer.customControls.obs_faune_flore_demo = (function() {
 		document.getElementById('casedepart').style.display='inline';
 		document.getElementById('preview').src='#';
 				
-		mviewer.customControls.obs_faune_flore.destroy();
+		mviewer.customControls.obs_faune_flore_demo.destroy();
 		
 		},
 		
@@ -202,7 +202,7 @@ mviewer.customControls.obs_faune_flore_demo = (function() {
             // mandatory - code executed when panel is closed
             _xy = null;
             mviewer.hideLocation();
-            mviewer.customLayers.obs_faune_flore.layer.getSource().clear();
+            mviewer.customLayers.obs_faune_flore_demo.layer.getSource().clear();
         },
 		
 		

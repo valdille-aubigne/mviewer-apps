@@ -37,18 +37,21 @@ Renommer / paramétrer le fichier config.xml (ici faune_flore_demo.xml)
 	style="css/themes/green.css"/>
  
  ### Personnaliser la couche "participative"
-  <layer id="obs_faune_flore_demo" name="Observations" visible="true" queryable="false"
-            type="customlayer" opacity="0.8" legendurl="img/blank.gif"
-            url="apps/faune_flore_demo/customlayers/obs_faune_flore_demo.js"
-            customcontrol="true"
-			customcontrolpath="apps/faune_flore_demo/customcontrols"
+ 
+ ####Notamment les champs id / url / customcontrolpath
+ 
+ 
+  <layer id="obs_faune_flore_demo" name="Observations" visible="true" queryable="false"  
+            type="customlayer" opacity="0.8" legendurl="img/blank.gif"  
+            url="apps/faune_flore_demo/customlayers/obs_faune_flore_demo.js"  
+            customcontrol="true"  
+			customcontrolpath="apps/faune_flore_demo/customcontrols"  
             expanded="true"           
-            attribution="Source: Val d'Ille-Aubigné"
-            metadata=""
-            metadata-csw="">
+            attribution="Source: Val d'Ille-Aubigné"  
+            metadata=""  
+            metadata-csw="">  
    </layer>
    
- Notamment les champs id / url / customcontrolpath
    
 Etape 3
 -----------

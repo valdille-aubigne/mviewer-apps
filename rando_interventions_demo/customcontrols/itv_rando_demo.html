@@ -1,0 +1,49 @@
+<form id="formu">
+
+	<div class="input-group date" data-provide="datepicker" data-date-end-date="0d" data-date-language="fr" data-date-format="dd/mm/yyyy" data-date-autoclose="true" data-date-today-btn="linked" data-date-today-highlight="true">
+		<input type="text" class="form-control" id="date_observation" placeholder="Date d'observation...">
+		<div class="input-group-addon">
+			<span class="glyphicon glyphicon-calendar"></span>
+		</div>
+	</div>
+	
+	<br/>
+	
+	<div class="form-group">
+			<textarea id="comment" class="form-control" rows="3" placeholder="Description..."></textarea>
+			
+	</div>
+	
+	<!-- </br> -->
+	<div class="form-group">
+		<input id="nom" class="form-control" placeholder="Votre nom..."></input>
+	</div>	
+	
+	<div class="form-group">
+		<input type="email" class="form-control" id="mail" placeholder="Votre mail (nom@example.fr)...">
+	</div>
+	
+   <div class="dropzone dz-clickable" id="depose" onclick="getElementById('image').click();">
+                <div id="casedepart" class="start">
+                    <div class="dz-default dz-message" >
+					<span id="filename" class="fas fa-cloud-upload-alt fa-3x"></span><p>Cliquer pour sélectionner un fichier...</p><br/>
+					</div>
+				</div>
+				<div id="casearrive" style="display:none">
+				<img class="img-responsive" id="preview" src="#" alt="monimage" style="visibility:collapse"/>
+				</div>
+				<input type="file" id="image" name="image" class="file-upload" style="visibility:collapse" onchange="mviewer.customControls.itv_rando_demo.getFileName();" accept="image/*">
+    </div>
+<br/>	
+</form>
+
+<div align="justify">
+ <button class="btn btn-default" onclick="mviewer.customControls.itv_rando_demo.getXY();">Lieu d'observation
+        <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+ </button>
+ 
+ <button class="btn btn-default" onclick="mviewer.customControls.itv_rando_demo.applyEvent();">Valider
+        <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+ </button>
+ 
+ </div>

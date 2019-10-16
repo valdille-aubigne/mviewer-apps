@@ -326,6 +326,7 @@ Paramétrer le fichier savecomment.php pour mise en cohérence avec les champs e
 
 		?>
 
+
  #### le nom du fichier csv où seront enregistrées les participations peut-être modifié dans la focntion fopen
  
 		$fd = fopen("observations.csv", "a");

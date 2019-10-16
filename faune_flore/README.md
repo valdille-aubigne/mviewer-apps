@@ -38,6 +38,7 @@ Renommer / paramétrer le fichier config.xml (ici faune_flore_demo.xml)
  
  ### Personnaliser la couche "participative"
  
+ 
  ####Notamment les champs id / url / customcontrolpath
  
  

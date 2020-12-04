@@ -1,7 +1,7 @@
 <?php // Connection à la base de données
 header("Content-Type: text/plain");
 try {
-		$dbconn=new PDO("pgsql:host=localhost;port=5432;dbname=xxxxxx","xxxxxx","xxxxxxxx") or die('Connexion impossible');
+		$dbconn=new PDO("pgsql:host=localhost;port=5432;dbname=xxxxxx","xxxxxx","xxxxxxxxxx") or die('Connexion impossible');
 		$dbconn->exec("SET CHARACTER SET utf8");
 		$dbconn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 // S'il existe un problème de connection, on obtient le message d'erreur

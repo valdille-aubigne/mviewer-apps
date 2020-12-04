@@ -1,0 +1,135 @@
+
+{{#features}}
+	<li class="item" style="width:238px;">
+		<h3 class="title-feature">Haie bocagère</h3>
+
+		<p class="text-feature">
+			{{#long_sig}}<span style="font-family:'roboto_bold'"> Longueur :</span> {{long_sig}} m<br/>{{/long_sig}}
+			{{#couvert}}<span style="font-family:'roboto_bold'"> Couvert : </span><span id="couvert"></span><br/>{{/couvert}}
+			{{#qualite}}<span style="font-family:'roboto_bold'"> Qualité topologique : </span> <span id="qualite"></span><br/>{{/qualite}}
+			{{#bord_ref}}<span style="font-family:'roboto_bold'"> Bordure référence :</span> <span id="bord_ref"></span><br/>{{/bord_ref}}
+			{{#interface}}<span style="font-family:'roboto_bold'"> Interface :</span> <span id="interface"></span><br/>{{/interface}}
+			{{#ori_pente}}<span style="font-family:'roboto_bold'"> Orientation pente :</span> <span id="ori_pente"></span><br/>{{/ori_pente}}
+			{{#pos_topo}}<span style="font-family:'roboto_bold'"> Position topo :</span> </span> <span id="pos_topo"></span><br/>{{/pos_topo}}
+			{{#connexion}}<span style="font-family:'roboto_bold'"> Connexion :</span> {{connexion}}<br/>{{/connexion}}
+			</br>
+		</p>
+	</li>
+{{/features}}
+
+<style>
+	.title-feature {
+		color: #032e46;
+		font-family:"roboto_bold";
+		font-size:23px;
+		margin-bottom:1%;
+		line-height:1;
+	}
+	.subtitle-feature {
+		color: #032e46;
+		font-family:"roboto_bold";
+		font-size:18px;
+		margin-top:7%;
+		line-height:1;
+	}
+	.text-feature{
+		font-family:"roboto_regular";
+		color:#555;
+		font-size:13px;
+		margin-top:10%;
+	}
+	.info.N {
+   		background-image: url(http://kartenn.region-bretagne.fr/doc/transports/icons/non_1.png);
+   		background-size: 16px;
+    	background-repeat: no-repeat;
+   	    background-position-x: 0px;
+   	    margin-bottom:3px;
+	}
+	.info.O {
+   		background-image: url(http://kartenn.region-bretagne.fr/doc/transports/icons/oui.png);
+   		background-size: 16px;
+    	background-repeat: no-repeat;
+   	    background-position-x: 0px;
+   	    margin-bottom:3px;
+	}
+</style>
+
+<script>
+
+	var couvert=[];
+	{{#features}}
+		couvert.push('{{couvert}}');
+	{{/features}}
+	couvert=couvert.toString();
+	if (couvert == '0') {couvert = 'Nu' ;}
+	if (couvert == '1') {couvert = 'Epars' ;}
+	if (couvert == '2') {couvert = 'Discontinu' ;}
+	if (couvert == '3') {couvert = 'Continu' ;}
+	document.getElementById("couvert").innerHTML = couvert;
+
+	var qualite=[];
+	{{#features}}
+		qualite.push('{{qualite}}');
+	{{/features}}
+	qualite=qualite.toString();
+	if (qualite == 'O') {qualite = 'Oui' ;}
+	if (qualite == 'N') {qualite = 'Non' ;}
+	document.getElementById("qualite").innerHTML = qualite;
+
+	var bord_ref=[];
+	{{#features}}
+		bord_ref.push('{{bord_ref}}');
+	{{/features}}
+	bord_ref=bord_ref.toString();
+	if (bord_ref == 'BBA') {bord_ref = 'Bord de bâti' ;}
+	if (bord_ref == 'BBO') {bord_ref = 'Bord de bois' ;}
+	if (bord_ref == 'BEAU') {bord_ref = 'Bord d\'eau' ;}
+	if (bord_ref == 'BL') {bord_ref = 'Bord de lande' ;}
+	if (bord_ref == 'BP') {bord_ref = 'Bord de parcelle culturale' ;}
+	if (bord_ref == 'BV') {bord_ref = 'Bord de voirie indifférenciée' ;}
+	if (bord_ref == 'BVC') {bord_ref = 'Bord de chemin' ;}
+	if (bord_ref == 'BVR') {bord_ref = 'Bord de route' ;}
+	document.getElementById("bord_ref").innerHTML = bord_ref;
+	
+	var interfaces=[];
+	{{#features}}
+		interfaces.push('{{interface}}');
+	{{/features}}
+	interfaces=interfaces.toString();
+	if (interfaces == 'BBA') {interfaces = 'Bord de bâti' ;}
+	if (interfaces == 'BBO') {interfaces = 'Bord de bois' ;}
+	if (interfaces == 'BEAU') {interfaces = 'Bord d\'eau' ;}
+	if (interfaces == 'BL') {interfaces = 'Bord de lande' ;}
+	if (interfaces == 'BP') {interfaces = 'Bord de parcelle culturale' ;}
+	if (interfaces == 'BPI') {interfaces = 'Bord de parcelle culturale (intra-parcellaire)' ;}
+	if (interfaces == 'BV') {interfaces = 'Bord de voirie indifférenciée' ;}
+	if (interfaces == 'BVC') {interfaces = 'Bord de chemin' ;}
+	if (interfaces == 'BVR') {interfaces = 'Bord de route' ;}
+	document.getElementById("interface").innerHTML = interfaces;
+	
+	var ori_pente=[];
+	{{#features}}
+		ori_pente.push('{{ori_pente}}');
+	{{/features}}
+	ori_pente=ori_pente.toString();
+	if (ori_pente == 'OB') {ori_pente = 'Oblique' ;}
+	if (ori_pente == 'PAR') {ori_pente = 'Parallèle' ;}
+	if (ori_pente == 'PER') {ori_pente = 'Perpendiculaire' ;}
+	if (ori_pente == 'SO') {ori_pente = 'Sans objet' ;}
+	document.getElementById("ori_pente").innerHTML = ori_pente;
+	
+	var pos_topo=[];
+	{{#features}}
+		pos_topo.push('{{pos_topo}}');
+	{{/features}}
+	pos_topo=pos_topo.toString();
+	if (pos_topo == 'CEI') {pos_topo = 'Ceinture (entre versant et vallon)' ;}
+	if (pos_topo == 'CRE') {pos_topo = 'Crête' ;}
+	if (pos_topo == 'EPA') {pos_topo = 'Epaulement entre plateau et versant' ;}
+	if (pos_topo == 'PLA') {pos_topo = 'Plateau ou absence de pente' ;}
+	if (pos_topo == 'VAL') {pos_topo = 'Vallée ou vallon ou talweg' ;}
+	if (pos_topo == 'VER') {pos_topo = 'Versant' ;}
+	document.getElementById("pos_topo").innerHTML = pos_topo;
+
+</script>
+

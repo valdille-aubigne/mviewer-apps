@@ -1,0 +1,269 @@
+{{#features}}
+
+	<div class="title-feature" style="padding-top:8px;">{{nom}}</div>
+	
+		<div class = "item active" style="margin-top:-2%;">
+			<div class="container" style="padding-left:0!important;margin-left:0!important;margin-bottom:10%;overflow:hidden;">
+				<div class="row">			
+					<div class="col-xs-2" style="padding-right:0px; padding-left:5px; margin-top:3%;">
+						<img class="img-responsive" src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/red_house_2.svg" style="max-width:50%;margin: 0 auto;">
+						<div class="number" style="margin-top:5%;text-align:center;">{{nb_log_vacant}}</div>
+						<div class="title-number" style="text-align:center;">
+							<p>logements vacants</p>
+						</div>
+					</div>
+					<div class="col-xs-4" style="margin-left:3%;">
+						<canvas id="ChartTypoLogVac1"></canvas>
+						<div style="margin-top:10px; text-align:center">
+							<p><b>Répartition selon la durée de la vacance</b></p>
+						</div> 
+					</div>
+					<div class="col-xs-4" style="margin-left:-3%;">
+						<canvas id="ChartTypoLogVac2"></canvas>
+						<div style="margin-top:10px; text-align:center">
+							<p><b>Répartition selon le type de logement</b></p>
+						</div>
+					</div>
+					<!-- CHIFFRES CLES TYPE LOG VAC -->
+					<div class="col-xs-2" style="padding-right:0px; padding-left:5px; ">
+						<img class="img-responsive" src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/mailing.svg" style="margin: 0 auto;">
+						<div class="number" style="margin-top:5%;text-align:center;">{{nb_log_3ans_horspaf}}</div>
+						<div style="text-align:center">
+							<p><b>logements vacants depuis plus de 3 ans et hors secteur d'action foncière ont fait l'objet d'une campagne de communication</b></p>
+						</div>
+					</div>
+				</div>
+				<div class="row">	
+					<div class="title-number" style="text-align:justify; padding-left:30px;">
+							<p><i style="font-size:10px; text-align:center; font-family:'roboto_regular'; color:#777;">{{nom}} - {{annee}} - Source : DGFiP</i></p>
+						</div>
+				</div>
+			</div>
+		</div>
+	
+{{/features}}
+
+<style>
+	<!-- body, html { -->
+		  <!-- margin:0px; -->
+		  <!-- position:relative; -->
+		  <!-- line-height: 1 !important; -->
+		  <!-- font-family:'Open Sans'; -->
+		  <!-- font-size:11px; -->
+		  <!-- text-align: center; -->
+		  <!-- color: #797979; -->
+		<!-- }  -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_black"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Black.ttf'); -->
+		<!-- } -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_bold"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Bold.ttf'); -->
+		<!-- } -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_regular"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Regular.ttf'); -->
+		<!-- } 		 -->
+	.title-feature {
+		color: #2d4059;
+		font-family:"roboto_black";
+		font-size:23px;
+		text-align: left;
+		margin-bottom:3%;
+		line-height:1;			
+	}
+	<!-- .indicateurTypLog {			 -->
+		<!-- text-align: center; -->
+	<!-- } -->
+	<!-- .panel-graph { -->
+	    <!-- color: #3db39e; -->
+	    <!-- text-align: center; -->
+	<!-- } -->
+
+	.container_viz{
+			padding-left:0!important;
+			margin-left:0!important;
+			overflow: hidden;
+			margin-top: 1%;
+		}
+	.number{
+			font-family: "roboto_black";
+			font-size:35px;
+			color: #fdc121;
+			/*margin-top: 5px;*/
+		}
+	.title-number{
+			font-family: "roboto_bold";
+			font-size:12px;
+			color: #fdc121;
+			/*margin-top:0%;*/
+		}
+</style>
+
+<script>
+	//Récupération des attributs
+	var nom_com=[];
+	{{#features}}
+		nom_com.push('{{nom}}');
+	{{/features}}
+	
+	var nb_log_vacant_0=[];
+	{{#features}}
+		nb_log_vacant_0.push('{{nb_log_vacant_0}}');
+	{{/features}}
+	
+	var nb_log_vacant_1=[];
+	{{#features}}
+		nb_log_vacant_1.push('{{nb_log_vacant_1}}');
+	{{/features}}
+	
+	var nb_log_vacant_2=[];
+	{{#features}}
+		nb_log_vacant_2.push('{{nb_log_vacant_2}}');
+	{{/features}}
+	
+	var nb_log_vacant_3_5=[];
+	{{#features}}
+		nb_log_vacant_3_5.push('{{nb_log_vacant_3_5}}');
+	{{/features}}
+	
+	var nb_log_vacant_6_10=[];
+	{{#features}}
+		nb_log_vacant_6_10.push('{{nb_log_vacant_6_10}}');
+	{{/features}}
+	
+	var nb_log_vacant_10=[];
+	{{#features}}
+		nb_log_vacant_10.push('{{nb_log_vacant_10}}');
+	{{/features}}
+	
+	var nb_log_vacant_maison=[];
+	{{#features}}
+		nb_log_vacant_maison.push('{{nb_log_vacant_maison}}');
+	{{/features}}
+	
+	var nb_log_vacant_appart=[];
+	{{#features}}
+		nb_log_vacant_appart.push('{{nb_log_vacant_appart}}');
+	{{/features}}
+	
+	
+	
+	var indicateurTypLogVac_a = {};
+	indicateurTypLogVac_a.getData = function() {
+		var data = {ChartTypoLogVac1: {labels:["- 1 an", "1 an", "2 ans", "3 à 5 ans", "5 à 10 ans", "+ 10 ans"], data: {datasets: [[nb_log_vacant_0,nb_log_vacant_1,nb_log_vacant_2,nb_log_vacant_3_5,nb_log_vacant_6_10,nb_log_vacant_10]]}}};
+		indicateurTypLogVac_a.drawChart(data);
+	};
+	
+	var indicateurTypLogVac_b = {};
+	indicateurTypLogVac_b.getData = function() {
+		var data = {ChartTypoLogVac2: {labels:["maison", "appartement"], data: {datasets: [[nb_log_vacant_maison,nb_log_vacant_appart]]}}};
+		indicateurTypLogVac_b.drawChart(data);
+	};
+	
+	
+		
+	indicateurTypLogVac_a.drawChart = function (data) {
+			var ctx1 = document.getElementById("ChartTypoLogVac1");
+			var maxscale = Math.max.apply(this, data.ChartTypoLogVac1.data.datasets[0]) / 5;
+			maxscale = Math.trunc(maxscale) * 5;
+			ctx1.getContext("2d").canvas.width = 100;
+			ctx1.getContext("2d").canvas.height = 55;
+			var ChartTypoLog1 = new Chart(ctx1, {
+			type: 'bar',
+			data: {
+				labels: data.ChartTypoLogVac1.labels,
+				datasets: [{
+							label: nom_com,
+							backgroundColor: "rgba(255,212,96,0.9)",
+							borderColor: "rgba(255,212,96,0.9)",
+							borderWidth: 1,
+							borderSkipped:'left',
+							hoverBackgroundColor: "rgba(255,212,96,1)",
+							hoverBorderColor: "rgba(255,212,96,1)",
+							data: data.ChartTypoLogVac1.data.datasets[0]
+							}]
+			},
+			 options: {
+				legend: {
+					display: false,
+				},
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true,
+							max: maxscale + 5
+						}
+					}]
+				},
+				tooltips: {					
+					titleFontFamily:"roboto_bold",
+					titleFontSize:13,
+					bodyFontFamily:"roboto_regular",
+					backgroundColor:"rgba(36, 36, 36, 0.85)",
+					callbacks: {
+						label: function(tooltipItem, data) {
+							return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() ;
+
+						}
+					}
+		        }
+			}
+			});  
+	};
+	
+	indicateurTypLogVac_b.drawChart = function (data) {
+			var ctx2 = document.getElementById("ChartTypoLogVac2");
+			ctx2.getContext("2d").canvas.width = 100;
+			ctx2.getContext("2d").canvas.height = 55;			
+			var ChartTypoLog2 = new Chart(ctx2, {
+			type: 'doughnut',
+			data: {
+				labels: data.ChartTypoLogVac2.labels,
+				datasets: [{
+							label: "Part selon le type",
+							backgroundColor: [
+								"rgba(245,187,0,0.9)",
+								"rgba(187,52,47,0.9)"
+							],
+							borderWidth: 3,
+							borderSkipped:'left',
+							hoverBackgroundColor: [
+								"rgba(245,187,0,1)",
+								"rgba(187,52,47,1)"
+							],
+							data: data.ChartTypoLogVac2.data.datasets[0]
+							}]
+			},
+			 options: {
+				tooltips: {					
+					titleFontFamily:"roboto_bold",
+					titleFontSize:13,
+					bodyFontFamily:"roboto_regular",
+					backgroundColor:"rgba(36, 36, 36, 0.85)",
+					callbacks: {
+						label: function(tooltipItem, data) {
+							return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() ;
+						}
+					}
+		        }
+			}
+			});  
+	};
+	
+
+	
+	 if  (typeof Chart === 'function') {
+            indicateurTypLogVac_a.getData();
+			indicateurTypLogVac_b.getData();
+			
+    } else {
+            $.get('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js', function() {
+				indicateurTypLogVac_a.getData();
+				indicateurTypLogVac_b.getData();
+				
+            });
+	}
+	
+</script>

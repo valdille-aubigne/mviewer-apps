@@ -1,0 +1,455 @@
+{{#features}}
+<div id="CarouselMenages" class="carousel slide" data-ride="carousel" data-interval="false">
+	
+	<div class="title-feature" style="padding-top:8px;">{{nom}}</div>
+	
+	<div class="carousel-inner" style="margin-top:-2%;">
+		<div class = "item active">
+			<div class="container" style="padding-left:0!important;margin-left:0!important;margin-bottom:10%;overflow:hidden;">
+				<div class="row">			
+					<div class="col-xs-2" style="padding-right:0px; padding-left:5px; margin-top:3%;">
+						<img class="img-responsive" src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/menage.svg" style="max-width:75%;margin: 0 auto;">
+						<div class="number" style="margin-top:5%;text-align:center;">{{men}}</div>
+						<div class="title-number" style="text-align:center;">
+							<p>Ménages</p>
+						</div>
+					</div>
+					<div class="col-xs-4" style="margin-left:3%;">
+						<canvas id="ChartTypoMen1"></canvas>
+						<div style="margin-top:10px; text-align:center">
+							<p><b>Composition des ménages</b></p>
+						</div> 
+					</div>
+					<!-- CHIFFRES CLES TYPE LOG -->
+					<div class="col-xs-4" style="padding-right:0px; margin-left:5%;">
+						<div class="row">
+							<div class="col-xs-2" style="padding-right:0px;">
+								<img src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/menage_jaune.svg" style="width:80px; margin-top:30%; margin-left:-45%;">
+							</div>
+							<div class="col-xs-8" style="padding-right:0px; margin-left:5%;margin-top:10%;">	
+								<div class="number" style="text-align:left; color:#F5C117;font-size:24px;">
+									{{pmen}}
+								</div>
+								<div class="title-number" style="text-align: left;color:#F5C117;">
+									<p>Population des ménages</br></p>
+								</div>	
+							</div>	
+						</div>
+						<div class="row">
+							<div class="col-xs-2" style="padding-right:0px;">
+								<img src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/menage_rouge.svg" style="width:100px; margin-top:80%; margin-left:-60%;">
+							</div>
+							<div class="col-xs-8" style="padding-right:0px; margin-left:5%;margin-top:10%;">	
+								<div class="number" style="text-align:left; color:#BB342F;font-size:24px;">
+									{{pparmen}}
+								</div>
+								<div class="title-number" style="text-align:left; color:#BB342F;">
+									<p>Personnes par ménage</br></p>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">	
+					<div class="title-number" style="text-align:left; padding-left:30px;">
+							<p><i style="font-size:10px; text-align:center; font-family:'roboto_regular'; color:#777;">{{nom}} - {{annee}} - Source : INSEE</i></p>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class = "item">
+			<div class="container" style="padding-left:0!important;margin-left:0!important;margin-bottom:10%;overflow:hidden;">
+				<div class="row">			
+					<div class="col-xs-2" style="padding-right:0px; padding-left:5px; margin-top:3%;">
+						<img class="img-responsive" src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/menage.svg" style="max-width:75%;margin: 0 auto;">
+						<div class="number" style="margin-top:5%;text-align:center;">{{men}}</div>
+						<div class="title-number" style="text-align:center;">
+							<p>Ménages</p>
+						</div>
+					</div>
+					<div class="col-xs-4" style="margin-left:3%;">
+						<canvas id="ChartTypoMen2"></canvas>
+						<div style="margin-top:10px; text-align:center">
+							<p class="title2" style="font-size:11px; margin:0px; margin-top:-8px; "><i>A {{nom}} en {{annee}}</i></br></p></br>
+						</div> 
+					</div>
+					<div class="col-xs-4" style="margin-left:3%;">
+						<canvas id="ChartTypoMen3"></canvas>
+						<div style="margin-top:10px; text-align:center">
+							<p><b>Catégories socio-professionelles</b></p>
+						</div> 
+					</div>
+				</div>
+				<div class="row">	
+					<div class="title-number" style="text-align:left; padding-left:30px;">
+							<p><i style="font-size:10px; text-align:center; font-family:'roboto_regular'; color:#777;">{{nom}} - {{annee}} - Source : INSEE</i></p>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Contrôles gauche droite -->
+	<a class="left carousel-control" href="#CarouselMenages" style="margin-left:-7%;margin-bottom:10%;" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" ></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#CarouselMenages" style="margin-right:25%;margin-bottom:10%;" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+		<span class="sr-only">Next</span>
+	</a>
+</div>			
+{{/features}}
+
+<style>
+	<!-- body, html { -->
+		  <!-- margin:0px; -->
+		  <!-- position:relative; -->
+		  <!-- line-height: 1 !important; -->
+		  <!-- font-family:'Open Sans'; -->
+		  <!-- font-size:11px; -->
+		  <!-- text-align: center; -->
+		  <!-- color: #797979; -->
+		<!-- }  -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_black"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Black.ttf'); -->
+		<!-- } -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_bold"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Bold.ttf'); -->
+		<!-- } -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_regular"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Regular.ttf'); -->
+		<!-- } 		 -->
+	.title-feature {
+		color: #2d4059;
+		font-family:"roboto_black";
+		font-size:23px;
+		text-align: left;
+		margin-bottom:3%;
+		line-height:1;			
+	}
+	<!-- .indicateurTypLog {			 -->
+		<!-- text-align: center; -->
+	<!-- } -->
+	<!-- .panel-graph { -->
+	    <!-- color: #3db39e; -->
+	    <!-- text-align: center; -->
+	<!-- } -->
+
+	.container_viz{
+			padding-left:0!important;
+			margin-left:0!important;
+			overflow: hidden;
+			margin-top: 1%;
+		}
+	.number{
+			font-family: "roboto_black";
+			font-size:35px;
+			color: #fdc121;
+			/*margin-top: 5px;*/
+		}
+	.title-number{
+			font-family: "roboto_bold";
+			font-size:12px;
+			color: #fdc121;
+			/*margin-top:0%;*/
+		}
+</style>
+
+<script>
+	//Récupération des attributs
+	var nom_com=[];
+	{{#features}}
+		nom_com.push('{{nom}}');
+	{{/features}}
+	
+	var tx_menpseul=[];
+	{{#features}}
+		tx_menpseul.push('{{tx_menpseul}}');
+	{{/features}}
+	
+	var tx_mencoupsenf=[];
+	{{#features}}
+		tx_mencoupsenf.push('{{tx_mencoupsenf}}');
+	{{/features}}
+	
+	var tx_mencoupaenf=[];
+	{{#features}}
+		tx_mencoupaenf.push('{{tx_mencoupaenf}}');
+	{{/features}}
+	
+	var tx_menfammono=[];
+	{{#features}}
+		tx_menfammono.push('{{tx_menfammono}}');
+	{{/features}}
+	
+	var tx_mensfam=[];
+	{{#features}}
+		tx_mensfam.push('{{tx_mensfam}}');
+	{{/features}}
+	
+	var tx_pop15m=[];
+	{{#features}}
+		tx_pop15m.push('{{tx_pop15m}}');
+	{{/features}}	
+	
+	var tx_pop1519=[];
+	{{#features}}
+		tx_pop1519.push('{{tx_pop1519}}');
+	{{/features}}	
+	
+	var tx_pop2024=[];
+	{{#features}}
+		tx_pop2024.push('{{tx_pop2024}}');
+	{{/features}}	
+	
+	var tx_pop2539=[];
+	{{#features}}
+		tx_pop2539.push('{{tx_pop2539}}');
+	{{/features}}	
+	
+	var tx_pop4054=[];
+	{{#features}}
+		tx_pop4054.push('{{tx_pop4054}}');
+	{{/features}}	
+	
+	var tx_pop5564=[];
+	{{#features}}
+		tx_pop5564.push('{{tx_pop5564}}');
+	{{/features}}	
+	
+	var tx_pop6579=[];
+	{{#features}}
+		tx_pop6579.push('{{tx_pop6579}}');
+	{{/features}}	
+	
+	var tx_pop80p=[];
+	{{#features}}
+		tx_pop80p.push('{{tx_pop80p}}');
+	{{/features}}	
+	
+	var tx_men_cs1=[];
+	{{#features}}
+		tx_men_cs1.push('{{tx_men_cs1}}');
+	{{/features}}	
+	
+	var tx_men_cs2=[];
+	{{#features}}
+		tx_men_cs2.push('{{tx_men_cs2}}');
+	{{/features}}	
+	
+	var tx_men_cs3=[];
+	{{#features}}
+		tx_men_cs3.push('{{tx_men_cs3}}');
+	{{/features}}	
+	
+	var tx_men_cs4=[];
+	{{#features}}
+		tx_men_cs4.push('{{tx_men_cs4}}');
+	{{/features}}	
+	
+	var tx_men_cs5=[];
+	{{#features}}
+		tx_men_cs5.push('{{tx_men_cs5}}');
+	{{/features}}	
+	
+	var tx_men_cs6=[];
+	{{#features}}
+		tx_men_cs6.push('{{tx_men_cs6}}');
+	{{/features}}	
+	
+	var tx_men_cs7=[];
+	{{#features}}
+		tx_men_cs7.push('{{tx_men_cs7}}');
+	{{/features}}	
+	
+	var tx_men_cs8=[];
+	{{#features}}
+		tx_men_cs8.push('{{tx_men_cs8}}');
+	{{/features}}	
+	
+	var indicateurTypMen_a = {};
+	indicateurTypMen_a.getData = function() {
+		var data = {ChartTypoMen1: {labels:["Personne seule", "Couple sans enfant", "Couple avec enfant", "Famille monoparentale", "Autre sans famille" ], data: {datasets: [[tx_menpseul,tx_mencoupsenf,tx_mencoupaenf,tx_menfammono,tx_mensfam]]}}};
+		indicateurTypMen_a.drawChart(data);
+	};
+	
+	var indicateurTypMen_b = {};
+	indicateurTypMen_b.getData = function() {
+		var data = {ChartTypoMen2: {labels:["- de 15", "15-19", "20-24", "25- 9", "40-54", "55-64", "65-79 ", "+ de 80"], data: {datasets: [[tx_pop15m,tx_pop1519,tx_pop2024,tx_pop2539,tx_pop4054,tx_pop5564,tx_pop6579,tx_pop80p]]}}};
+		indicateurTypMen_b.drawChart(data);
+	};
+	
+	var indicateurTypMen_c = {};
+	indicateurTypMen_c.getData = function() {
+		var data = {ChartTypoMen3: {labels:["Agriculteur", "Artisan, Commerçant","Cadre", "Profession intermédiaire", "Employé", "Ouvrier", "Retraité", "Sans activité"], data: {datasets: [[tx_men_cs1,tx_men_cs2,tx_men_cs3,tx_men_cs4,tx_men_cs5,tx_men_cs6,tx_men_cs7,tx_men_cs8]]}}};
+		indicateurTypMen_c.drawChart(data);
+	};
+	
+		
+	indicateurTypMen_a.drawChart = function (data) {
+			var ctx1 = document.getElementById("ChartTypoMen1");
+			var maxscale = Math.max.apply(this, data.ChartTypoMen1.data.datasets[0]) / 5;
+			maxscale = Math.trunc(maxscale) * 5;
+			ctx1.getContext("2d").canvas.width = 100;
+			ctx1.getContext("2d").canvas.height = 55;
+			var ChartTypoMen1 = new Chart(ctx1, {
+			type: 'doughnut',
+			data: {
+				labels: data.ChartTypoMen1.labels,
+				datasets: [{
+							label: "Part selon le type",
+							backgroundColor: [
+								"rgba(249,212,35,0.9)",
+								"rgba(251,185,44,0.9)",
+								"rgba(252,159,53,0.9)",
+								"rgba(253,132,62,0.9)",
+								"rgba(254,105,71,0.9)"
+							],
+							borderWidth: 3,
+							borderSkipped:'left',
+							hoverBackgroundColor: [
+								"rgba(249,212,35,1)",
+								"rgba(251,185,44,1)",
+								"rgba(252,159,53,1)",
+								"rgba(253,132,62,1)",
+								"rgba(254,105,71,1)"								
+							],
+							data: data.ChartTypoMen1.data.datasets[0]
+							}]
+			},
+			  options: {
+				legend: {
+					position: 'right',
+				},
+				tooltips: {					
+					titleFontFamily:"roboto_bold",
+					titleFontSize:13,
+					bodyFontFamily:"roboto_regular",
+					backgroundColor:"rgba(36, 36, 36, 0.85)",
+					callbacks: {
+						label: function(tooltipItem, data) {
+							return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() + "%";
+
+						}
+					}
+		        }
+			}
+			});  
+	};
+	
+	indicateurTypMen_b.drawChart = function (data) {
+			var ctx2 = document.getElementById("ChartTypoMen2");
+			var maxscale = Math.max.apply(this, data.ChartTypoMen2.data.datasets[0]) / 5;
+			maxscale = Math.trunc(maxscale) * 5;
+			ctx2.getContext("2d").canvas.width = 100;
+			ctx2.getContext("2d").canvas.height = 55;			
+			var ChartTypoMen2 = new Chart(ctx2, {
+			type: 'bar',
+			data: {
+				labels: data.ChartTypoMen2.labels,
+				datasets: [{
+							label: nom_com,
+							backgroundColor: "rgba(255,212,96,0.9)",
+							borderColor: "rgba(255,212,96,0.9)",
+							borderWidth: 1,
+							borderSkipped:'left',
+							hoverBackgroundColor: "rgba(255,212,96,1)",
+							hoverBorderColor: "rgba(255,212,96,1)",
+							data: data.ChartTypoMen2.data.datasets[0]
+							}]
+			},
+			 options: {
+				legend: {
+					display: false,
+				},
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true,
+							max: maxscale + 5
+						}
+					}]
+				},
+				tooltips: {					
+					titleFontFamily:"roboto_bold",
+					titleFontSize:13,
+					bodyFontFamily:"roboto_regular",
+					backgroundColor:"rgba(36, 36, 36, 0.85)",
+					callbacks: {
+						label: function(tooltipItem, data) {
+							return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() + "%";
+
+						}
+					}
+		        }
+			}
+			});  
+	};
+	
+	indicateurTypMen_c.drawChart = function (data) {
+			var ctx3 = document.getElementById("ChartTypoMen3");
+			var maxscale = Math.max.apply(this, data.ChartTypoMen3.data.datasets[0]) / 5;
+			maxscale = Math.trunc(maxscale) * 5;
+			ctx3.getContext("2d").canvas.width = 100;
+			ctx3.getContext("2d").canvas.height = 55;			
+			var ChartTypoMen3 = new Chart(ctx3, {
+			type: 'horizontalBar',
+			data: {
+				labels: data.ChartTypoMen3.labels,
+				datasets: [{
+							label: nom_com,
+							backgroundColor: "rgba(255,212,96,0.9)",
+							borderColor: "rgba(255,212,96,0.9)",
+							borderWidth: 1,
+							borderSkipped:'left',
+							hoverBackgroundColor: "rgba(255,212,96,1)",
+							hoverBorderColor: "rgba(255,212,96,1)",
+							data: data.ChartTypoMen3.data.datasets[0]
+							}]
+			},
+			 options: {
+				legend: {
+					display: false,
+				},
+				scales: {
+					xAxes: [{
+						ticks: {
+							beginAtZero: true,
+							max: maxscale + 5
+						}
+					}]
+				},
+				tooltips: {					
+					titleFontFamily:"roboto_bold",
+					titleFontSize:13,
+					bodyFontFamily:"roboto_regular",
+					backgroundColor:"rgba(36, 36, 36, 0.85)",
+					callbacks: {
+						label: function(tooltipItem, data) {
+							return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() + "%";
+
+						}
+					}
+		        }
+			}
+			});  
+	};
+	
+	 if  (typeof Chart === 'function') {
+            indicateurTypMen_a.getData();
+			indicateurTypMen_b.getData();
+			indicateurTypMen_c.getData();
+			
+    } else {
+            $.get('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js', function() {
+				indicateurTypMen_a.getData();
+				indicateurTypMen_b.getData();
+				indicateurTypMen_c.getData();
+				
+            });
+	}
+	
+</script>

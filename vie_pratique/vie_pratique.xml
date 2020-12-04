@@ -1,75 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
     <application title="Val d'Ille - Aubigné" logo="./apps/logo-via.png" help="mviewer_help.html" panelfooterimage="img/panel-footer.png" panelfooterheight="80px" legend="false" exportpng="false" measuretools="true" legendasimage="false" popup="false" print="false" style="css/themes/wet_asphalt.css"/>
-	<mapoptions zoom="12" center="-179742,6154000" projection="EPSG:3857" maxzoom="19"/>  
-		
-	<baselayers style="gallery"><!-- style="default"||gallery" -->   
-        <baselayer  type="WMS" id="photo1" label="Photo aérienne" title="Ortho Géobretagne" thumbgallery="img/basemap/ortho.jpg" url="http://tile.geobretagne.fr/gwc02/service/wms" layers="satellite" format="image/jpeg" visible="false" attribution="partenaires GéoBretagne - IGN RGE BD ORTHO - PlanetObserver"/>
-		<baselayer  type="OSM" id="osm2" label="Plan" title="Thunderforest Neighbourhood" thumbgallery="img/basemap/mapquest.png" 
-			url="https://tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=1de58fc34e9443279668517b06a35dc1" 
-			attribution="© Thunderforest. Données : les contributeurs d'&lt;a href='http://www.openstreetmap.org/' target='_blank'>OpenStreetMap &lt;/a>,  &lt;a href='http://www.openstreetmap.org/copyright' target='_blank'>ODbL &lt;/a>" visible="false"/>
-		<baselayer  type="OSM" id="positron" label="Plan clair" title="CartoDb" thumbgallery="img/basemap/positron.png" 
-			url="http://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" maxzoom="20" 
-			visible="true" attribution="Map tiles by  &lt;a href='http://cartodb.com/attributions'>CartoDb &lt;/a>, under  &lt;a href='http://creativecommons.org/licenses/by/3.0/'>CC BY 3.0 &lt;/a>" />      
-    </baselayers> 
+	<mapoptions zoom="12" center="-179742,6154000" projection="EPSG:3857" maxzoom="19"/>
+
+  <baselayers style="gallery">
+        <baselayer
+      type="WMS"
+      id="photo1"
+      label="Photo aérienne"
+      title="Ortho Géobretagne"
+      thumbgallery="img/basemap/ortho.jpg"
+      url="https://tile.geobretagne.fr/gwc02/service/wms"
+      layers="satellite"
+      format="image/jpeg"
+      visible="false"
+      attribution="partenaires GéoBretagne - IGN RGE BD ORTHO - PlanetObserver"
+    />
+    <baselayer
+      type="OSM"
+      id="osm2"
+      label="Plan"
+      title="Thunderforest Neighbourhood"
+      thumbgallery="img/basemap/mapquest.png"
+      url="https://tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=1de58fc34e9443279668517b06a35dc1"
+      attribution="© Thunderforest. Données : les contributeurs d'&lt;a href='http://www.openstreetmap.org/' target='_blank'>OpenStreetMap &lt;/a>,  &lt;a href='http://www.openstreetmap.org/copyright' target='_blank'>ODbL &lt;/a>"
+      visible="false"
+    />
+    <baselayer
+      type="OSM"
+      id="positron"
+      label="Plan clair"
+      title="CartoDb"
+      thumbgallery="img/basemap/positron.png"
+      url="https://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+      maxzoom="20"
+      visible="true"
+      attribution="Map tiles by  &lt;a href='http://cartodb.com/attributions'>CartoDb &lt;/a>, under  &lt;a href='http://creativecommons.org/licenses/by/3.0/'>CC BY 3.0 &lt;/a>"
+    />
+  </baselayers>
+
     <proxy url=""/>
-    <olscompletion url="http://api-adresse.data.gouv.fr/search/" type="ban"/>
-    <elasticsearch url="http://ows.region-bretagne.fr/kartenn/_search" geometryfield="geometry" linkid="search_id" querymode="fussy_like_this"/>
+    <olscompletion url="https://api-adresse.data.gouv.fr/search/" type="ban"/>
+    <elasticsearch url="https://ows.region-bretagne.fr/kartenn/_search" geometryfield="geometry" linkid="search_id" querymode="fussy_like_this"/>
     <searchparameters bbox="true" localities="true" features="true"/>
-	
-    <themes mini="">
-		
-				
-		
+
+    <themes mini="true">
+
 		<theme name="Vie pratique" collapsed="false" id="VIE_PRATIQUE" icon="child">
-				
-				<layer 	id="communes_via" 
-						name="Communes" 
-						visible="true" 
-						tiled="true" 
-						namespace="ccvia" 
-						queryable="false" 
-						infoformat="application/vnd.ogc.gml" 
-						opacity="0.1" 
-						featurecount="5" 
-						style="" 
-						url="https://geobretagne.fr/geoserver/ccvia/ows" 
-						attribution="Val d'Ille-Aubigné" 
-						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-communes_via" 
-						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-communes_via"
-				>
-				</layer>
-				
-				<layer 	id="equipements" 
-						name="Petite enfance" 
-						visible="true" 
-						tiled="true" 
-						namespace="ccvia" 
-						queryable="true" 
-						infoformat="text/html" 
-						featurecount="5" 
-						style="equip_pe" 
-						opacity="1" 
-						url="https://geobretagne.fr/geoserver/ccvia/ows" 
-						attribution="Val d'Ille-Aubigné" 
-						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-equipements" 
-						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-bocage_valdille_equipements" 
-				/>
-				<layer 	id="equipements" 
-						name="Espaces jeunes" 
-						visible="true" 
-						tiled="true" 
-						namespace="ccvia" 
-						queryable="true" 
-						infoformat="text/html" 
-						featurecount="5" 
-						style="equip_espjeunes" 
-						opacity="1" 
-						url="https://geobretagne.fr/geoserver/ccvia/ows" 
-						attribution="Val d'Ille-Aubigné" 
-						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-equipements" 
-						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-bocage_valdille_equipements" 
-				/>
+
+				<layer 	id="equipements"
+						name="Petite enfance"
+						visible="true"
+						tiled="true"
+						queryable="true"
+            infoformat="application/vnd.ogc.gml"
+						featurecount="5"
+						style="equip_pe"
+						opacity="1"
+            url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-equipements"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-bocage_valdille_equipements"
+            >
+    						<template url="./apps/vie_pratique/templates/equipement.mst"></template>
+    		</layer>
+				<layer 	id="equipements"
+						name="Espaces jeunes"
+						visible="true"
+						tiled="true"
+						namespace="ccvia"
+						queryable="true"
+            infoformat="application/vnd.ogc.gml"
+						featurecount="5"
+						style="equip_espjeunes"
+						opacity="1"
+            url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-equipements"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-bocage_valdille_equipements"
+            >
+    						<template url="./apps/vie_pratique/templates/equipement.mst"></template>
+    		</layer>
+        <layer 	id="valdilleaubigne:communes_ccvia"
+            name="Communes"
+            visible="true"
+            tiled="true"
+            queryable="false"
+            infoformat="application/vnd.ogc.gml"
+            opacity="0.2"
+            featurecount="5"
+            style="communes_bleues"
+            url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+            attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-communes_via"
+            metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-communes_via"
+        >
+        </layer>
 		</theme>
 	    </themes>
 </config>

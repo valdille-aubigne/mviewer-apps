@@ -1,0 +1,622 @@
+{{#features}}
+<div id="CarouselRPLS" class="carousel slide" data-ride="carousel" data-interval="false">
+
+	<div class="title-feature" style="padding-top:8px;">{{nom}}</div>
+	
+	<div class="carousel-inner" style="margin-top:-2%;">
+		<div class = "item active">
+			<div class="container" style="padding-left:0!important;margin-left:0!important;margin-bottom:10%;overflow:hidden;">
+				<div class="row">			
+					<div class="col-xs-2" style="padding-right:0px; padding-left:5px; margin-top:3%;">
+						<img class="img-responsive" src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/red_house.svg" style="max-width:50%;margin: 0 auto;">
+						<div class="number" style="margin-top:5%;text-align:center;">{{nb_lls}}</div>
+						<div class="title-number" style="text-align:center;">
+							<p>logements locatifs sociaux</p>
+						</div>
+					</div>
+					<div class="col-xs-4" style="margin-left:3%;">
+						<canvas id="ChartRPLS1"></canvas>
+						<div style="margin-top:10px; text-align:center">
+							<p><b>Répartition des logements selon le nombre de pièces</b></p>
+						</div> 
+					</div>
+					<div class="col-xs-4" style="margin-left:-3%;">
+						<canvas id="ChartRPLS2"></canvas>
+						<div style="margin-top:10px; text-align:center">
+							<p><b>Répartition des logements selon le type</b></p>
+						</div>
+					</div>
+					<!-- CHIFFRES CLES TYPE LOG -->
+					<div class="col-xs-2" style="padding-right:0px; margin-top:3%;margin-left:-6%;">
+						<div class="row">
+							<div class="col-xs-2" style="padding-right:0px;">
+								<img src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/icon_house.svg" style="width:60px; margin-top:50%; margin-left:-72%;">
+							</div>
+							<div class="col-xs-8" style="padding-right:0px; margin-left:15%;margin-top:5%;">	
+								<div class="number" style="text-align:left; color:#4eb897;font-size:24px;">
+									{{nb_individuel}}
+								</div>
+								<div class="title-number" style="text-align: left;color:#4eb897;">
+									<p>maisons</br></p>
+								</div>	
+							</div>	
+						</div>
+						<div class="row">
+							<div class="col-xs-2" style="padding-right:0px;">
+								<img src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/icon_building.svg" style="width:60px; margin-top:50%; margin-left:-72%;">
+							</div>
+							<div class="col-xs-8" style="padding-right:0px; margin-left:15%;margin-top:5%;">	
+								<div class="number" style="text-align:left; color:#268f91;font-size:24px;">
+									{{nb_collectif}}
+								</div>
+								<div class="title-number" style="text-align:left; color:#268f91;">
+									<p>appartements </br></p>
+								</div>	
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-2" style="padding-right:0px;">
+								<img src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/icon_building_student.svg" style="width:60px; margin-top:50%; margin-left:-72%;">
+							</div>
+							<div class="col-xs-8" style="padding-right:0px; margin-left:15%;margin-top:5%;">	
+								<div class="number" style="text-align:left; color:#56739C;font-size:24px;">
+									{{nb_etudiant}}
+								</div>
+								<div class="title-number" style="text-align:left; color:#56739C;">
+									<p>logements étudiants </br></p>
+								</div>	
+							</div>					
+						</div>
+					</div>
+				</div>
+				<div class="row">	
+					<div class="title-number" style="text-align:left; padding-left:30px;">
+							<p><i style="font-size:10px; text-align:center; font-family:'roboto_regular'; color:#777;">{{nom}} - {{annee}} - RPLS (Ministère de la transition écologique)</i></p>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class = "item">
+			<div class="container" style="padding-left:0!important;margin-left:0!important;margin-bottom:10%;overflow:hidden;">
+				<div class="row">			
+					<div class="col-xs-2" style="padding-right:0px; padding-left:5px; margin-top:3%;">
+						<img class="img-responsive" src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/red_house.svg" style="max-width:50%;margin: 0 auto;">
+						<div class="number" style="margin-top:5%;text-align:center;">{{nb_lls}}</div>
+						<div class="title-number" style="text-align:center;">
+							<p>logements locatifs sociaux</p>
+						</div>
+					</div>
+					<div class="col-xs-4" style="margin-left:3%;">
+						<canvas id="ChartRPLS3"></canvas>
+						<div style="margin-top:10px; text-align:center">
+							<p><b>Répartition des logements selon le mode de financement</b></p>
+						</div> 
+					</div>
+					<div class="col-xs-4" style="margin-left:3%;">
+						<div style="margin-top:10px; text-align:center">
+							<p><b>Les différents types de logements sociaux</b><br/><br/></p>
+							<p style="font-size:11px; margin:0px; margin-top:-8px; text-align:left ">
+								Le <b>PLAI (Prêt Locatif Aidé d'Intégration)</b> est réservé aux personnes rencontrant des difficultés sociales et économiques.<br/>
+								Le <b>PLUS (Prêt Locatif à Usage Social)</b> correspond aux HLM traditionnelles. C'est le prêt le plus utilisé mobilisé par les organismes. <br/>
+								Le <b>PLS (Prêt Locatif Social)</b> finance des logements situés en priorité dans des zones o ù le marché immobilier est le plus tendu, pour des personnes qui ne peuvent pas être locataire d'un logement PLAI ou PLUS mais qui ne disposant de revenus suffisants pour se loger dans le privé.<br/>
+								<br/>
+								Pour accéder à un logement à loyer modéré il faut répondre à des conditions de revenus qui varient en fonction de la composition du ménage et de la localisation des logements.
+							</p>
+						</div> 
+					</div>
+				</div>
+				<div class="row">	
+					<div class="title-number" style="text-align:left; padding-left:30px;">
+							<p><i style="font-size:10px; text-align:center; font-family:'roboto_regular'; color:#777;">{{nom}} - {{annee}} - Source : RPLS (Ministère de la transition écologique)</i></p>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class = "item">
+			<div class="container" style="padding-left:0!important;margin-left:0!important;margin-bottom:10%;overflow:hidden;">
+				<div class="row">			
+					<div class="col-xs-2" style="padding-right:0px; padding-left:5px; margin-top:3%;">
+						<img class="img-responsive" src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/red_house.svg" style="max-width:50%;margin: 0 auto;">
+						<div class="number" style="margin-top:5%;text-align:center;">{{nb_lls}}</div>
+						<div class="title-number" style="text-align:center;">
+							<p>logements locatifs sociaux</p>
+						</div>
+					</div>
+					<div class="col-xs-4" style="margin-left:3%;">
+						<canvas id="ChartRPLS4"></canvas>
+						<div style="margin-top:10px; text-align:center">
+							<p><b>Répartition des logements selon l'année de construction</b></p>
+						</div> 
+					</div>
+					<div class="col-xs-4" style="margin-left:3%;">
+						<canvas id="ChartRPLS5"></canvas>
+						<div style="margin-top:10px; text-align:center">
+							<p><b>Répartition des logements selon le classement énergétique</b></p>
+						</div> 
+					</div>
+				</div>
+				<div class="row">	
+					<div class="title-number" style="text-align:left; padding-left:30px;">
+							<p><i style="font-size:10px; text-align:center; font-family:'roboto_regular'; color:#777;">{{nom}} - {{annee}} - Source : RPLS (Ministère de la transition écologique)</i></p>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Contrôles gauche droite -->
+	<a class="left carousel-control" href="#CarouselRPLS" style="margin-left:-7%;margin-bottom:10%;" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" ></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#CarouselRPLS" style="margin-right:25%;margin-bottom:10%;" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+		<span class="sr-only">Next</span>
+	</a>
+</div>		
+{{/features}}
+
+<style>
+	<!-- body, html { -->
+		  <!-- margin:0px; -->
+		  <!-- position:relative; -->
+		  <!-- line-height: 1 !important; -->
+		  <!-- font-family:'Open Sans'; -->
+		  <!-- font-size:11px; -->
+		  <!-- text-align: center; -->
+		  <!-- color: #797979; -->
+		<!-- }  -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_black"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Black.ttf'); -->
+		<!-- } -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_bold"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Bold.ttf'); -->
+		<!-- } -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_regular"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Regular.ttf'); -->
+		<!-- } 		 -->
+	.title-feature {
+		color: #2d4059;
+		font-family:"roboto_black";
+		font-size:23px;
+		text-align: left;
+		margin-bottom:3%;
+		line-height:1;			
+	}
+	<!-- .indicateurRPLS {			 -->
+		<!-- text-align: center; -->
+	<!-- } -->
+	<!-- .panel-graph { -->
+	    <!-- color: #3db39e; -->
+	    <!-- text-align: center; -->
+	<!-- } -->
+
+	.container_viz{
+			padding-left:0!important;
+			margin-left:0!important;
+			overflow: hidden;
+			margin-top: 1%;
+		}
+	.number{
+			font-family: "roboto_black";
+			font-size:35px;
+			color: #fdc121;
+			/*margin-top: 5px;*/
+		}
+	.title-number{
+			font-family: "roboto_bold";
+			font-size:12px;
+			color: #fdc121;
+			/*margin-top:0%;*/
+		}
+</style>
+
+<script>
+	//Récupération des attributs
+	var nom_com=[];
+	{{#features}}
+		nom_com.push('{{nom}}');
+	{{/features}}
+	
+	var tx_lls_1p=[];
+	{{#features}}
+		tx_lls_1p.push('{{tx_lls_1p}}');
+	{{/features}}
+	
+	var tx_lls_2p=[];
+	{{#features}}
+		tx_lls_2p.push('{{tx_lls_2p}}');
+	{{/features}}
+	
+	var tx_lls_3p=[];
+	{{#features}}
+		tx_lls_3p.push('{{tx_lls_3p}}');
+	{{/features}}
+	
+	var tx_lls_4p=[];
+	{{#features}}
+		tx_lls_4p.push('{{tx_lls_4p}}');
+	{{/features}}
+	
+	var tx_lls_5p=[];
+	{{#features}}
+		tx_lls_5p.push('{{tx_lls_5p}}');
+	{{/features}}
+	
+	var tx_individuel=[];
+	{{#features}}
+		tx_individuel.push('{{tx_individuel}}');
+	{{/features}}
+	
+	var tx_collectif=[];
+	{{#features}}
+		tx_collectif.push('{{tx_collectif}}');
+	{{/features}}
+	
+	var tx_etudiant=[];
+	{{#features}}
+		tx_etudiant.push('{{tx_etudiant}}');
+	{{/features}}
+	
+	var tx_pla=[];
+	{{#features}}
+		tx_pla.push('{{tx_pla}}');
+	{{/features}}
+	
+	var tx_plus=[];
+	{{#features}}
+		tx_plus.push('{{tx_plus}}');
+	{{/features}}
+	
+	var tx_pls=[];
+	{{#features}}
+		tx_pls.push('{{tx_pls}}');
+	{{/features}}
+	
+	var tx_hlmo=[];
+	{{#features}}
+		tx_hlmo.push('{{tx_hlmo}}');
+	{{/features}}
+	
+	var tx_1900_1970=[];
+	{{#features}}
+		tx_1900_1970.push('{{tx_1900_1970}}');
+	{{/features}}
+	
+	var tx_1970_1989=[];
+	{{#features}}
+		tx_1970_1989.push('{{tx_1970_1989}}');
+	{{/features}}
+	
+	var tx_1990_1999=[];
+	{{#features}}
+		tx_1990_1999.push('{{tx_1990_1999}}');
+	{{/features}}
+	
+	var tx_2000_2009=[];
+	{{#features}}
+		tx_2000_2009.push('{{tx_2000_2009}}');
+	{{/features}}
+	
+	var tx_2010_2019=[];
+	{{#features}}
+		tx_2010_2019.push('{{tx_2010_2019}}');
+	{{/features}}
+	
+	var tx_dpe_a=[];
+	{{#features}}
+		tx_dpe_a.push('{{tx_dpe_a}}');
+	{{/features}}
+	
+	var tx_dpe_b=[];
+	{{#features}}
+		tx_dpe_b.push('{{tx_dpe_b}}');
+	{{/features}}
+	
+	var tx_dpe_c=[];
+	{{#features}}
+		tx_dpe_c.push('{{tx_dpe_c}}');
+	{{/features}}
+	
+	var tx_dpe_d=[];
+	{{#features}}
+		tx_dpe_d.push('{{tx_dpe_d}}');
+	{{/features}}
+	
+	var tx_dpe_e=[];
+	{{#features}}
+		tx_dpe_e.push('{{tx_dpe_e}}');
+	{{/features}}
+	
+	var tx_dpe_f=[];
+	{{#features}}
+		tx_dpe_f.push('{{tx_dpe_f}}');
+	{{/features}}
+	
+	var tx_dpe_inconnu=[];
+	{{#features}}
+		tx_dpe_inconnu.push('{{tx_dpe_inconnu}}');
+	{{/features}}
+	
+	
+	
+	var indicateurRPLS_a = {};
+	indicateurRPLS_a.getData = function() {
+		var data = {ChartRPLS1: {labels:["1 pièce", "2 pièces", "3 pièces", "4 pièces", "5 pièces"], data: {datasets: [[tx_lls_1p,tx_lls_2p,tx_lls_3p,tx_lls_4p,tx_lls_5p]]}}};
+		indicateurRPLS_a.drawChart(data);
+	};
+	
+	var indicateurRPLS_b = {};
+	indicateurRPLS_b.getData = function() {
+		var data = {ChartRPLS2: {labels:["individuel", "collectif", "étudiant"], data: {datasets: [[tx_individuel,tx_collectif,tx_etudiant]]}}};
+		indicateurRPLS_b.drawChart(data);
+	};
+	
+	var indicateurRPLS_c = {};
+	indicateurRPLS_c.getData = function() {
+		var data = {ChartRPLS3: {labels:["PLA", "PLUS", "PLS","HLM/O"], data: {datasets: [[tx_pla,tx_plus,tx_pls,tx_hlmo]]}}};
+		indicateurRPLS_c.drawChart(data);
+	};
+	
+	var indicateurRPLS_d = {};
+	indicateurRPLS_d.getData = function() {
+		var data = {ChartRPLS4: {labels:["Avant 1970", "1970 - 1989", "1990 - 1999","2000 - 2009","2010 - 2019"], data: {datasets: [[tx_1900_1970,tx_1970_1989,tx_1990_1999,tx_2000_2009,tx_2010_2019]]}}};
+		indicateurRPLS_d.drawChart(data);
+	};
+	
+	var indicateurRPLS_e = {};
+	indicateurRPLS_e.getData = function() {
+		var data = {ChartRPLS5: {labels:["A", "B", "C","D","E","F","Inconnu"], data: {datasets: [[tx_dpe_a,tx_dpe_b,tx_dpe_c,tx_dpe_d,tx_dpe_e,tx_dpe_f,tx_dpe_inconnu]]}}};
+		indicateurRPLS_e.drawChart(data);
+	};
+		
+	indicateurRPLS_a.drawChart = function (data) {
+			var ctx1 = document.getElementById("ChartRPLS1");
+			var maxscale = Math.max.apply(this, data.ChartRPLS1.data.datasets[0]) / 5;
+			maxscale = Math.trunc(maxscale) * 5;
+			ctx1.getContext("2d").canvas.width = 100;
+			ctx1.getContext("2d").canvas.height = 55;
+			var ChartRPLS1 = new Chart(ctx1, {
+			type: 'bar',
+			data: {
+				labels: data.ChartRPLS1.labels,
+				datasets: [{
+							label: nom_com,
+							backgroundColor: "rgba(255,212,96,0.9)",
+							borderColor: "rgba(255,212,96,0.9)",
+							borderWidth: 1,
+							borderSkipped:'left',
+							hoverBackgroundColor: "rgba(255,212,96,1)",
+							hoverBorderColor: "rgba(255,212,96,1)",
+							data: data.ChartRPLS1.data.datasets[0]
+							}]
+			},
+			 options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true,
+							max: maxscale + 5
+						}
+					}]
+				},
+				tooltips: {					
+					titleFontFamily:"roboto_bold",
+					titleFontSize:13,
+					bodyFontFamily:"roboto_regular",
+					backgroundColor:"rgba(36, 36, 36, 0.85)",
+					callbacks: {
+						label: function(tooltipItem, data) {
+							return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() + "%";
+
+						}
+					}
+		        }
+			}
+			});  
+	};
+	
+	indicateurRPLS_b.drawChart = function (data) {
+			var ctx2 = document.getElementById("ChartRPLS2");
+			ctx2.getContext("2d").canvas.width = 100;
+			ctx2.getContext("2d").canvas.height = 55;			
+			var ChartRPLS2 = new Chart(ctx2, {
+			type: 'doughnut',
+			data: {
+				labels: data.ChartRPLS2.labels,
+				datasets: [{
+							label: "Part selon le type",
+							backgroundColor: [
+								"rgba(78,184,151,0.9)",
+								"rgba(38,143,145,0.9)",
+								"rgba(86,115,154,0.9)"
+							],
+							borderWidth: 3,
+							borderSkipped:'left',
+							hoverBackgroundColor: [
+								"rgba(78,184,151,1)",
+								"rgba(38,143,145,1)",
+								"rgba(86,115,154,1)"								
+							],
+							data: data.ChartRPLS2.data.datasets[0]
+							}]
+			},
+			 options: {
+				tooltips: {					
+					titleFontFamily:"roboto_bold",
+					titleFontSize:13,
+					bodyFontFamily:"roboto_regular",
+					backgroundColor:"rgba(36, 36, 36, 0.85)",
+					callbacks: {
+						label: function(tooltipItem, data) {
+							return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() + "%";
+
+						}
+					}
+		        }
+			}
+			});  
+	};
+	
+	indicateurRPLS_c.drawChart = function (data) {
+			var ctx3 = document.getElementById("ChartRPLS3");
+			var maxscale3 = Math.max.apply(this, data.ChartRPLS3.data.datasets[0]) / 5;
+			maxscale3 = Math.trunc(maxscale3) * 5;
+			ctx3.getContext("2d").canvas.width = 100;
+			ctx3.getContext("2d").canvas.height = 55;
+			var ChartRPLS3 = new Chart(ctx3, {
+			type: 'bar',
+			data: {
+				labels: data.ChartRPLS3.labels,
+				datasets: [{
+							label: nom_com,
+							backgroundColor: "rgba(255,212,96,0.9)",
+							borderColor: "rgba(255,212,96,0.9)",
+							borderWidth: 1,
+							borderSkipped:'left',
+							hoverBackgroundColor: "rgba(255,212,96,1)",
+							hoverBorderColor: "rgba(255,212,96,1)",
+							data: data.ChartRPLS3.data.datasets[0]
+							}]
+			},
+			 options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true,
+							max: maxscale3 + 5
+						}
+					}]
+				},
+				tooltips: {					
+					titleFontFamily:"roboto_bold",
+					titleFontSize:13,
+					bodyFontFamily:"roboto_regular",
+					backgroundColor:"rgba(36, 36, 36, 0.85)",
+					callbacks: {
+						label: function(tooltipItem, data) {
+							return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() + "%";
+
+						}
+					}
+		        }
+			}
+			});  
+	};
+	
+	indicateurRPLS_d.drawChart = function (data) {
+			var ctx4 = document.getElementById("ChartRPLS4");
+			var maxscale4 = Math.max.apply(this, data.ChartRPLS4.data.datasets[0]) / 5;
+			maxscale4 = Math.trunc(maxscale4) * 5;
+			ctx4.getContext("2d").canvas.width = 100;
+			ctx4.getContext("2d").canvas.height = 55;
+			var ChartRPLS4 = new Chart(ctx4, {
+			type: 'bar',
+			data: {
+				labels: data.ChartRPLS4.labels,
+				datasets: [{
+							label: nom_com,
+							backgroundColor: "rgba(255,212,96,0.9)",
+							borderColor: "rgba(255,212,96,0.9)",
+							borderWidth: 1,
+							borderSkipped:'left',
+							hoverBackgroundColor: "rgba(255,212,96,1)",
+							hoverBorderColor: "rgba(255,212,96,1)",
+							data: data.ChartRPLS4.data.datasets[0]
+							}]
+			},
+			 options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true,
+							max: maxscale4 + 5
+						}
+					}]
+				},
+				tooltips: {					
+					titleFontFamily:"roboto_bold",
+					titleFontSize:13,
+					bodyFontFamily:"roboto_regular",
+					backgroundColor:"rgba(36, 36, 36, 0.85)",
+					callbacks: {
+						label: function(tooltipItem, data) {
+							return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() + "%";
+
+						}
+					}
+		        }
+			}
+			});  
+	};
+	
+	indicateurRPLS_e.drawChart = function (data) {
+			var ctx5 = document.getElementById("ChartRPLS5");
+			ctx5.getContext("2d").canvas.width = 100;
+			ctx5.getContext("2d").canvas.height = 55;			
+			var ChartRPLS5 = new Chart(ctx5, {
+			type: 'doughnut',
+			data: {
+				labels: data.ChartRPLS5.labels,
+				datasets: [{
+							label: "Part selon le type",
+							backgroundColor: [
+								"rgba(31,160,85,0.9)",
+								"rgba(52,201,36,0.9)",
+								"rgba(127,221,76,0.9)",
+								"rgba(255,255,0,0.9)",
+								"rgba(243,214,23,0.9)",
+								"rgba(230,126,48,0.9)",
+								"rgba(127,127,127,0.9)"
+							],
+							borderWidth: 3,
+							borderSkipped:'left',
+							hoverBackgroundColor: [
+								"rgba(31,160,85,1)",
+								"rgba(52,201,36,1)",
+								"rgba(127,221,76,1)",
+								"rgba(255,255,0,1)",
+								"rgba(243,214,23,1)",
+								"rgba(230,126,48,1)",
+								"rgba(127,127,127,1)"								
+							],
+							data: data.ChartRPLS5.data.datasets[0]
+							}]
+			},
+			 options: {
+				tooltips: {					
+					titleFontFamily:"roboto_bold",
+					titleFontSize:13,
+					bodyFontFamily:"roboto_regular",
+					backgroundColor:"rgba(36, 36, 36, 0.85)",
+					callbacks: {
+						label: function(tooltipItem, data) {
+							return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() + "%";
+
+						}
+					}
+		        }
+			}
+			});  
+	};
+	
+	 if  (typeof Chart === 'function') {
+            indicateurRPLS_a.getData();
+			indicateurRPLS_b.getData();
+			indicateurRPLS_c.getData();
+			indicateurRPLS_d.getData();
+			indicateurRPLS_e.getData();
+    } else {
+            $.get('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js', function() {
+				indicateurRPLS_a.getData();
+				indicateurRPLS_b.getData();
+				indicateurRPLS_c.getData();
+				indicateurRPLS_d.getData();
+				indicateurRPLS_e.getData();
+            });
+	}
+	
+</script>

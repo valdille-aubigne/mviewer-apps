@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <application
+		title="Plan local d'urbanisme intercommunal (PLUi)"
+		logo="./apps/logo-via.png"
+		help="./apps/plui/mviewer_help_plui.html"
+		showhelp="true"
+		exportpng="true"
+		measuretools="true"
+		style="css/themes/wet_asphalt.css"
+		geoloc="true"
+		togglealllayersfromtheme = "true"
+	/>
+	<mapoptions
+		zoom="12"
+		center="-179742,6154000"
+		projection="EPSG:3857"
+		maxzoom="19"
+	/>
+
+	<baselayers style="gallery">
+        <baselayer
+			type="WMS"
+			id="photo1"
+			label="Photo aérienne"
+			title="Ortho Géobretagne"
+			thumbgallery="img/basemap/ortho.jpg"
+			url="https://tile.geobretagne.fr/gwc02/service/wms"
+			layers="satellite"
+			format="image/jpeg"
+			visible="false"
+			attribution="partenaires GéoBretagne - IGN RGE BD ORTHO - PlanetObserver"
+		/>
+		<baselayer
+			type="OSM"
+			id="osm2"
+			label="Plan"
+			title="Thunderforest Neighbourhood"
+			thumbgallery="img/basemap/mapquest.png"
+			url="https://tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=1de58fc34e9443279668517b06a35dc1"
+			attribution="© Thunderforest. Données : les contributeurs d'&lt;a href='http://www.openstreetmap.org/' target='_blank'>OpenStreetMap &lt;/a>,  &lt;a href='http://www.openstreetmap.org/copyright' target='_blank'>ODbL &lt;/a>"
+			visible="false"
+		/>
+		<baselayer
+			type="OSM"
+			id="positron"
+			label="Plan clair"
+			title="CartoDb"
+			thumbgallery="img/basemap/positron.png"
+			url="https://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+			maxzoom="20"
+			visible="true"
+			attribution="Map tiles by  &lt;a href='http://cartodb.com/attributions'>CartoDb &lt;/a>, under  &lt;a href='http://creativecommons.org/licenses/by/3.0/'>CC BY 3.0 &lt;/a>"
+		/>
+	</baselayers>
+
+  <proxy url=""/>
+  <olscompletion url="https://api-adresse.data.gouv.fr/search/" type="ban"/>
+<!--  <elasticsearch url="https://ows.region-bretagne.fr/kartenn/_search" geometryfield="geometry" linkid="search_id" querymode="fussy_like_this"/>
+--><searchparameters bbox="true" localities="true" features="false"/>
+
+    <themes mini="true">
+		<theme name="Découpage administratif" collapsed="true" id="admin" icon="fas fa-globe">
+				<layer 	id="valdilleaubigne:parcellaire_opposable"
+						name="Parcelles"
+						visible="true"
+						expanded="false"
+						tiled="true"
+						searchable="false"
+						queryable="true"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						style=""
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="DGFiP"
+
+				>
+				<template url="./apps/plui/templates/parcellaire.mst"></template>
+				</layer>
+				<layer 	id="valdilleaubigne:communes_ccvia"
+						name="Communes"
+						visible="true"
+						expanded="false"
+						tiled="true"
+						searchable="false"
+						queryable="false"
+						infopanel="bottom-panel"
+						infoformat="text/html" featurecount="5"
+						opacity="0.9"
+						style=""
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Les contributeurs OpenStreetMap"
+
+				>
+				</layer>
+		</theme>
+
+		<theme name="Annexes" collapsed="true" id="annexes" icon="fas fa-book-open">
+				<layer 	id="valdilleaubigne:info_surf_opposable"
+						name="Zones de bruit"
+						visible="false"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						style="plui_zone_bruit"
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-plui-info_surf_opposable"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-plui-info_surf_opposable"
+				>
+				<template url="./apps/plui/templates/informations.mst"></template>
+				</layer>
+				<layer 	id="valdilleaubigne:info_surf_opposable"
+						name="Droit de préemption"
+						visible="false"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						style="plui_preemption"
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-plui-info_surf_opposable"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-plui-info_surf_opposable"
+				>
+				<template url="./apps/plui/templates/informations.mst"></template>
+				</layer>
+				<layer 	id="valdilleaubigne:info_surf_opposable"
+						name="Urbanisme opérationnel"
+						visible="false"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						style="plui_urba_ope"
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-plui-info_surf_opposable"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-plui-info_surf_opposable"
+				>
+				<template url="./apps/plui/templates/informations.mst"></template>
+				</layer>
+				<layer 	id="valdilleaubigne:info_surf_opposable"
+						name="Carrières"
+						visible="false"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						style="plui_carrieres"
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-plui-info_surf_opposable"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-plui-info_surf_opposable"
+				>
+				<template url="./apps/plui/templates/informations.mst"></template>
+				</layer>
+				<layer 	id="valdilleaubigne:plui_eaux_usees"
+						name="Eaux usées"
+						visible="false"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+
+				>
+				<template url="./apps/plui/templates/informations.mst"></template>
+				</layer>
+				<layer 	id="valdilleaubigne:plui_ep_ouvrages"
+						name="Ouvrages eaux pluviales"
+						visible="false"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+
+				>
+				<template url="./apps/plui/templates/informations.mst"></template>
+				</layer>
+				<layer 	id="valdilleaubigne:plui_ep_zonages"
+						name="Zonages eaux pluviales"
+						visible="false"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+
+				>
+				<template url="./apps/plui/templates/informations.mst"></template>
+				</layer>
+				<layer 	id="valdilleaubigne:info_lin_opposable"
+						name="Réseau eau potable"
+						visible="false"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						style="plui_reseau_aep"
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-plui-info_lin_opposable"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-plui-info_lin_opposable"
+				>
+				<template url="./apps/plui/templates/informations.mst"></template>
+				</layer>
+				<layer 	id="valdilleaubigne:info_surf_opposable"
+						name="Zone de présomption de prescription archéologique"
+						visible="false"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						style="plui_archeo"
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-plui-info_surf_opposable"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-plui-info_surf_opposable"
+				>
+				<template url="./apps/plui/templates/informations.mst"></template>
+				</layer>
+				<layer 	id="valdilleaubigne:info_surf_opposable"
+						name="Argiles"
+						visible="false"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						style="plui_argiles"
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-plui-info_surf_opposable"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-plui-info_surf_opposable"
+				>
+				<template url="./apps/plui/templates/informations.mst"></template>
+				</layer>
+					<layer 	id="valdilleaubigne:info_surf_opposable"
+						name="Secteurs d'information sur les sols"
+						visible="false"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						style="plui_sis"
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-plui-info_surf_opposable"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-plui-info_surf_opposable"
+				>
+				<template url="./apps/plui/templates/informations.mst"></template>
+				</layer>
+		</theme>
+
+		<theme name="Servitudes" collapsed="true" id="servitudes" icon="fas fa-bookmark">
+				<layer 	id="valdilleaubigne:sup_pct_opposable"
+						name="Servitudes ponctuelles"
+						visible="false"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						style=""
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-plui-sup_pct_opposable"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-plui-sup_pct_opposable"
+				>
+				<template url="./apps/plui/templates/servitudes.mst"></template>
+				</layer>
+			<layer 	id="valdilleaubigne:sup_lin_opposable"
+						name="Servitudes linéaires"
+						visible="false"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						style=""
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-plui-sup_lin_opposable"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-plui-sup_lin_opposable"
+				>
+				<template url="./apps/plui/templates/servitudes.mst"></template>
+				</layer>
+			<layer 	id="valdilleaubigne:sup_surf_opposable"
+						name="Servitudes surfaciques"
+						visible="false"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						style=""
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-plui-sup_surf_opposable"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-plui-sup_surf_opposable"
+				>
+				<template url="./apps/plui/templates/servitudes.mst"></template>
+				</layer>
+		</theme>
+
+
+		<theme name="Prescriptions" legendmini = "true" collapsed="true" id="prescriptions" icon="fas fa-exclamation-circle">
+				<layer 	id="valdilleaubigne:prescription_pct_opposable"
+						name="Prescriptions ponctuelles"
+						visible="true"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						style=""
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-plui-prescription_pct_opposable"
+            metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-plui-prescription_pct_opposable"
+				>
+				<template url="./apps/plui/templates/prescriptions.mst"></template>
+				</layer>
+				<layer 	id="valdilleaubigne:prescription_lin_opposable"
+						name="Prescriptions linéaires"
+						visible="true"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						style=""
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-plui-prescription_lin_opposable"
+            metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-plui-prescription_lin_opposable"
+				>
+				<template url="./apps/plui/templates/prescriptions.mst"></template>
+				</layer>
+				<layer 	id="valdilleaubigne:prescription_surf_opposable"
+						name="Prescriptions surfaciques"
+						visible="true"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						style=""
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-plui-prescription_surf_opposable"
+            metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-plui-prescription_surf_opposable"
+				>
+				<template url="./apps/plui/templates/prescriptions.mst"></template>
+				</layer>
+		</theme>
+
+		<theme name="Zonages" legendmini = "true" collapsed="true" id="zonages" icon="fas fa-splotch">
+				<layer 	id="valdilleaubigne:zone_urba_opposable"
+						name="Zonages"
+						visible="true"
+						expanded="false"
+						tiled="false"
+						searchable="false"
+						queryable="false"
+						exclusive="false"
+						infopanel="bottom-panel"
+						infoformat="application/vnd.ogc.gml" featurecount="5"
+						opacity="0.9"
+						style=""
+						url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-plui-zone_urba_opposable"
+            metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-plui-zone_urba_opposable"
+				>
+				<template url="./apps/plui/templates/zonages.mst"></template>
+				</layer>
+		</theme>
+
+    </themes>
+</config>

@@ -1,0 +1,29 @@
+
+{{#features}}
+	<li class="item" style="width:238px;">
+		<p class="text-feature">
+			<h3 class="title-feature">LIGNE N°{{num_ligne}}</h3>
+			<span style="font-family:'roboto_bold'"> Axe :</span> {{nom}}<br/>
+			<span style="font-family:'roboto_bold'">Horaires :</span><a target="_blank" href="https://www.breizhgo.bzh/se-deplacer-en-bretagne/se-deplacer-en-car/ille-et-vilaine"> Accéder aux horaires</a><br/>	
+		</p>
+	</li>
+{{/features}}
+
+<style>
+	.title-feature {
+		color: #032E46;
+		font-family:"roboto_bold";
+		font-size:23px;
+		margin-bottom:1%;
+		line-height:1;
+	}
+	.text-feature{
+		font-family:"roboto_regular";
+		color:#555;
+		font-size:13px;
+		margin-top:10%;
+	}
+	.lowercase-feature{
+		    text-transform: lowercase;
+	}
+</style>

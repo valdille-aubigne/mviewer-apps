@@ -1,0 +1,523 @@
+{{#features}}
+<div id="CarouselConfLog" class="carousel slide" data-ride="carousel" data-interval="false">
+
+	<div class="title-feature" style="padding-top:8px;">{{nom}}</div>
+	
+	<div class="carousel-inner" style="margin-top:-2%;">
+		<div class = "item active">
+			<div class="container" style="padding-left:0!important;margin-left:0!important;margin-bottom:10%;overflow:hidden;">
+				<div class="row">			
+					<div class="col-xs-2" style="padding-right:0px; padding-left:5px; margin-top:3%;">
+						<img class="img-responsive" src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/orange_house.svg" style="max-width:50%;margin: 0 auto;">
+						<div class="number" style="margin-top:5%;text-align:center;">{{nb_log}}</div>
+						<div class="title-number" style="text-align:center;">
+							<p>logements</p>
+						</div>
+					</div>
+					<div class="col-xs-4" style="margin-left:3%;">
+						<canvas id="ChartConfLog1"></canvas>
+						<div style="margin-top:10px; text-align:center">
+							<p><b>Répartition des logements selon la catégorie cadastrale</b></p>
+						</div> 
+					</div>
+					<div class="col-xs-4" style="margin-left:-3%;">
+						<canvas id="ChartConfLog2"></canvas>
+						<div style="margin-top:10px; text-align:center">
+							<p><b>Répartition des logements selon le niveau de confort</b></p>
+						</div>
+					</div>
+					<!-- CHIFFRES CLES TYPE LOG 
+					<div class="col-xs-2" style="padding-right:0px; margin-top:3%;margin-left:-6%;">
+						<div class="row">
+							<div class="col-xs-2" style="padding-right:0px;">
+								<img src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/icon_house.svg" style="width:60px; margin-top:50%; margin-left:-72%;">
+							</div>
+							<div class="col-xs-8" style="padding-right:0px; margin-left:15%;margin-top:5%;">	
+								<div class="number" style="text-align:left; color:#4eb897;font-size:24px;">
+									{{nb_individuel}}
+								</div>
+								<div class="title-number" style="text-align: left;color:#4eb897;">
+									<p>maisons</br></p>
+								</div>	
+							</div>	
+						</div>
+						<div class="row">
+							<div class="col-xs-2" style="padding-right:0px;">
+								<img src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/icon_building.svg" style="width:60px; margin-top:50%; margin-left:-72%;">
+							</div>
+							<div class="col-xs-8" style="padding-right:0px; margin-left:15%;margin-top:5%;">	
+								<div class="number" style="text-align:left; color:#268f91;font-size:24px;">
+									{{nb_collectif}}
+								</div>
+								<div class="title-number" style="text-align:left; color:#268f91;">
+									<p>appartements </br></p>
+								</div>	
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-2" style="padding-right:0px;">
+								<img src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/icon_building_student.svg" style="width:60px; margin-top:50%; margin-left:-72%;">
+							</div>
+							<div class="col-xs-8" style="padding-right:0px; margin-left:15%;margin-top:5%;">	
+								<div class="number" style="text-align:left; color:#56739C;font-size:24px;">
+									{{nb_etudiant}}
+								</div>
+								<div class="title-number" style="text-align:left; color:#56739C;">
+									<p>logements étudiants </br></p>
+								</div>	
+							</div>					
+						</div>
+					</div> -->
+				</div>
+				<div class="row">	
+					<div class="title-number" style="text-align:left; padding-left:30px;">
+							<p><i style="font-size:10px; text-align:center; font-family:'roboto_regular'; color:#777;">{{nom}} - {{annee}} - Source : MAJIC (Direction générale des finances publiques)</i></p>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class = "item">
+			<div class="container" style="padding-left:0!important;margin-left:0!important;margin-bottom:10%;overflow:hidden;">
+				<div class="row">			
+					<div class="col-xs-2" style="padding-right:0px; padding-left:5px; margin-top:3%;">
+						<img class="img-responsive" src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/orange_house.svg" style="max-width:50%;margin: 0 auto;">
+						<div class="number" style="margin-top:5%;text-align:center;">{{nb_log}}</div>
+						<div class="title-number" style="text-align:center;">
+							<p>logements</p>
+						</div>
+					</div>
+					<div class="col-xs-4" style="margin-left:3%;">
+						<canvas id="ChartConfLog3"></canvas>
+						<div style="margin-top:10px; text-align:center">
+							<p><b>Répartition des logements selon le nombre de pièces</b></p>
+						</div> 
+					</div>
+					
+					<div class="col-xs-4" style="margin-left:-3%;">
+						<canvas id="ChartConfLog4"></canvas>
+						<div style="margin-top:10px; text-align:center">
+							<p><b>Répartition des logements selon l'année de construction</b></p>
+						</div>
+					</div>
+				</div>
+				<div class="row">	
+					<div class="title-number" style="text-align:left; padding-left:30px;">
+							<p><i style="font-size:10px; text-align:center; font-family:'roboto_regular'; color:#777;">{{nom}} - {{annee}} - Source : MAJIC (Direction générale des finances publiques)</i></p>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Contrôles gauche droite -->
+	<a class="left carousel-control" href="#CarouselConfLog" style="margin-left:-7%;margin-bottom:10%;" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" ></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#CarouselConfLog" style="margin-right:25%;margin-bottom:10%;" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+		<span class="sr-only">Next</span>
+	</a>
+</div>		
+{{/features}}
+
+<style>
+	<!-- body, html { -->
+		  <!-- margin:0px; -->
+		  <!-- position:relative; -->
+		  <!-- line-height: 1 !important; -->
+		  <!-- font-family:'Open Sans'; -->
+		  <!-- font-size:11px; -->
+		  <!-- text-align: center; -->
+		  <!-- color: #797979; -->
+		<!-- }  -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_black"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Black.ttf'); -->
+		<!-- } -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_bold"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Bold.ttf'); -->
+		<!-- } -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_regular"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Regular.ttf'); -->
+		<!-- } 		 -->
+	.title-feature {
+		color: #2d4059;
+		font-family:"roboto_black";
+		font-size:23px;
+		text-align: left;
+		margin-bottom:3%;
+		line-height:1;			
+	}
+	<!-- .indicateurConfLog {			 -->
+		<!-- text-align: center; -->
+	<!-- } -->
+	<!-- .panel-graph { -->
+	    <!-- color: #3db39e; -->
+	    <!-- text-align: center; -->
+	<!-- } -->
+
+	.container_viz{
+			padding-left:0!important;
+			margin-left:0!important;
+			overflow: hidden;
+			margin-top: 1%;
+		}
+	.number{
+			font-family: "roboto_black";
+			font-size:35px;
+			color: #fdc121;
+			/*margin-top: 5px;*/
+		}
+	.title-number{
+			font-family: "roboto_bold";
+			font-size:12px;
+			color: #fdc121;
+			/*margin-top:0%;*/
+		}
+</style>
+
+<script>
+	//Récupération des attributs
+	
+	var nom_com=[];
+	{{#features}}
+		nom_com.push('{{nom}}');
+	{{/features}}
+	
+	var tx_cat_cad_2=[];
+	{{#features}}
+		tx_cat_cad_2.push('{{tx_cat_cad_2}}');
+	{{/features}}
+	
+	var tx_cat_cad_3=[];
+	{{#features}}
+		tx_cat_cad_3.push('{{tx_cat_cad_3}}');
+	{{/features}}
+	
+	var tx_cat_cad_4=[];
+	{{#features}}
+		tx_cat_cad_4.push('{{tx_cat_cad_4}}');
+	{{/features}}
+	
+	var tx_cat_cad_5=[];
+	{{#features}}
+		tx_cat_cad_5.push('{{tx_cat_cad_5}}');
+	{{/features}}
+	
+	var tx_cat_cad_6=[];
+	{{#features}}
+		tx_cat_cad_6.push('{{tx_cat_cad_6}}');
+	{{/features}}
+	
+	var tx_cat_cad_7=[];
+	{{#features}}
+		tx_cat_cad_7.push('{{tx_cat_cad_7}}');
+	{{/features}}
+	
+	var tx_cat_cad_8=[];
+	{{#features}}
+		tx_cat_cad_8.push('{{tx_cat_cad_8}}');
+	{{/features}}
+	
+	var tx_confort_aucun=[];
+	{{#features}}
+		tx_confort_aucun.push('{{tx_confort_aucun}}');
+	{{/features}}
+	
+	var tx_confort_partiel=[];
+	{{#features}}
+		tx_confort_partiel.push('{{tx_confort_partiel}}');
+	{{/features}}
+	
+	var tx_confort_total=[];
+	{{#features}}
+		tx_confort_total.push('{{tx_confort_total}}');
+	{{/features}}
+	
+	var tx_1p=[];
+	{{#features}}
+		tx_1p.push('{{tx_1p}}');
+	{{/features}}
+	
+	var tx_2p=[];
+	{{#features}}
+		tx_2p.push('{{tx_2p}}');
+	{{/features}}
+	
+	var tx_3p=[];
+	{{#features}}
+		tx_3p.push('{{tx_3p}}');
+	{{/features}}
+	
+	var tx_4p=[];
+	{{#features}}
+		tx_4p.push('{{tx_4p}}');
+	{{/features}}
+	
+	var tx_5pp=[];
+	{{#features}}
+		tx_5pp.push('{{tx_5pp}}');
+	{{/features}}
+	
+	var tx_ctr_av_1915=[];
+	{{#features}}
+		tx_ctr_av_1915.push('{{tx_ctr_av_1915}}');
+	{{/features}}
+	
+	var tx_ctr_1915_1948=[];
+	{{#features}}
+		tx_ctr_1915_1948.push('{{tx_ctr_1915_1948}}');
+	{{/features}}
+	
+	var tx_ctr_1949_1974=[];
+	{{#features}}
+		tx_ctr_1949_1974.push('{{tx_ctr_1949_1974}}');
+	{{/features}}
+	
+	var tx_ctr_1975_1989=[];
+	{{#features}}
+		tx_ctr_1975_1989.push('{{tx_ctr_1975_1989}}');
+	{{/features}}
+	
+	var tx_ctr_1990_1999=[];
+	{{#features}}
+		tx_ctr_1990_1999.push('{{tx_ctr_1990_1999}}');
+	{{/features}}
+	
+	var tx_ctr_2000_2009=[];
+	{{#features}}
+		tx_ctr_2000_2009.push('{{tx_ctr_2000_2009}}');
+	{{/features}}
+	
+	var tx_ctr_ap_2010=[];
+	{{#features}}
+		tx_ctr_ap_2010.push('{{tx_ctr_ap_2010}}');
+	{{/features}}
+	
+	
+	
+	var indicateurConfLog_a = {};
+	indicateurConfLog_a.getData = function() {
+		var data = {ChartConfLog1: {labels:["2", "3", "4", "5", "6", "7", "8"], data: {datasets: [[tx_cat_cad_2,tx_cat_cad_3,tx_cat_cad_4,tx_cat_cad_5,tx_cat_cad_6,tx_cat_cad_7,tx_cat_cad_8]]}}};
+		indicateurConfLog_a.drawChart(data);
+	};
+	
+	var indicateurConfLog_b = {};
+	indicateurConfLog_b.getData = function() {
+		var data = {ChartConfLog2: {labels:["aucun", "partiel", "total"], data: {datasets: [[tx_confort_aucun,tx_confort_partiel,tx_confort_total]]}}};
+		indicateurConfLog_b.drawChart(data);
+	};
+	
+	var indicateurConfLog_c = {};
+	indicateurConfLog_c.getData = function() {
+		var data = {ChartConfLog3: {labels:["1 pièce", "2 pièces", "3 pièces", "4 pièces", "5 pièces et +"], data: {datasets: [[tx_1p,tx_2p,tx_3p,tx_4p,tx_5pp]]}}};
+		indicateurConfLog_c.drawChart(data);
+	};
+	
+	var indicateurConfLog_d = {};
+	indicateurConfLog_d.getData = function() {
+		var data = {ChartConfLog4: {labels:["Avant 1915", "1915 - 1948", "1949 - 1974","1975 - 1989","1990 - 1999", "2000 - 2009", "Après 2010"], data: {datasets: [[tx_ctr_av_1915,tx_ctr_1915_1948,tx_ctr_1949_1974,tx_ctr_1975_1989,tx_ctr_1990_1999,tx_ctr_2000_2009,tx_ctr_ap_2010]]}}};
+		indicateurConfLog_d.drawChart(data);
+	};
+	
+	
+	indicateurConfLog_a.drawChart = function (data) {
+			var ctx1 = document.getElementById("ChartConfLog1");
+			var maxscale = Math.max.apply(this, data.ChartConfLog1.data.datasets[0]) / 5;
+			maxscale = Math.trunc(maxscale) * 5;
+			ctx1.getContext("2d").canvas.width = 100;
+			ctx1.getContext("2d").canvas.height = 55;
+			var ChartConfLog1 = new Chart(ctx1, {
+			type: 'bar',
+			data: {
+				labels: data.ChartConfLog1.labels,
+				datasets: [{
+							label: nom_com,
+							backgroundColor: "rgba(255,212,96,0.9)",
+							borderColor: "rgba(255,212,96,0.9)",
+							borderWidth: 1,
+							borderSkipped:'left',
+							hoverBackgroundColor: "rgba(255,212,96,1)",
+							hoverBorderColor: "rgba(255,212,96,1)",
+							data: data.ChartConfLog1.data.datasets[0]
+							}]
+			},
+			 options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true,
+							max: maxscale + 5
+						}
+					}]
+				},
+				tooltips: {					
+					titleFontFamily:"roboto_bold",
+					titleFontSize:13,
+					bodyFontFamily:"roboto_regular",
+					backgroundColor:"rgba(36, 36, 36, 0.85)",
+					callbacks: {
+						label: function(tooltipItem, data) {
+							return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() + "%";
+
+						}
+					}
+		        }
+			}
+			});  
+	};
+	
+	indicateurConfLog_b.drawChart = function (data) {
+			var ctx2 = document.getElementById("ChartConfLog2");
+			ctx2.getContext("2d").canvas.width = 100;
+			ctx2.getContext("2d").canvas.height = 55;			
+			var ChartConfLog2 = new Chart(ctx2, {
+			type: 'doughnut',
+			data: {
+				labels: data.ChartConfLog2.labels,
+				datasets: [{
+							label: "Part selon le type",
+							backgroundColor: [
+								"rgba(78,184,151,0.9)",
+								"rgba(38,143,145,0.9)",
+								"rgba(86,115,154,0.9)"
+							],
+							borderWidth: 3,
+							borderSkipped:'left',
+							hoverBackgroundColor: [
+								"rgba(78,184,151,1)",
+								"rgba(38,143,145,1)",
+								"rgba(86,115,154,1)"								
+							],
+							data: data.ChartConfLog2.data.datasets[0]
+							}]
+			},
+			 options: {
+				tooltips: {					
+					titleFontFamily:"roboto_bold",
+					titleFontSize:13,
+					bodyFontFamily:"roboto_regular",
+					backgroundColor:"rgba(36, 36, 36, 0.85)",
+					callbacks: {
+						label: function(tooltipItem, data) {
+							return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() + "%";
+
+						}
+					}
+		        }
+			}
+			});  
+	};
+	
+	indicateurConfLog_c.drawChart = function (data) {
+			var ctx3 = document.getElementById("ChartConfLog3");
+			var maxscale3 = Math.max.apply(this, data.ChartConfLog3.data.datasets[0]) / 5;
+			maxscale3 = Math.trunc(maxscale3) * 5;
+			ctx3.getContext("2d").canvas.width = 100;
+			ctx3.getContext("2d").canvas.height = 55;
+			var ChartConfLog3 = new Chart(ctx3, {
+			type: 'bar',
+			data: {
+				labels: data.ChartConfLog3.labels,
+				datasets: [{
+							label: nom_com,
+							backgroundColor: "rgba(255,212,96,0.9)",
+							borderColor: "rgba(255,212,96,0.9)",
+							borderWidth: 1,
+							borderSkipped:'left',
+							hoverBackgroundColor: "rgba(255,212,96,1)",
+							hoverBorderColor: "rgba(255,212,96,1)",
+							data: data.ChartConfLog3.data.datasets[0]
+							}]
+			},
+			 options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true,
+							max: maxscale3 + 5
+						}
+					}]
+				},
+				tooltips: {					
+					titleFontFamily:"roboto_bold",
+					titleFontSize:13,
+					bodyFontFamily:"roboto_regular",
+					backgroundColor:"rgba(36, 36, 36, 0.85)",
+					callbacks: {
+						label: function(tooltipItem, data) {
+							return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() + "%";
+
+						}
+					}
+		        }
+			}
+			});  
+	};
+	
+	indicateurConfLog_d.drawChart = function (data) {
+			var ctx4 = document.getElementById("ChartConfLog4");
+			var maxscale4 = Math.max.apply(this, data.ChartConfLog4.data.datasets[0]) / 5;
+			maxscale4 = Math.trunc(maxscale4) * 5;
+			ctx4.getContext("2d").canvas.width = 100;
+			ctx4.getContext("2d").canvas.height = 55;
+			var ChartConfLog4 = new Chart(ctx4, {
+			type: 'bar',
+			data: {
+				labels: data.ChartConfLog4.labels,
+				datasets: [{
+							label: nom_com,
+							backgroundColor: "rgba(255,212,96,0.9)",
+							borderColor: "rgba(255,212,96,0.9)",
+							borderWidth: 1,
+							borderSkipped:'left',
+							hoverBackgroundColor: "rgba(255,212,96,1)",
+							hoverBorderColor: "rgba(255,212,96,1)",
+							data: data.ChartConfLog4.data.datasets[0]
+							}]
+			},
+			 options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true,
+							max: maxscale4 + 5
+						}
+					}]
+				},
+				tooltips: {					
+					titleFontFamily:"roboto_bold",
+					titleFontSize:13,
+					bodyFontFamily:"roboto_regular",
+					backgroundColor:"rgba(36, 36, 36, 0.85)",
+					callbacks: {
+						label: function(tooltipItem, data) {
+							return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() + "%";
+
+						}
+					}
+		        }
+			}
+			});  
+	};
+	
+
+	
+	 if  (typeof Chart === 'function') {
+            indicateurConfLog_a.getData();
+			indicateurConfLog_b.getData();
+			indicateurConfLog_c.getData();
+			indicateurConfLog_d.getData();
+    } else {
+            $.get('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js', function() {
+				indicateurConfLog_a.getData();
+				indicateurConfLog_b.getData();
+				indicateurConfLog_c.getData();
+				indicateurConfLog_d.getData();
+            });
+	}
+	
+</script>

@@ -9,7 +9,7 @@
 		label="Photo aérienne" 
 		title="Ortho Géobretagne" 
 		thumbgallery="img/basemap/ortho.jpg" 
-		url="http://tile.geobretagne.fr/gwc02/service/wms" 
+		url="https://tile.geobretagne.fr/gwc02/service/wms" 
 		layers="satellite" 
 		format="image/jpeg" 
 		visible="false" 
@@ -22,7 +22,7 @@
 		title="Thunderforest Neighbourhood" 
 		thumbgallery="img/basemap/mapquest.png" 
 		url="https://tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=1de58fc34e9443279668517b06a35dc1" 
-		attribution="© Thunderforest. Données : les contributeurs d'&lt;a href='http://www.openstreetmap.org/' target='_blank'>OpenStreetMap &lt;/a>,  &lt;a href='http://www.openstreetmap.org/copyright' target='_blank'>ODbL &lt;/a>" 
+		attribution="© Thunderforest. Données : les contributeurs d'&lt;a href='https://www.openstreetmap.org/' target='_blank'>OpenStreetMap &lt;/a>,  &lt;a href='https://www.openstreetmap.org/copyright' target='_blank'>ODbL &lt;/a>" 
 		visible="false"
 		/>		
 		<baselayer  
@@ -31,10 +31,10 @@
 		label="Plan clair" 
 		title="CartoDb" 
 		thumbgallery="img/basemap/positron.png" 
-		url="http://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" 
+		url="https://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" 
 		maxzoom="20" 
 		visible="false" 
-		attribution="Map tiles by  &lt;a href='http://cartodb.com/attributions'>CartoDb &lt;/a>, under  &lt;a href='http://creativecommons.org/licenses/by/3.0/'>CC BY 3.0 &lt;/a>" 
+		attribution="Map tiles by  &lt;a href='https://cartodb.com/attributions'>CartoDb &lt;/a>, under  &lt;a href='https://creativecommons.org/licenses/by/3.0/'>CC BY 3.0 &lt;/a>" 
 		/>      
 		<baselayer
          type="WMTS"
@@ -42,10 +42,10 @@
          label="OpenStreetMap"
          title="OpenSTreetMap"
          thumbgallery="img/basemap/osm.png"
-         url="http://osm.geobretagne.fr/gwc01/service/wmts"
+         url="https://osm.geobretagne.fr/gwc01/service/wmts"
 		 layers="osm:bing"
 		 format="image/png"
-         attribution="Données : les contributeurs d'&lt;a href='http://www.openstreetmap.org/' target='_blank'>OpenStreetMap &lt;/a>,  &lt;a     href='http://www.openstreetmap.org/copyright' target='_blank'>ODbL &lt;/a>"
+         attribution="Données : les contributeurs d'&lt;a href='https://www.openstreetmap.org/' target='_blank'>OpenStreetMap &lt;/a>,  &lt;a     href='https://www.openstreetmap.org/copyright' target='_blank'>ODbL &lt;/a>"
          visible="true"
 		 style=""
 		 matrixset="EPSG:3857"
@@ -54,8 +54,8 @@
 
 <!-- <authentification url="who" loginurl="?login" logouturl="../j_spring_security_logout" enabled="true"/> -->
     <!-- <proxy url=""/> -->
-    <!-- <olscompletion url="http://api-adresse.data.gouv.fr/search/" type="ban"/> -->
-    <!-- <elasticsearch url="http://ows.region-bretagne.fr/kartenn/_search" geometryfield="geometry" linkid="search_id" querymode="fussy_like_this"/> -->
+    <!-- <olscompletion url="https://api-adresse.data.gouv.fr/search/" type="ban"/> -->
+    <!-- <elasticsearch url="https://ows.region-bretagne.fr/kartenn/_search" geometryfield="geometry" linkid="search_id" querymode="fussy_like_this"/> -->
     <!-- <searchparameters bbox="true" localities="true" features="true"/> -->
 	
 <themes mini="false">

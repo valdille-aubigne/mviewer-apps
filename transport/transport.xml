@@ -1,263 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
     <application title="Val d'Ille - Aubigné" logo="./apps/logo-via.png" help="mviewer_help.html" panelfooterimage="img/panel-footer.png" panelfooterheight="80px" legend="false" exportpng="true" measuretools="true" legendasimage="false" popup="false" print="false" style="css/themes/wet_asphalt.css"/>
-	<mapoptions zoom="12" center="-179742,6154000" projection="EPSG:3857" maxzoom="19"/>  
-		
-	<baselayers style="gallery"><!-- style="default"||gallery" -->   
-        <baselayer  
-		type="WMS" 
-		id="photo1" 
-		label="Photo aérienne" 
-		title="Ortho Géobretagne" 
-		thumbgallery="img/basemap/ortho.jpg" 
-		url="http://tile.geobretagne.fr/gwc02/service/wms" 
-		layers="satellite" 
-		format="image/jpeg" 
-		visible="false" 
-		attribution="partenaires GéoBretagne - IGN RGE BD ORTHO - PlanetObserver"
-		/>
-		<baselayer  
-		type="OSM" 
-		id="osm2" 
-		label="Plan" 
-		title="Thunderforest Neighbourhood" 
-		thumbgallery="img/basemap/mapquest.png" 
-		url="https://tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=1de58fc34e9443279668517b06a35dc1" 
-		attribution="© Thunderforest. Données : les contributeurs d'&lt;a href='http://www.openstreetmap.org/' target='_blank'>OpenStreetMap &lt;/a>,  &lt;a href='http://www.openstreetmap.org/copyright' target='_blank'>ODbL &lt;/a>" 
-		visible="false"
-		/>		
-		<baselayer  
-		type="OSM" 
-		id="positron" 
-		label="Plan clair" 
-		title="CartoDb" 
-		thumbgallery="img/basemap/positron.png" 
-		url="http://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" 
-		maxzoom="20" 
-		visible="false" 
-		attribution="Map tiles by  &lt;a href='http://cartodb.com/attributions'>CartoDb &lt;/a>, under  &lt;a href='http://creativecommons.org/licenses/by/3.0/'>CC BY 3.0 &lt;/a>" 
-		/>      
-		<baselayer
-         type="WMTS"
-         id="osm1"
-         label="OpenStreetMap"
-         title="OpenSTreetMap"
-         thumbgallery="img/basemap/osm.png"
-         url="http://osm.geobretagne.fr/gwc01/service/wmts"
-		 layers="osm:bing"
-		 format="image/png"
-         attribution="Données : les contributeurs d'&lt;a href='http://www.openstreetmap.org/' target='_blank'>OpenStreetMap &lt;/a>,  &lt;a     href='http://www.openstreetmap.org/copyright' target='_blank'>ODbL &lt;/a>"
-         visible="true"
-		 style=""
-		 matrixset="EPSG:3857"
-		 />
-	</baselayers>
+	<mapoptions zoom="12" center="-179742,6154000" projection="EPSG:3857" maxzoom="19"/>
+
+  <baselayers style="gallery">
+        <baselayer
+      type="WMS"
+      id="photo1"
+      label="Photo aérienne"
+      title="Ortho Géobretagne"
+      thumbgallery="img/basemap/ortho.jpg"
+      url="https://tile.geobretagne.fr/gwc02/service/wms"
+      layers="satellite"
+      format="image/jpeg"
+      visible="false"
+      attribution="partenaires GéoBretagne - IGN RGE BD ORTHO - PlanetObserver"
+    />
+    <baselayer
+      type="OSM"
+      id="osm2"
+      label="Plan"
+      title="Thunderforest Neighbourhood"
+      thumbgallery="img/basemap/mapquest.png"
+      url="https://tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=1de58fc34e9443279668517b06a35dc1"
+      attribution="© Thunderforest. Données : les contributeurs d'&lt;a href='http://www.openstreetmap.org/' target='_blank'>OpenStreetMap &lt;/a>,  &lt;a href='http://www.openstreetmap.org/copyright' target='_blank'>ODbL &lt;/a>"
+      visible="false"
+    />
+    <baselayer
+      type="OSM"
+      id="positron"
+      label="Plan clair"
+      title="CartoDb"
+      thumbgallery="img/basemap/positron.png"
+      url="https://{a-c}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+      maxzoom="20"
+      visible="true"
+      attribution="Map tiles by  &lt;a href='http://cartodb.com/attributions'>CartoDb &lt;/a>, under  &lt;a href='http://creativecommons.org/licenses/by/3.0/'>CC BY 3.0 &lt;/a>"
+    />
+  </baselayers>
+
     <proxy url=""/>
-    <olscompletion url="http://api-adresse.data.gouv.fr/search/" type="ban"/>
-    <elasticsearch url="http://ows.region-bretagne.fr/kartenn/_search" geometryfield="geometry" linkid="search_id" querymode="fussy_like_this"/>
+    <olscompletion url="https://api-adresse.data.gouv.fr/search/" type="ban"/>
+    <elasticsearch url="https://ows.region-bretagne.fr/kartenn/_search" geometryfield="geometry" linkid="search_id" querymode="fussy_like_this"/>
     <searchparameters bbox="true" localities="true" features="true"/>
-	
+
     <themes mini="">
-		
-       	
+
+
 		<theme name="Transports" collapsed="false" id="TRANSPORT" icon="bus">
-				
-				<layer 	id="communes_via" 
-						name="Communes" 
-						visible="true" 
-						tiled="true" 
-						namespace="ccvia" 
-						queryable="false" 
-						infoformat="application/vnd.ogc.gml" 
-						opacity="0.2" 
-						featurecount="5" 
-						style="" 
-						url="https://geobretagne.fr/geoserver/ccvia/ows" 
-						attribution="Val d'Ille-Aubigné" 
-						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-communes_via" 
+
+				<layer 	id="valdilleaubigne:communes_ccvia"
+						name="Communes"
+						visible="true"
+						tiled="true"
+						queryable="false"
+						infoformat="application/vnd.ogc.gml"
+						opacity="0.2"
+						featurecount="5"
+						style="communes_bleues"
+            url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-communes_via"
 						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-communes_via"
 				>
-						
 				</layer>
-				
-				
-				<layer 	id="aire_covoiturage" 
-						name="Aires de covoiturage" 
-						visible="false" 
-						namespace="ccvia" 
-						queryable="true" 
-						infoformat="application/vnd.ogc.gml" 
-						featurecount="5" 
-						style="" 
-						opacity="1" 
-						url="https://geobretagne.fr/geoserver/ccvia/ows" 
-						attribution="Val d'Ille-Aubigné" 
-						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-aire_covoiturage" 
-						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-aire_covoiturage" 
+
+				<layer 	id="aire_covoiturage"
+						name="Aires de covoiturage"
+						visible="false"
+						queryable="true"
+						infoformat="application/vnd.ogc.gml"
+						featurecount="5"
+						style=""
+						opacity="1"
+            url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-aire_covoiturage"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-aire_covoiturage"
 				>
-						<template url="./apps/global/templates/transport.aire_covoiturage.mst"></template> 
+						<template url="./apps/transport/template/aire_covoiturage.mst"></template>
 				</layer>
-				<layer 	id="abri_velo" 
-						name="Abris vélos" 
-						visible="false" 
-						namespace="ccvia" 
-						queryable="true" 
-						infoformat="application/vnd.ogc.gml" 
-						featurecount="5" 
-						style="" 
-						opacity="1" 
-						url="https://geobretagne.fr/geoserver/ccvia/ows" 
-						attribution="Val d'Ille-Aubigné" 
-						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-abri_velo" 
-						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-abri_velo" 
+
+				<layer 	id="abri_velo"
+						name="Abris vélos"
+						visible="false"
+						queryable="true"
+						infoformat="application/vnd.ogc.gml"
+						featurecount="5"
+						style=""
+						opacity="1"
+            url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-abri_velo"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-abri_velo"
 				>
-						<template url="./apps/global/templates/transport.abri_velo.mst"></template> 
+						<template url="./apps/transport/template/abri_velo.mst"></template>
 				</layer>
-				<layer 	id="liaisons_cyclables" 
-						name="Liaisons cyclables" 
-						visible="false" 
-						namespace="ccvia" 
-						queryable="false" 
-						infoformat="application/vnd.ogc.gml" 
-						featurecount="5" 
-						style="" 
-						opacity="1" 
-						url="https://geobretagne.fr/geoserver/ccvia/ows" 
-						attribution="Val d'Ille-Aubigné" 
-						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-liaisons_cyclables" 
-						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-liaisons_cyclables" 
+				<layer 	id="liaisons_cyclables"
+						name="Liaisons cyclables"
+						visible="false"
+						queryable="false"
+						infoformat="application/vnd.ogc.gml"
+						featurecount="5"
+						style=""
+						opacity="1"
+            url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-liaison_cyclable"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-liaison_cyclable"
 				>
-						<template url="./apps/global/templates/transport.liaisons_cyclables.mst"></template> 
+						<template url="./apps/global/templates/transport.liaisons_cyclables.mst"></template>
 				</layer>
-				
-				<layer 	id="mobifute" 
-						name="Navette Mobi Futé" 
-						visible="true" 
-						namespace="ccvia" 
-						queryable="true" 
-						infoformat="application/vnd.ogc.gml" 
-						featurecount="5" 
-						style="" 
-						opacity="1" 
-						url="https://geobretagne.fr/geoserver/ccvia/ows" 
-						attribution="Val d'Ille-Aubigné" 
-						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-mobifute" 
-						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-mobifute" 
-				>
-						<template url="./apps/global/templates/transport.mobifute.mst"></template> 
+
+				<layer 	id="mobifute"
+						name="Navette Mobi Futé"
+						visible="true"
+						queryable="true"
+						infoformat="application/vnd.ogc.gml"
+						featurecount="5"
+						style=""
+						opacity="1"
+            url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-mobifute"
+            metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-mobifute"
+        >
+						<template url="./apps/transport/template/ligne_mobifute.mst"></template>
 				</layer>
-				<layer 	id="arret_routier_departemental" 
-						name="Arrêts BreizhGo" 
+				<layer 	id="arret_routier_logique_departemental"
+						name="Arrêts BreizhGo"
 						tiled="false"
-						visible="true" 
-						namespace="rb" 
-						queryable="true" 
-						infoformat="application/vnd.ogc.gml" 
-						featurecount="5" 
+						visible="true"
+						namespace="rb"
+						queryable="true"
+						infoformat="application/vnd.ogc.gml"
+						featurecount="5"
 						style="transports_arret_rout_dep_defaut"
-						opacity="1" 
-						url="https://ows.region-bretagne.fr/geoserver/rb/ows" 
-						attribution="Région Bretagne" 
-						metadata="https://geobretagne.fr/geonetwork/srv/fre/catalog.search#/metadata/252ee615-278d-4bc1-b5a7-9ea543348e72" 
-						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=252ee615-278d-4bc1-b5a7-9ea543348e72" 
+						opacity="1"
+						url="https://ows.region-bretagne.fr/geoserver/rb/ows"
+						attribution="Région Bretagne"
+						metadata="https://geobretagne.fr/geonetwork/srv/fre/catalog.search#/metadata/252ee615-278d-4bc1-b5a7-9ea543348e72"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=252ee615-278d-4bc1-b5a7-9ea543348e72"
 						filter="INTERSECTS (geom, Polygon ((355065.13887245848309249 6799121.25040920078754425, 351428.12215071578975767 6796184.0888468325138092, 344454.94743342750007287 6797458.6336542097851634, 344566.21194563072640449 6803011.09064452070742846, 339724.0002999126445502 6805289.8245085421949625, 341056.45387149672023952 6810332.55348461959511042, 343692.67249460710445419 6811442.55997379962354898, 346183.21237007342278957 6809716.04519982729107141, 348285.72185925161466002 6813876.4306451203301549, 352452.80273778404807672 6813723.98058776929974556, 354970.94595228001708165 6816620.67467520479112864, 362386.76683641551062465 6816489.45583730842918158, 367083.74782929680077359 6819149.47942369990050793, 370630.44769165042089298 6814575.25106778740882874, 368759.0903766782139428 6810034.11502937041223049, 368979.18194770376430824 6807096.61922330316156149, 366375.47740352619439363 6806715.53349219728261232, 362199.64589327666908503 6803026.19855630397796631, 360290.92645244376035407 6802801.17530000489205122, 358871.46886403940152377 6797716.18481757491827011, 355065.13887245848309249 6799121.25040920078754425)))"
 
 				>
-						<template url="./apps/global/templates/transport.arrets_illenoo.mst"></template> 
+						<template url="./apps/transport/template/arret_breizhgo.mst"></template>
 				</layer>
-				<layer 	id="ligne_routiere_departementale" 
+				<layer 	id="ligne_routiere_departementale"
 						name="Lignes BreizhGo"
 						tiled="false"
-						visible="true" 
-						namespace="rb" 
-						queryable="true" 
-						infoformat="application/vnd.ogc.gml" 
-						featurecount="5" 
-						style="transports_ligne_rout_dep_defaut" 
-						opacity="1" 
-						url="https://ows.region-bretagne.fr/geoserver/rb/ows" 
-						attribution="Région Bretagne" 
-						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=b08c5f1b-79ed-441a-9198-7360e6338b89" 
-						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=b08c5f1b-79ed-441a-9198-7360e6338b89" 
+						visible="true"
+						namespace="rb"
+						queryable="true"
+						infoformat="application/vnd.ogc.gml"
+						featurecount="5"
+						style="transports_ligne_rout_dep_defaut"
+						opacity="1"
+						url="https://ows.region-bretagne.fr/geoserver/rb/ows"
+						attribution="Région Bretagne"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=b08c5f1b-79ed-441a-9198-7360e6338b89"
+						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=b08c5f1b-79ed-441a-9198-7360e6338b89"
 						filter="INTERSECTS (geom, Polygon ((355065.13887245848309249 6799121.25040920078754425, 351428.12215071578975767 6796184.0888468325138092, 344454.94743342750007287 6797458.6336542097851634, 344566.21194563072640449 6803011.09064452070742846, 339724.0002999126445502 6805289.8245085421949625, 341056.45387149672023952 6810332.55348461959511042, 343692.67249460710445419 6811442.55997379962354898, 346183.21237007342278957 6809716.04519982729107141, 348285.72185925161466002 6813876.4306451203301549, 352452.80273778404807672 6813723.98058776929974556, 354970.94595228001708165 6816620.67467520479112864, 362386.76683641551062465 6816489.45583730842918158, 367083.74782929680077359 6819149.47942369990050793, 370630.44769165042089298 6814575.25106778740882874, 368759.0903766782139428 6810034.11502937041223049, 368979.18194770376430824 6807096.61922330316156149, 366375.47740352619439363 6806715.53349219728261232, 362199.64589327666908503 6803026.19855630397796631, 360290.92645244376035407 6802801.17530000489205122, 358871.46886403940152377 6797716.18481757491827011, 355065.13887245848309249 6799121.25040920078754425)))"
 				>
-						<template url="./apps/global/templates/transport.ligne_illenoo.mst"></template> 
-				</layer> 
-				
-				
-				<layer 	id="troncon_ferroviaire" 
-						name="Lignes ferroviaires" 
-						visible="true" 
-						namespace="rb" 
-						queryable="true" 
-						infoformat="application/vnd.ogc.gml" 
-						featurecount="5" 
-						style="" 
-						opacity="1" 
-						url="https://ows.region-bretagne.fr/geoserver/rb/ows" 
-						attribution="Région Bretagne" 
-						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=0da27e88-4da6-423e-ba4c-dbcad9128cd2" 
+						<template url="./apps/transport/template/transport_ligne_breizhgo.mst"></template>
+				</layer>
+
+
+				<layer 	id="troncon_ferroviaire"
+						name="Lignes ferroviaires"
+						visible="true"
+						namespace="rb"
+						queryable="true"
+						infoformat="application/vnd.ogc.gml"
+						featurecount="5"
+						style=""
+						opacity="1"
+						url="https://ows.region-bretagne.fr/geoserver/rb/ows"
+						attribution="Région Bretagne"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=0da27e88-4da6-423e-ba4c-dbcad9128cd2"
 						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=0da27e88-4da6-423e-ba4c-dbcad9128cd2"
 						filter="INTERSECTS (geom, Polygon ((355065.13887245848309249 6799121.25040920078754425, 351428.12215071578975767 6796184.0888468325138092, 344454.94743342750007287 6797458.6336542097851634, 344566.21194563072640449 6803011.09064452070742846, 339724.0002999126445502 6805289.8245085421949625, 341056.45387149672023952 6810332.55348461959511042, 343692.67249460710445419 6811442.55997379962354898, 346183.21237007342278957 6809716.04519982729107141, 348285.72185925161466002 6813876.4306451203301549, 352452.80273778404807672 6813723.98058776929974556, 354970.94595228001708165 6816620.67467520479112864, 362386.76683641551062465 6816489.45583730842918158, 367083.74782929680077359 6819149.47942369990050793, 370630.44769165042089298 6814575.25106778740882874, 368759.0903766782139428 6810034.11502937041223049, 368979.18194770376430824 6807096.61922330316156149, 366375.47740352619439363 6806715.53349219728261232, 362199.64589327666908503 6803026.19855630397796631, 360290.92645244376035407 6802801.17530000489205122, 358871.46886403940152377 6797716.18481757491827011, 355065.13887245848309249 6799121.25040920078754425)))"
-						
-						> 
-						<template url="./apps/global/templates/transport.ligne_ferroviaire.mst"></template> 
+
+						>
+						<template url="./apps/transport/template/ligne_ferroviaire.mst"></template>
 				</layer>
-				
-				<layer 	id="arret_ferroviaire" 
-						name="Arrêts TER" 
-						visible="true" 
-						namespace="rb" 
-						queryable="true" 
-						infoformat="application/vnd.ogc.gml" 
-						featurecount="5" 
-						style="" 
-						opacity="1" 
-						url="https://ows.region-bretagne.fr/geoserver/rb/ows" 
-						attribution="Région Bretagne" 
-						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=0da27e88-4da6-423e-ba4c-dbcad9128cd2" 
+
+				<layer 	id="arret_ferroviaire"
+						name="Arrêts TER"
+						visible="true"
+						namespace="rb"
+						queryable="true"
+						infoformat="application/vnd.ogc.gml"
+						featurecount="5"
+						style=""
+						opacity="1"
+						url="https://ows.region-bretagne.fr/geoserver/rb/ows"
+						attribution="Région Bretagne"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=0da27e88-4da6-423e-ba4c-dbcad9128cd2"
 						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=0da27e88-4da6-423e-ba4c-dbcad9128cd2"
 						filter="INTERSECTS (geom, Polygon ((355065.13887245848309249 6799121.25040920078754425, 351428.12215071578975767 6796184.0888468325138092, 344454.94743342750007287 6797458.6336542097851634, 344566.21194563072640449 6803011.09064452070742846, 339724.0002999126445502 6805289.8245085421949625, 341056.45387149672023952 6810332.55348461959511042, 343692.67249460710445419 6811442.55997379962354898, 346183.21237007342278957 6809716.04519982729107141, 348285.72185925161466002 6813876.4306451203301549, 352452.80273778404807672 6813723.98058776929974556, 354970.94595228001708165 6816620.67467520479112864, 362386.76683641551062465 6816489.45583730842918158, 367083.74782929680077359 6819149.47942369990050793, 370630.44769165042089298 6814575.25106778740882874, 368759.0903766782139428 6810034.11502937041223049, 368979.18194770376430824 6807096.61922330316156149, 366375.47740352619439363 6806715.53349219728261232, 362199.64589327666908503 6803026.19855630397796631, 360290.92645244376035407 6802801.17530000489205122, 358871.46886403940152377 6797716.18481757491827011, 355065.13887245848309249 6799121.25040920078754425)))"
-				> 
-						
-						<template url="./apps/global/templates/global.arret_ferroviaire.mst"></template> 
-				</layer>
-				<layer 	id="arret_mobifute" 
-						name="Arrêts Mobi Futé" 
-						visible="true" 
-						namespace="ccvia" 
-						queryable="true" 
-						infoformat="application/vnd.ogc.gml" 
-						featurecount="5" 
-						style="" 
-						opacity="1" 
-						url="https://geobretagne.fr/geoserver/ccvia/ows" 
-						attribution="Val d'Ille-Aubigné" 
-						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-ccvia-arret_mobifute" 
-						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-ccvia-arret_mobifute" 
 				>
-						<template url="./apps/global/templates/transport.arrets_mobifute.mst"></template> 
+
+						<template url="./apps/transport/template/arret_ferroviaire.mst"></template>
 				</layer>
-				
-				<layer 	id="star_ligne_itineraire" 
-						name="Lignes du réseau STAR" 
-						visible="true" 
-						namespace="rm" 
-						queryable="true" 
-						infoformat="application/vnd.ogc.gml" 
-						featurecount="5" 
-						style="" 
-						opacity="1" 
-						url="https://public.sig.rennesmetropole.fr/geoserver/ows" 
-						attribution="Rennes Métropole" 
-						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=74052be5-4ce0-4861-baf1-35c0761538af" 
+				<layer 	id="arret_mobifute"
+						name="Arrêts Mobi Futé"
+						visible="true"
+						queryable="true"
+						infoformat="application/vnd.ogc.gml"
+						featurecount="5"
+						style=""
+						opacity="1"
+            url="https://geo.valdille-aubigne.fr/geoserver/valdilleaubigne/wms"
+						attribution="Val d'Ille-Aubigné"
+            metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=fr-valdilleaubigne-arret_mobifute"
+            metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=fr-valdilleaubigne-arret_mobifute"
+        >
+						<template url="./apps/transport/template/arret_mobifute.mst"></template>
+				</layer>
+
+				<layer 	id="star_ligne_itineraire"
+						name="Lignes du réseau STAR"
+						visible="true"
+						namespace="rm"
+						queryable="true"
+						infoformat="application/vnd.ogc.gml"
+						featurecount="5"
+						style=""
+						opacity="1"
+						url="https://public.sig.rennesmetropole.fr/geoserver/ows"
+						attribution="Rennes Métropole"
+						metadata="https://geobretagne.fr/geonetwork/apps/georchestra/?uuid=74052be5-4ce0-4861-baf1-35c0761538af"
 						metadata-csw="https://geobretagne.fr/geonetwork/srv/eng/csw?SERVICE=CSW&amp;VERSION=2.0.2&amp;REQUEST=GetRecordById&amp;elementSetName=full&amp;ID=74052be5-4ce0-4861-baf1-35c0761538af"
 						filter="INTERSECTS (shape, Polygon ((1354924.45960438274778426 7232758.31613569334149361, 1351281.63272760203108191 7229825.06342061050236225, 1344307.19794038077816367 7231110.30905303917825222, 1344426.6614151424728334 7236665.00720799900591373, 1339585.79765251139178872 7238951.85245204251259565, 1340926.28553571063093841 7243994.63170990068465471, 1343565.17348736058920622 7245101.17075165174901485, 1346054.14963427931070328 7243370.32421023119240999, 1348163.54024239047430456 7247529.24150472413748503, 1352331.96600321168079972 7247370.70405209716409445, 1354855.19167108368128538 7250264.85759505722671747, 1362273.51399515359662473 7250123.10955876111984253, 1366975.85953917726874352 7252777.55663824733346701, 1370517.55832214513793588 7248196.82352276518940926, 1368639.28749828319996595 7243656.53201282303780317, 1368855.44270175276324153 7240717.58050395548343658, 1366250.17287130979821086 7240339.91986093204468489, 1362067.51333031058311462 7236654.86920590326189995, 1360157.68105452693998814 7236432.4233858697116375, 1358730.4651865519117564 7231347.24522236455231905, 1354924.45960438274778426 7232758.31613569334149361)))"
-						> 
-						<template url="./apps/global/templates/transport.ligne_star.mst"></template> 
+						>
+						<template url="./apps/transport/template/ligne_star.mst"></template>
 				</layer>
 		</theme>
-		
-		
+
+
     </themes>
 </config>

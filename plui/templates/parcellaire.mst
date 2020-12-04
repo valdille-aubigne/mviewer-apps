@@ -1,0 +1,266 @@
+
+{{#features}}
+
+<div id="numparc" class="title-feature" style="padding-top:8px;"></div>
+
+		<div class = "item active" style="margin-top:-2%;">
+			<div class="container" style="padding-left:0!important;margin-left:0!important;margin-bottom:10%;overflow:hidden;">
+				<div class="row">
+					<div class="col-xs-3" style="padding-right:0px; padding-left:5px; margin-left:1%; margin-top:0%;">
+						<div class="title-number" style="text-align:left;">
+							<p>
+							<span style="font-family:'roboto_bold'"> Dispositions générales :</span>
+							<span style="font-size:12px; text-align:left; font-family:'roboto_regular'; color:#777;">
+							<a target=\"_blank\"  href="https://www.valdille-aubigne.fr/wp-content/uploads/2020/PLUI/4.1_reglement_litteral_approbation.pdf#page=8">Ouvrir le pdf</a>
+							</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-xs-8" style="padding-right:0px; padding-left:5px; margin-left:1%; margin-top:0%;">
+						<div class="title-number" style="text-align:left;">
+							<p>
+							<span style="font-family:'roboto_bold'"> OAP thématiques :</span>
+							<span style="font-size:12px; text-align:left; font-family:'roboto_regular'; color:#777;">
+							<a target=\"_blank\"  href="https://www.valdille-aubigne.fr/wp-content/uploads/2020/PLUI/3.Orientation_amenagement/3.1_OAP_thematiques/3.1.3_OAP_Trame_verte_bleue_approbation.pdf">OAP Trame verte et bleue </a> /
+							<a target=\"_blank\"  href="https://www.valdille-aubigne.fr/wp-content/uploads/2020/PLUI/3.Orientation_amenagement/3.1_OAP_thematiques/3.1.2_OAP_Patrimoine_approbation.pdf">OAP Patrimoine et paysage </a> /
+							<a target=\"_blank\"  href="https://www.valdille-aubigne.fr/wp-content/uploads/2020/PLUI/3.Orientation_amenagement/3.1_OAP_thematiques/3.1.1_OAP_Commerce_approbation.pdf">OAP Commerce </a>
+							</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<!-- ZONAGE -->
+					<div class="col-xs-11" style="padding-right:0px; padding-left:5px; margin-left:1%; margin-top:0%;">
+						<div class="title-number" style="text-align:left;">
+							<p>
+							<span style="font-family:'roboto_bold'"> Zonage(s) :</span><br/>
+							<span id="zonlist" style="font-size:12px; text-align:left; font-family:'roboto_regular'; color:#777;"></span>
+							</p>
+						</div>
+					</div>
+				</div>	
+				<div class="row">
+					<!-- PRESCRIPTION -->
+					<div class="col-xs-5" style="padding-right:0px; padding-left:5px; margin-left:1%; margin-top:0%;">
+						<div class="title-number" style="text-align:left;">
+							<p>
+							<span style="font-family:'roboto_bold'"> Prescription(s) :</span><br/>
+							<span id="psclist" style="font-size:12px; text-align:left; font-family:'roboto_regular'; color:#777;"></span>
+							</p>
+						</div>
+					</div>
+
+					<!-- SUP -->
+					<div class="col-xs-3" style="padding-right:0px; padding-left:5px; margin-left:1%; margin-top:0%;">
+						<div class="title-number" style="text-align:left;">
+							<p>
+							<span style="font-family:'roboto_bold'"> Servitude(s) :</span><br/>
+							<span id="suplist" style="font-size:12px; text-align:left; font-family:'roboto_regular'; color:#777;"></span>
+							</p>
+						</div>
+					</div>
+
+					<!-- INFORMATION -->
+					<div class="col-xs-3" style="padding-right:0px; padding-left:5px; margin-left:1%; margin-top:0%;">
+						<div class="title-number" style="text-align:left;">
+							<p>
+							<span style="font-family:'roboto_bold'"> Annexe(s) :</span><br/>
+							<span id="inflist" style="font-size:12px; text-align:left; font-family:'roboto_regular'; color:#777;">
+							</span>
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+{{/features}}
+
+<style>
+	<!-- body, html { -->
+		  <!-- margin:0px; -->
+		  <!-- position:relative; -->
+		  <!-- line-height: 1 !important; -->
+		  <!-- font-family:'Open Sans'; -->
+		  <!-- font-size:12px; -->
+		  <!-- text-align: center; -->
+		  <!-- color: #797979; -->
+		<!-- }  -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_black"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Black.ttf'); -->
+		<!-- } -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_bold"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Bold.ttf'); -->
+		<!-- } -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_regular"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Regular.ttf'); -->
+		<!-- } 		 -->
+	.title-feature {
+		color: #2d4059;
+		font-family:"roboto_black";
+		font-size:23px;
+		text-align: left;
+		margin-bottom:3%;
+		line-height:1;
+	}
+	<!-- .indicateurConfLog {			 -->
+		<!-- text-align: center; -->
+	<!-- } -->
+	<!-- .panel-graph { -->
+	    <!-- color: #3db39e; -->
+	    <!-- text-align: center; -->
+	<!-- } -->
+
+	.container_viz{
+			padding-left:0!important;
+			margin-left:0!important;
+			overflow: hidden;
+			margin-top: 1%;
+		}
+	.number{
+			font-family: "roboto_black";
+			font-size:35px;
+			color: #fdc121;
+			/*margin-top: 5px;*/
+		}
+	.title-number{
+			font-family: "roboto_bold";
+			font-size:12px;
+			color: #fdc121;
+			/*margin-top:0%;*/
+		}
+	.carousel-control {
+    height: 70% !important;
+    top: 40% !important;
+    /*color: rgba(52,152,219, 0.6) !important;*/
+	}
+	.liste{
+		list-style: disc;
+		margin:0;
+		padding:10px;
+	}
+</style>
+
+<script>
+
+	var i, j, k, l, x ="<ul class=\"liste\">",y="<ul class=\"liste\">", z="<ul class=\"liste\">", aa="<ul class=\"liste\">";
+
+	var idu=[];
+	{{#features}}
+		idu.push('{{idu}}');
+	{{/features}}
+
+	idu=idu.toString();
+	idu = "Parcelle n°" + idu.substring(6,8).replace(/^0{1}/,'') + " " + idu.substring(8,12).replace(/^0{1,}/,'');
+	document.getElementById("numparc").innerHTML = idu;
+
+	var zonage=[];
+	{{#features}}
+		zonage.push('{{zonage}}');
+	{{/features}}
+
+	zonage=zonage.toString();
+	zonage=zonage.replace(/&quot;/g, '"');
+	zonage = JSON.parse(zonage);
+
+	for (i = 0; i < zonage.length; i++) {
+  x += "<li>" + zonage[i]["libelle"] + " - " + zonage[i]["libelong"] + " (" +
+			"<a target=\"_blank\"  href=" + zonage[i]["urlfic"] + ">Ouvrir le pdf)</a></li>";
+}
+x += "</ul>";
+document.getElementById("zonlist").innerHTML = x;
+
+var prescription=[];
+	{{#features}}
+		prescription.push('{{prescription}}');
+	{{/features}}
+
+if (prescription != '') {
+
+	prescription=prescription.toString();
+	prescription=prescription.replace(/&quot;/g, '"');
+	prescription = JSON.parse(prescription);
+
+for (j = 0; j < prescription.length; j++) {
+  y += "<li>" + prescription[j]["libelle"] ;
+if (prescription[j]["txt"] != null){
+  y += " : " + prescription[j]["txt"];
+}
+if (prescription[j]["libtypepsc"] != null){
+  y += " - " + prescription[j]["libtypepsc"] ;
+}
+if (prescription[j]["piece_ecrite"] != null){
+  y += " (" +	"<a target=\"_blank\"  href=" + prescription[j]["piece_ecrite"] + ">Ouvrir le pdf)</a>";
+}
+  y += "</li>" ;
+}
+}else{
+y += "<li>Aucune prescription sur la parcelle</li>";
+}
+y += "</ul>";
+document.getElementById("psclist").innerHTML = y;
+
+var information=[];
+	{{#features}}
+		information.push('{{information}}');
+	{{/features}}
+
+if (information != '') {
+
+	information=information.toString();
+	information=information.replace(/&quot;/g, '"');
+	information = JSON.parse(information);
+
+for (k = 0; k < information.length; k++) {
+ if (!(information[k]["typeinf"] == '19' && information[k]["stypeinf"] == '01') || (information[k]["libelle"] == 'Zonage assainissement' )){
+ z += "<li>" + information[k]["libelle"];
+
+if (information[k]["txt"] != null){ 
+  z += " : " + information[k]["txt"];
+}
+//if (information[k]["libtypeinf"] != null){
+ // z += " - " + information[k]["libtypeinf"] ;
+//}
+if (information[k]["urlfic"] != null){
+  z += " (" +	"<a target=\"_blank\"  href=" + information[k]["urlfic"] + ">Ouvrir)</a>";
+} 
+  z += "</li>" ;
+}
+}}else{
+z += "<li>Aucune contraintes autre sur la parcelle</li>";
+}
+z += "</ul>";
+document.getElementById("inflist").innerHTML = z;
+
+
+var sup=[];
+	{{#features}}
+		sup.push('{{sup}}');
+	{{/features}}
+
+if (sup != '') {
+
+	sup=sup.toString();
+	sup=sup.replace(/&quot;/g, '"');
+	sup = JSON.parse(sup);
+
+for (l = 0; l < sup.length; l++) {
+  aa += "<li>" + sup[l]["libelle"];
+
+if (sup[l]["urlfic"] != null){
+  aa += " (" +	"<a target=\"_blank\"  href=" + sup[l]["urlfic"] + ">Ouvrir le pdf)</a>";
+}
+  aa += "</li>" ;
+}
+}
+aa += "<li>T7 : Extérieur des zones de dégagement</li>";
+aa += "</ul>";
+document.getElementById("suplist").innerHTML = aa;
+
+</script>

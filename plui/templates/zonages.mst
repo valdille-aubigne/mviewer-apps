@@ -1,0 +1,80 @@
+
+{{#features}}
+
+	<li class="item" style="text-align: center" >
+		<h3 class="title-feature" style="text-align: center">Zone {{libelle}}</h3>
+		<p class="text-feature">		
+			<span style="font-family:'roboto_bold'"> Description zonage :</span> {{libelong}}<br/>
+			<span style="font-family:'roboto_bold'"> Destination zonage :</span> {{lib_destdomi}}<br/>
+			<span style="font-family:'roboto_bold'"> Reglement  : </span><a target="_blank"  href="{{urlfic}}">Ouvrir le pdf</a><br/>	
+			</br>
+			</br>
+			</br>
+			</br>
+		</p>
+	</li>
+{{/features}}
+
+<style>
+	<!-- body, html { -->
+		  <!-- margin:0px; -->
+		  <!-- position:relative; -->
+		  <!-- line-height: 1 !important; -->
+		  <!-- font-family:'Open Sans'; -->
+		  <!-- font-size:11px; -->
+		  <!-- text-align: center; -->
+		  <!-- color: #797979; -->
+		<!-- }  -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_black"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Black.ttf'); -->
+		<!-- } -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_bold"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Bold.ttf'); -->
+		<!-- } -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_regular"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Regular.ttf'); -->
+		<!-- } 		 -->
+	.title-feature {
+		color: #2d4059;
+		font-family:"roboto_black";
+		font-size:23px;
+		text-align: left;
+		margin-bottom:3%;
+		line-height:1;			
+	}
+	<!-- .indicateurConfLog {			 -->
+		<!-- text-align: center; -->
+	<!-- } -->
+	<!-- .panel-graph { -->
+	    <!-- color: #3db39e; -->
+	    <!-- text-align: center; -->
+	<!-- } -->
+
+	.container_viz{
+			padding-left:0!important;
+			margin-left:0!important;
+			overflow: hidden;
+			margin-top: 1%;
+		}
+	.number{
+			font-family: "roboto_black";
+			font-size:35px;
+			color: #fdc121;
+			/*margin-top: 5px;*/
+		}
+	.title-number{
+			font-family: "roboto_bold";
+			font-size:12px;
+			color: #fdc121;
+			/*margin-top:0%;*/
+		}
+.carousel-control {
+    height: 70% !important;
+    top: 40% !important;
+    /*color: rgba(52,152,219, 0.6) !important;*/
+}
+</style>
+

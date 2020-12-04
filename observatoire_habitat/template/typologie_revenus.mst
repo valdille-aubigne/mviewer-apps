@@ -1,0 +1,146 @@
+{{#features}}
+
+	<div class="title-feature" style="padding-top:8px;">{{nom}}</div>
+	
+		<div class = "item active" style="margin-top:-2%;">
+			<div class="container" style="padding-left:0!important;margin-left:0!important;margin-bottom:10%;overflow:hidden;">
+				<div class="row">			
+					<div class="col-xs-2" style="padding-right:0px; padding-left:5px; margin-top:3%;">
+						<img class="img-responsive" src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/revenu.svg" style="max-width:75%;margin: 0 auto;">
+						<div class="number" style="margin-top:5%;text-align:center;">{{med}} €</div>
+						<div class="title-number" style="text-align:center;">
+							<p>Revenu médian des ménages</i></p>
+						</div>
+					</div>
+										
+					<!-- CHIFFRES CLES TYPE REV -->
+					<div class="col-xs-2" style="padding-right:0px; margin-top:3%;margin-left:3%;">
+						<div class="row">
+							<div class="col-xs-2" style="padding-right:0px;">
+								<img src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/menage_jaune.svg" style="width:60px; margin-top:50%; margin-left:-72%;">
+							</div>
+							<div class="col-xs-8" style="padding-right:0px; margin-left:15%;margin-top:5%;">	
+								<div class="number" style="text-align:left; color:#F5C117;font-size:24px;">
+									{{nbmenfisc}}
+								</div>
+								<div class="title-number" style="text-align: left;color:#F5C117;">
+									<p>Nombre de ménages fiscaux</br></p>
+								</div>	
+							</div>	
+						</div>
+						<div class="row">
+							<div class="col-xs-2" style="padding-right:0px;">
+								<img src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/menage_rouge.svg" style="width:80px; margin-top:150%; margin-left:-102%;">
+							</div>
+							<div class="col-xs-8" style="padding-right:0px; margin-left:15%;margin-top:5%;">	
+								<div class="number" style="text-align:left; color:#BB342F;font-size:24px;">
+									{{nbpersparmenfisc}}
+								</div>
+								<div class="title-number" style="text-align:left; color:#BB342F;">
+									<p>Nombre de personnes par ménages </br></p>
+								</div>	
+							</div>
+						</div>
+					</div>
+					
+					<!-- CHIFFRES CLES REV2 -->
+					<div class="col-xs-2" style="padding-right:0px; margin-top:3%;margin-left:3%;">
+						<div class="row">
+						{{#pimp}}
+							<div class="col-xs-2" style="padding-right:0px;">
+								<img src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/menage_impot.svg" style="width:60px; margin-top:50%; margin-left:-72%;">
+							</div>
+							<div class="col-xs-8" style="padding-right:0px; margin-left:15%;margin-top:5%;">	
+								<div class="number" style="text-align:left; color:#F5C117;font-size:24px;">
+									{{pimp}} %
+								</div>
+								<div class="title-number" style="text-align: left;color:#F5C117;">
+									<p>Taux de ménages imposables</br></p>
+								</div>	
+							</div>	
+						{{/pimp}}
+						</div>
+						<div class="row">
+						{{#tp60}}
+							<div class="col-xs-2" style="padding-right:0px;">
+								<img src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/menage_pauvrete.svg" style="width:80px; margin-top:90%; margin-left:-102%;">
+							</div>
+							<div class="col-xs-8" style="padding-right:0px; margin-left:15%;margin-top:5%;">	
+								<div class="number" style="text-align:left; color:#BB342F;font-size:24px;">
+									{{tp60}} %
+								</div>
+								<div class="title-number" style="text-align:left; color:#BB342F;">
+									<p>Taux de ménages sous le seuil de pauvreté </br></p>
+								</div>	
+							</div>
+						{{/tp60}}	
+						</div>
+					</div>
+				</div>
+				<div class="row">	
+					<div class="title-number" style="text-align:left; padding-left:30px;">
+							<p><i style="font-size:10px; text-align:center; font-family:'roboto_regular'; color:#777;">{{nom}} - {{annee}} - Source : INSEE</i></p>
+						</div>
+				</div>
+			</div>
+		</div>
+	
+{{/features}}
+
+<style>
+	<!-- body, html { -->
+		  <!-- margin:0px; -->
+		  <!-- position:relative; -->
+		  <!-- line-height: 1 !important; -->
+		  <!-- font-family:'Open Sans'; -->
+		  <!-- font-size:11px; -->
+		  <!-- text-align: center; -->
+		  <!-- color: #797979; -->
+		<!-- }  -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_black"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Black.ttf'); -->
+		<!-- } -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_bold"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Bold.ttf'); -->
+		<!-- } -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_regular"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Regular.ttf'); -->
+		<!-- } 		 -->
+	.title-feature {
+		color: #2d4059;
+		font-family:"roboto_black";
+		font-size:23px;
+		text-align: left;
+		margin-bottom:3%;
+		line-height:1;			
+	}
+	<!-- .indicateurTypLog {			 -->
+		<!-- text-align: center; -->
+	<!-- } -->
+	<!-- .panel-graph { -->
+	    <!-- color: #3db39e; -->
+	    <!-- text-align: center; -->
+	<!-- } -->
+
+	.container_viz{
+			padding-left:0!important;
+			margin-left:0!important;
+			overflow: hidden;
+			margin-top: 1%;
+		}
+	.number{
+			font-family: "roboto_black";
+			font-size:35px;
+			color: #fdc121;
+			/*margin-top: 5px;*/
+		}
+	.title-number{
+			font-family: "roboto_bold";
+			font-size:12px;
+			color: #fdc121;
+			/*margin-top:0%;*/
+		}
+</style>

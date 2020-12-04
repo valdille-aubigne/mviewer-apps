@@ -1,0 +1,282 @@
+{{#features}}
+
+	<div class="title-feature" style="padding-top:8px;">{{nom}}</div>
+	
+		<div class = "item active" style="margin-top:-2%;">
+			<div class="container" style="padding-left:0!important;margin-left:0!important;margin-bottom:10%;overflow:hidden;">
+				<div class="row">			
+					<div class="col-xs-2" style="padding-right:0px; padding-left:5px; margin-top:3%;">
+						<img class="img-responsive" src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/icon_house_blanc.svg" style="max-width:50%;margin: 0 auto;">
+						<div class="number" style="margin-top:5%;text-align:center;">{{log}}</div>
+						<div class="title-number" style="text-align:center;">
+							<p>logements</p>
+						</div>
+					</div>
+					<div class="col-xs-4" style="margin-left:3%;">
+						<canvas id="ChartTypoLog1"></canvas>
+						<div style="margin-top:10px; text-align:center">
+							<p><b>Répartition des logements selon l'utilisation</b></p>
+						</div> 
+					</div>
+					<div class="col-xs-4" style="margin-left:-3%;">
+						<canvas id="ChartTypoLog2"></canvas>
+						<div style="margin-top:10px; text-align:center">
+							<p><b>Répartition des logements selon le type</b></p>
+						</div>
+					</div>
+					<!-- CHIFFRES CLES TYPE LOG -->
+					<div class="col-xs-2" style="padding-right:0px; margin-top:3%;margin-left:-6%;">
+						<div class="row">
+							<div class="col-xs-2" style="padding-right:0px;">
+								<img src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/icon_house_jaune.svg" style="width:60px; margin-top:50%; margin-left:-72%;">
+							</div>
+							<div class="col-xs-8" style="padding-right:0px; margin-left:15%;margin-top:5%;">	
+								<div class="number" style="text-align:left; color:#F5C117;font-size:24px;">
+									{{maison}}
+								</div>
+								<div class="title-number" style="text-align: left;color:#F5C117;">
+									<p>maisons</br></p>
+								</div>	
+							</div>	
+						</div>
+						<div class="row">
+							<div class="col-xs-2" style="padding-right:0px;">
+								<img src="https://geo.valdille-aubigne.fr/mviewer/apps/observatoire_habitat/template/icon_building_rouge.svg" style="width:60px; margin-top:50%; margin-left:-72%;">
+							</div>
+							<div class="col-xs-8" style="padding-right:0px; margin-left:15%;margin-top:5%;">	
+								<div class="number" style="text-align:left; color:#BB342F;font-size:24px;">
+									{{appart}}
+								</div>
+								<div class="title-number" style="text-align:left; color:#BB342F;">
+									<p>appartements </br></p>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">	
+					<div class="title-number" style="text-align:left; padding-left:30px;">
+							<p><i style="font-size:10px; text-align:center; font-family:'roboto_regular'; color:#777;">{{nom}} - {{annee}} - Source : INSEE</i></p>
+						</div>
+				</div>
+			</div>
+		</div>
+	
+{{/features}}
+
+<style>
+	<!-- body, html { -->
+		  <!-- margin:0px; -->
+		  <!-- position:relative; -->
+		  <!-- line-height: 1 !important; -->
+		  <!-- font-family:'Open Sans'; -->
+		  <!-- font-size:11px; -->
+		  <!-- text-align: center; -->
+		  <!-- color: #797979; -->
+		<!-- }  -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_black"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Black.ttf'); -->
+		<!-- } -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_bold"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Bold.ttf'); -->
+		<!-- } -->
+		<!-- @font-face { -->
+			<!-- font-family: "roboto_regular"; -->
+			<!-- src: url('fonts/Roboto/Roboto-Regular.ttf'); -->
+		<!-- } 		 -->
+	.title-feature {
+		color: #2d4059;
+		font-family:"roboto_black";
+		font-size:23px;
+		text-align: left;
+		margin-bottom:3%;
+		line-height:1;			
+	}
+	<!-- .indicateurTypLog {			 -->
+		<!-- text-align: center; -->
+	<!-- } -->
+	<!-- .panel-graph { -->
+	    <!-- color: #3db39e; -->
+	    <!-- text-align: center; -->
+	<!-- } -->
+
+	.container_viz{
+			padding-left:0!important;
+			margin-left:0!important;
+			overflow: hidden;
+			margin-top: 1%;
+		}
+	.number{
+			font-family: "roboto_black";
+			font-size:35px;
+			color: #fdc121;
+			/*margin-top: 5px;*/
+		}
+	.title-number{
+			font-family: "roboto_bold";
+			font-size:12px;
+			color: #fdc121;
+			/*margin-top:0%;*/
+		}
+</style>
+
+<script>
+	//Récupération des attributs
+	var nom_com=[];
+	{{#features}}
+		nom_com.push('{{nom}}');
+	{{/features}}
+	
+	var tx_rp=[];
+	{{#features}}
+		tx_rp.push('{{tx_rp}}');
+	{{/features}}
+	
+	var tx_rseocc=[];
+	{{#features}}
+		tx_rseocc.push('{{tx_rseocc}}');
+	{{/features}}
+	
+	var tx_logvac=[];
+	{{#features}}
+		tx_logvac.push('{{tx_logvac}}');
+	{{/features}}
+	
+	var maison=[];
+	{{#features}}
+		maison.push('{{maison}}');
+	{{/features}}
+	
+	var tx_maison=[];
+	{{#features}}
+		tx_maison.push('{{tx_maison}}');
+	{{/features}}
+	
+	var appart=[];
+	{{#features}}
+		appart.push('{{appart}}');
+	{{/features}}
+	
+	var tx_appart=[];
+	{{#features}}
+		tx_appart.push('{{tx_appart}}');
+	{{/features}}
+	
+	
+	
+	
+	var indicateurTypLog_a = {};
+	indicateurTypLog_a.getData = function() {
+		var data = {ChartTypoLog1: {labels:["Principale", "Secondaire", "Vacant"], data: {datasets: [[tx_rp,tx_rseocc,tx_logvac]]}}};
+		indicateurTypLog_a.drawChart(data);
+	};
+	
+	var indicateurTypLog_b = {};
+	indicateurTypLog_b.getData = function() {
+		var data = {ChartTypoLog2: {labels:["individuel", "collectif"], data: {datasets: [[tx_maison,tx_appart]]}}};
+		indicateurTypLog_b.drawChart(data);
+	};
+	
+	
+		
+	indicateurTypLog_a.drawChart = function (data) {
+			var ctx1 = document.getElementById("ChartTypoLog1");
+			var maxscale = Math.max.apply(this, data.ChartTypoLog1.data.datasets[0]) / 5;
+			maxscale = Math.trunc(maxscale) * 5;
+			ctx1.getContext("2d").canvas.width = 100;
+			ctx1.getContext("2d").canvas.height = 55;
+			var ChartTypoLog1 = new Chart(ctx1, {
+			type: 'doughnut',
+			data: {
+				labels: data.ChartTypoLog1.labels,
+				datasets: [{
+							label: "Part selon le type",
+							backgroundColor: [
+								"rgba(78,184,151,0.9)",
+								"rgba(38,143,145,0.9)",
+								"rgba(86,115,154,0.9)"
+							],
+							borderWidth: 3,
+							borderSkipped:'left',
+							hoverBackgroundColor: [
+								"rgba(78,184,151,1)",
+								"rgba(38,143,145,1)",
+								"rgba(86,115,154,1)"								
+							],
+							data: data.ChartTypoLog1.data.datasets[0]
+							}]
+			},
+			  options: {
+				tooltips: {					
+					titleFontFamily:"roboto_bold",
+					titleFontSize:13,
+					bodyFontFamily:"roboto_regular",
+					backgroundColor:"rgba(36, 36, 36, 0.85)",
+					callbacks: {
+						label: function(tooltipItem, data) {
+							return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() + "%";
+
+						}
+					}
+		        }
+			}
+			});  
+	};
+	
+	indicateurTypLog_b.drawChart = function (data) {
+			var ctx2 = document.getElementById("ChartTypoLog2");
+			ctx2.getContext("2d").canvas.width = 100;
+			ctx2.getContext("2d").canvas.height = 55;			
+			var ChartTypoLog2 = new Chart(ctx2, {
+			type: 'doughnut',
+			data: {
+				labels: data.ChartTypoLog2.labels,
+				datasets: [{
+							label: "Part selon le type",
+							backgroundColor: [
+								"rgba(245,187,0,0.9)",
+								"rgba(187,52,47,0.9)"
+							],
+							borderWidth: 3,
+							borderSkipped:'left',
+							hoverBackgroundColor: [
+								"rgba(245,187,0,1)",
+								"rgba(187,52,47,1)"
+							],
+							data: data.ChartTypoLog2.data.datasets[0]
+							}]
+			},
+			 options: {
+				tooltips: {					
+					titleFontFamily:"roboto_bold",
+					titleFontSize:13,
+					bodyFontFamily:"roboto_regular",
+					backgroundColor:"rgba(36, 36, 36, 0.85)",
+					callbacks: {
+						label: function(tooltipItem, data) {
+							return parseFloat(data.datasets[0].data[tooltipItem.index]).toFixed(2).toLocaleString() + "%";
+
+						}
+					}
+		        }
+			}
+			});  
+	};
+	
+
+	
+	 if  (typeof Chart === 'function') {
+            indicateurTypLog_a.getData();
+			indicateurTypLog_b.getData();
+			
+    } else {
+            $.get('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js', function() {
+				indicateurTypLog_a.getData();
+				indicateurTypLog_b.getData();
+				
+            });
+	}
+	
+</script>

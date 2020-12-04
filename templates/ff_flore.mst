@@ -3,17 +3,17 @@
 	<li class="item" style="width:238px;">
 		<h3 class="title-feature">Flore</h3>
 
-		<p class="text-feature">
-			{{#nb_flore}}<span style="font-family:'roboto_bold'"> Observations floristiques :</span> {{nb_flore}}<br/>{{/nb_flore}}
-			{{#nb_arbres}}<span style="font-family:'roboto_bold'"> Arbres :</span> {{nb_arbres}}<br/>{{/nb_arbres}}
-			{{#nb_arbustes}}<span style="font-family:'roboto_bold'"> Arbustes :</span> {{nb_arbustes}}<br/>{{/nb_arbustes}}
-			{{#nb_plantes_herbacees}}<span style="font-family:'roboto_bold'"> Plantes herbacées :</span> {{nb_plantes_herbacees}}<br/>{{/nb_plantes_herbacees}}
-			{{#nb_plantes_invasives}}<span style="font-family:'roboto_bold'"> Plantes invasives :</span> {{nb_plantes_invasives}}<br/>{{/nb_plantes_invasives}}
-			{{#nb_lichens}}<span style="font-family:'roboto_bold'"> Lichens :</span> {{nb_lichens}}<br/>{{/nb_lichens}}
-			{{#nb_mousses}}<span style="font-family:'roboto_bold'"> Mousses :</span> {{nb_mousses}}<br/>{{/nb_mousses}}
-			{{#nb_graminees}}<span style="font-family:'roboto_bold'"> Graminées :</span> {{nb_graminees}}<br/>{{/nb_graminees}}
-			{{#nb_fougeres}}<span style="font-family:'roboto_bold'"> Fougères :</span> {{nb_fougeres}}<br/>{{/nb_fougeres}}
-			{{#nb_autre_flore}}<span style="font-family:'roboto_bold'"> Autre Flore :</span> {{nb_autre_flore}}<br/>{{/nb_autre_flore}}
+		<p class="text-feature">		
+			{{#flore}}<span style="font-family:'roboto_bold'"> Observations floristiques :</span> {{flore}}<br/>{{/flore}}
+			{{#arbres}}<span style="font-family:'roboto_bold'"> Arbres :</span> {{arbres}}<br/>{{/arbres}}
+			{{#arbustes}}<span style="font-family:'roboto_bold'"> Arbustes :</span> {{arbustes}}<br/>{{/arbustes}}
+			{{#plherbacee}}<span style="font-family:'roboto_bold'"> Plantes herbacées :</span> {{plherbacee}}<br/>{{/plherbacee}}
+			{{#plinvasive}}<span style="font-family:'roboto_bold'"> Plantes invasives :</span> {{plinvasive}}<br/>{{/plinvasive}}
+			{{#lichen}}<span style="font-family:'roboto_bold'"> Lichens :</span> {{lichen}}<br/>{{/lichen}}
+			{{#mousses}}<span style="font-family:'roboto_bold'"> Mousses :</span> {{mousses}}<br/>{{/mousses}}
+			{{#graminee}}<span style="font-family:'roboto_bold'"> Graminées :</span> {{graminee}}<br/>{{/graminee}}
+			{{#fougeres}}<span style="font-family:'roboto_bold'"> Fougères :</span> {{fougeres}}<br/>{{/fougeres}}
+			{{#autreflore}}<span style="font-family:'roboto_bold'"> Autre Flore :</span> {{autreflore}}<br/>{{/autreflore}}
 			</br>
 		</p>
 	</li>
@@ -55,3 +55,4 @@
    	    margin-bottom:3px;
 	}
 </style>
+

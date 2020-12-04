@@ -3,19 +3,18 @@
 	<li class="item" style="width:238px;">
 		<h3 class="title-feature">Faune</h3>
 
-		<p class="text-feature">		
-			{{#faune}}<span style="font-family:'roboto_bold'"> Observations faunistiques :</span> {{faune}}<br/>{{/faune}}
-			{{#oiseaux}}<span style="font-family:'roboto_bold'"> Oiseaux :</span> {{oiseaux}}<br/>{{/oiseaux}}
-			{{#papillons}}<span style="font-family:'roboto_bold'"> Papillons :</span> {{papillons}}<br/>{{/papillons}}
-			{{#reptiles}}<span style="font-family:'roboto_bold'"> Reptiles :</span> {{reptiles}}<br/>{{/reptiles}}
-			
-			{{#chsouris}}<span style="font-family:'roboto_bold'"> Chauve-souris :</span> {{chsouris}}<br/>{{/chsouris}}
-			{{#libellules}}<span style="font-family:'roboto_bold'"> Libellules :</span> {{libellules}}<br/>{{/libellules}}
-			{{#amphibien}}<span style="font-family:'roboto_bold'"> Amphibiens :</span> {{amphibien}}<br/>{{/amphibien}}
-			{{#abeille}}<span style="font-family:'roboto_bold'"> Abeilles, bourdons, frelons, guêpes :</span> {{abeille}}<br/>{{/abeille}}
-			{{#araigne}}<span style="font-family:'roboto_bold'"> Araignées :</span> {{araigne}}<br/>{{/araigne}}
-			{{#ainsecte}}<span style="font-family:'roboto_bold'"> Autres insectes :</span> {{ainsecte}}<br/>{{/ainsecte}}
-			{{#autrefaune}}<span style="font-family:'roboto_bold'"> Autre :</span> {{autrefaune}}<br/>{{/autrefaune}}
+		<p class="text-feature">
+			{{#nb_faune}}<span style="font-family:'roboto_bold'"> Observations faunistiques :</span> {{nb_faune}}<br/>{{/nb_faune}}
+			{{#nb_oiseaux}}<span style="font-family:'roboto_bold'"> Oiseaux :</span> {{nb_oiseaux}}<br/>{{/nb_oiseaux}}
+			{{#nb_papillons}}<span style="font-family:'roboto_bold'"> Papillons :</span> {{nb_papillons}}<br/>{{/nb_papillons}}
+			{{#nb_reptiles}}<span style="font-family:'roboto_bold'"> Reptiles :</span> {{nb_reptiles}}<br/>{{/nb_reptiles}}
+			{{#nb_chauvesouris}}<span style="font-family:'roboto_bold'"> Chauve-souris :</span> {{nb_chauvesouris}}<br/>{{/nb_chauvesouris}}
+			{{#nb_libellules}}<span style="font-family:'roboto_bold'"> Libellules :</span> {{nb_libellules}}<br/>{{/nb_libellules}}
+			{{#nb_amphibiens}}<span style="font-family:'roboto_bold'"> Amphibiens :</span> {{nb_amphibiens}}<br/>{{/nb_amphibiens}}
+			{{#nb_abeilles}}<span style="font-family:'roboto_bold'"> Abeilles, bourdons, frelons, guêpes :</span> {{nb_abeilles}}<br/>{{/nb_abeilles}}
+			{{#nb_araignees}}<span style="font-family:'roboto_bold'"> Araignées :</span> {{nb_araignees}}<br/>{{/nb_araignees}}
+			{{#nb_autres_insectes}}<span style="font-family:'roboto_bold'"> Autres insectes :</span> {{nb_autres_insectes}}<br/>{{/nb_autres_insectes}}
+			{{#nb_autre_faune}}<span style="font-family:'roboto_bold'"> Autre :</span> {{nb_autre_faune}}<br/>{{/nb_autre_faune}}
 			</br>
 		</p>
 	</li>
@@ -57,4 +56,3 @@
    	    margin-bottom:3px;
 	}
 </style>
-
